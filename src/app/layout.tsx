@@ -1,5 +1,8 @@
 import type { Metadata } from "next";
+import type { Viewport } from "next";
 import { IBM_Plex_Mono, Space_Grotesk } from "next/font/google";
+import { AnalyticsProvider } from "@/components/analytics-provider";
+import { siteConfig, siteUrl, ogImageUrl } from "@/lib/site-config";
 import "./globals.css";
 
 const spaceGrotesk = Space_Grotesk({
@@ -13,28 +16,63 @@ const ibmPlexMono = IBM_Plex_Mono({
   variable: "--font-mono",
 });
 
-const siteUrl =
-  process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000";
-
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
-  title: "Robin Keim | IT Consulting",
-  description:
-    "Technical advisory for founders, professionals, and teams who need clarity and a working system fast.",
+  applicationName: siteConfig.siteName,
+  title: siteConfig.title,
+  description: siteConfig.description,
+  alternates: {
+    canonical: "/",
+  },
+  keywords: [...siteConfig.keywords],
+  authors: [{ name: siteConfig.personName }],
+  creator: siteConfig.personName,
+  publisher: siteConfig.companyName,
+  category: "technology consulting",
+  referrer: "origin-when-cross-origin",
+  formatDetection: {
+    address: false,
+    email: false,
+    telephone: false,
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+      "max-video-preview": -1,
+    },
+  },
   openGraph: {
-    title: "Robin Keim | IT Consulting",
-    description:
-      "Fast, practical IT consulting that turns technical uncertainty into clear execution.",
+    title: siteConfig.title,
+    description: siteConfig.ogDescription,
     url: siteUrl,
-    siteName: "Robin Consulting",
+    siteName: siteConfig.siteName,
+    locale: siteConfig.locale,
     type: "website",
+    images: [
+      {
+        url: ogImageUrl,
+        width: 1200,
+        height: 630,
+        alt: siteConfig.title,
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Robin Keim | IT Consulting",
-    description:
-      "Fast, practical IT consulting that turns technical uncertainty into clear execution.",
+    title: siteConfig.title,
+    description: siteConfig.ogDescription,
+    images: [ogImageUrl],
   },
+};
+
+export const viewport: Viewport = {
+  themeColor: siteConfig.themeColor,
+  colorScheme: "dark",
 };
 
 export default function RootLayout({
@@ -48,6 +86,10 @@ export default function RootLayout({
         suppressHydrationWarning
         className={`${spaceGrotesk.variable} ${ibmPlexMono.variable}`}
       >
+        <a href="#main-content" className="skip-link">
+          Skip to content
+        </a>
+        <AnalyticsProvider />
         {children}
       </body>
     </html>

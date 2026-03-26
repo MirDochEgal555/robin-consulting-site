@@ -15,12 +15,22 @@ export function SectionShell({
   description,
   children,
 }: SectionShellProps) {
+  const headingId = `${id}-heading`;
+
   return (
-    <section id={id} className="anchor-offset py-20 sm:py-24">
+    <section
+      id={id}
+      aria-labelledby={headingId}
+      className="anchor-offset py-20 sm:py-24"
+    >
       <div className="container-shell">
         <div className="mb-10 max-w-3xl">
           <div className="eyebrow-line section-label reveal-up scroll-reveal-up">{eyebrow}</div>
-          <h2 className="mt-4 text-3xl font-semibold tracking-tight text-white sm:text-4xl reveal-up scroll-reveal-up" style={{ "--delay": "90ms" } as CSSProperties}>
+          <h2
+            id={headingId}
+            className="mt-4 text-3xl font-semibold tracking-tight text-white sm:text-4xl reveal-up scroll-reveal-up"
+            style={{ "--delay": "90ms" } as CSSProperties}
+          >
             {title}
           </h2>
           {description ? (

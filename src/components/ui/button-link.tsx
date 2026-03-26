@@ -1,13 +1,27 @@
+"use client";
+
+import { trackConversion, trackEvent } from "@/lib/analytics";
+
 type ButtonLinkProps = {
   href: string;
   children: React.ReactNode;
   variant?: "primary" | "secondary";
+  trackingEvent?: string;
+  trackingLabel?: string;
+  trackingSection?: string;
+  conversionType?: "booking" | "email";
+  ariaLabel?: string;
 };
 
 export function ButtonLink({
   href,
   children,
   variant = "primary",
+  trackingEvent,
+  trackingLabel,
+  trackingSection,
+  conversionType,
+  ariaLabel,
 }: ButtonLinkProps) {
   const styles =
     variant === "primary"
@@ -16,12 +30,34 @@ export function ButtonLink({
 
   const external = href.startsWith("http");
 
+  const handleClick = () => {
+    if (trackingEvent) {
+      trackEvent(trackingEvent, {
+        cta_label: trackingLabel,
+        cta_section: trackingSection,
+        cta_url: href,
+      });
+    }
+
+    if (!conversionType) {
+      return;
+    }
+
+    trackConversion(conversionType, {
+      cta_label: trackingLabel,
+      cta_section: trackingSection,
+      cta_url: href,
+    });
+  };
+
   return (
     <a
       href={href}
       target={external ? "_blank" : undefined}
       rel={external ? "noreferrer" : undefined}
-      className={`inline-flex items-center justify-center rounded-full px-5 py-3 text-sm font-medium transition duration-200 hover:-translate-y-0.5 hover:shadow-[0_16px_36px_rgba(14,165,233,0.18)] ${styles}`}
+      aria-label={ariaLabel}
+      onClick={handleClick}
+      className={`inline-flex items-center justify-center rounded-full px-5 py-3 text-sm font-medium transition duration-200 hover:-translate-y-0.5 hover:shadow-[0_16px_36px_rgba(14,165,233,0.18)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sky-300 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-950 ${styles}`}
     >
       {children}
     </a>

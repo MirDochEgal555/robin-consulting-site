@@ -4,13 +4,18 @@ import { ButtonLink } from "@/components/ui/button-link";
 
 export function HeroSection() {
   return (
-    <section id="top" className="relative py-20 sm:py-28">
+    <section
+      id="top"
+      aria-labelledby="hero-heading"
+      className="relative py-20 sm:py-28"
+    >
       <div className="hero-orb hero-orb-one float-y" />
       <div className="hero-orb hero-orb-two float-x" />
       <div className="container-shell grid gap-10 lg:grid-cols-[1.1fr_0.9fr] lg:items-center">
         <div className="reveal-left" style={{ "--delay": "80ms" } as CSSProperties}>
           <div className="eyebrow-line section-label reveal-up" style={{ "--delay": "120ms" } as CSSProperties}>Technical advisory</div>
           <h1
+            id="hero-heading"
             className="mt-6 max-w-4xl text-5xl font-semibold tracking-tight text-white sm:text-6xl reveal-up"
             style={{ "--delay": "180ms" } as CSSProperties}
           >
@@ -26,10 +31,23 @@ export function HeroSection() {
             className="mt-8 flex flex-col gap-3 sm:flex-row reveal-up"
             style={{ "--delay": "340ms" } as CSSProperties}
           >
-            <ButtonLink href={siteContent.bookingUrl}>
+            <ButtonLink
+              href={siteContent.bookingUrl}
+              trackingEvent="cta_click"
+              trackingLabel="hero_book_consultation"
+              trackingSection="hero"
+              conversionType="booking"
+            >
               Book a free consultation
             </ButtonLink>
-            <ButtonLink href={siteContent.emailLink} variant="secondary">
+            <ButtonLink
+              href={siteContent.emailLink}
+              variant="secondary"
+              trackingEvent="cta_click"
+              trackingLabel="hero_email"
+              trackingSection="hero"
+              conversionType="email"
+            >
               Email Robin
             </ButtonLink>
           </div>

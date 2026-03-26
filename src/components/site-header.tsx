@@ -3,6 +3,7 @@
 import { startTransition, useEffect, useState } from "react";
 import { siteContent } from "@/content/site-content";
 import { ButtonLink } from "@/components/ui/button-link";
+import { trackEvent } from "@/lib/analytics";
 
 const sections = [
   { label: "Overview", href: "#top" },
@@ -78,18 +79,27 @@ export function SiteHeader() {
       }`}
     >
       <div className="container-shell flex items-center justify-between gap-4 py-4">
-        <a href="#top" className="flex flex-col">
+        <a href="#top" aria-label="Robin Keim IT Consulting home" className="flex flex-col">
           <span className="text-sm font-medium uppercase tracking-[0.16em] text-sky-300">
             Robin Keim
           </span>
           <span className="text-sm text-slate-400">IT Consulting</span>
         </a>
-        <nav className="hidden items-center gap-2 rounded-full border border-white/10 bg-white/[0.04] p-1 text-sm text-slate-300 md:flex">
+        <nav
+          aria-label="Primary"
+          className="hidden items-center gap-2 rounded-full border border-white/10 bg-white/[0.04] p-1 text-sm text-slate-300 md:flex"
+        >
           {siteContent.navItems.map((item) => (
             <a
               key={item.href}
               href={item.href}
-              aria-current={activeHref === item.href ? "page" : undefined}
+              aria-current={activeHref === item.href ? "location" : undefined}
+              onClick={() =>
+                trackEvent("section_navigation", {
+                  section_label: item.label,
+                  section_target: item.href,
+                })
+              }
               className={`rounded-full px-4 py-2 transition ${
                 activeHref === item.href
                   ? "bg-sky-400 text-slate-950 shadow-[0_12px_30px_rgba(56,189,248,0.24)]"
@@ -100,7 +110,15 @@ export function SiteHeader() {
             </a>
           ))}
         </nav>
-        <ButtonLink href={siteContent.bookingUrl}>Book a free consultation</ButtonLink>
+        <ButtonLink
+          href={siteContent.bookingUrl}
+          trackingEvent="cta_click"
+          trackingLabel="header_book_consultation"
+          trackingSection="header"
+          conversionType="booking"
+        >
+          Book a free consultation
+        </ButtonLink>
       </div>
     </header>
   );

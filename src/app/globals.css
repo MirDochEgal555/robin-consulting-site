@@ -19,6 +19,7 @@
 
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: 6rem;
 }
 
 body {
@@ -42,6 +43,10 @@ a {
   text-decoration: none;
 }
 
+:focus-visible {
+  outline-color: var(--accent);
+}
+
 img {
   max-width: 100%;
   display: block;
@@ -54,6 +59,24 @@ img {
 .container-shell {
   margin: 0 auto;
   width: min(1120px, calc(100% - 2rem));
+}
+
+.skip-link {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  z-index: 100;
+  border-radius: 9999px;
+  background: #e0f2fe;
+  color: #07111f;
+  padding: 0.75rem 1rem;
+  font-weight: 600;
+  transform: translateY(-140%);
+  transition: transform 160ms ease;
+}
+
+.skip-link:focus {
+  transform: translateY(0);
 }
 
 .glass-panel {

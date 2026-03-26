@@ -5,10 +5,28 @@ const bookingUrl =
   process.env.NEXT_PUBLIC_BOOKING_URL ?? "https://www.cal.eu/robin-keim-consulting";
 
 export const siteContent = {
+  personName: "Robin Keim",
+  siteName: "Robin Consulting",
   companyName: "IT Consulting by Robin Keim",
   bookingUrl,
   email: contactEmail,
   emailLink: `mailto:${contactEmail}`,
+  seo: {
+    title: "Robin Keim | IT Consulting for Fast Technical Decisions",
+    description:
+      "Technical consulting for founders, operators, and lean teams that need clarity on architecture, scope, tooling, and implementation.",
+    ogDescription:
+      "Fast, practical IT consulting that turns technical uncertainty into a clear path to execution.",
+    keywords: [
+      "IT consulting",
+      "technical consulting",
+      "software consulting",
+      "architecture review",
+      "technical strategy",
+      "delivery planning",
+      "software implementation",
+    ],
+  },
   navItems: [
     { label: "Services", href: "#services" },
     { label: "Process", href: "#process" },

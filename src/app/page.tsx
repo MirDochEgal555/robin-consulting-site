@@ -6,12 +6,15 @@ import { ProofSection } from "@/components/sections/proof-section";
 import { ServicesSection } from "@/components/sections/services-section";
 import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
+import { StructuredData } from "@/components/structured-data";
+import { getHomePageStructuredData } from "@/lib/structured-data";
 
 export default function HomePage() {
   return (
     <div className="relative overflow-x-hidden">
+      <StructuredData data={getHomePageStructuredData()} />
       <SiteHeader />
-      <main className="pt-24">
+      <main id="main-content" className="pt-24">
         <HeroSection />
         <ServicesSection />
         <ProcessSection />

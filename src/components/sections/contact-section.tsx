@@ -23,15 +23,31 @@ export function ContactSection() {
             <p className="mt-4 max-w-2xl text-base leading-7 text-slate-300">
               {siteContent.contact.description}
             </p>
-            <div className="mt-6 rounded-3xl border border-white/10 bg-slate-950/30 p-4 font-mono text-sm text-slate-300">
+            <a
+              href={siteContent.emailLink}
+              className="mt-6 inline-flex rounded-3xl border border-white/10 bg-slate-950/30 p-4 font-mono text-sm text-slate-300 transition hover:border-sky-300/40 hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sky-300 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-950"
+            >
               {siteContent.contact.email}
-            </div>
+            </a>
           </div>
           <div className="flex flex-col gap-3 sm:flex-row lg:flex-col pulse-glow">
-            <ButtonLink href={siteContent.bookingUrl}>
+            <ButtonLink
+              href={siteContent.bookingUrl}
+              trackingEvent="cta_click"
+              trackingLabel="contact_book_consultation"
+              trackingSection="contact"
+              conversionType="booking"
+            >
               Book a free consultation
             </ButtonLink>
-            <ButtonLink href={siteContent.emailLink} variant="secondary">
+            <ButtonLink
+              href={siteContent.emailLink}
+              variant="secondary"
+              trackingEvent="cta_click"
+              trackingLabel="contact_email"
+              trackingSection="contact"
+              conversionType="email"
+            >
               Send an email
             </ButtonLink>
           </div>
