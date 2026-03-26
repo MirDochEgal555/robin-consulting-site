@@ -104,7 +104,12 @@ export const siteContent = {
   contact: {
     title: "Free initial consultation",
     description:
-      "Start with a short consultation to discuss the problem, the decision in front of you, and whether the work calls for consulting, implementation, or both. If you prefer email, reach out directly.",
+      "Start with a short consultation to discuss the problem, the decision in front of you, and whether the work calls for consulting, implementation, or both. If you want to share context first, use the form and Robin will reply directly.",
     email: contactEmail,
+    highlights: [
+      "Best for architecture reviews, implementation scoping, and urgent technical decisions.",
+      "Share the context before the call so the first conversation can start at the real problem.",
+      "If the form is unavailable, direct email and the booking link remain open.",
+    ],
   },
 } as const;
