@@ -1,3 +1,4 @@
+import type { CSSProperties } from "react";
 import { SectionShell } from "@/components/section-shell";
 import { siteContent } from "@/content/site-content";
 
@@ -13,7 +14,8 @@ export function ProcessSection() {
         {siteContent.process.map((step, index) => (
           <article
             key={step.title}
-            className="rounded-[1.75rem] border border-white/10 bg-white/[0.03] p-6"
+            className="card-lift reveal-up scroll-tilt-in rounded-[1.75rem] border border-white/10 bg-white/[0.03] p-6"
+            style={{ "--delay": `${120 + index * 140}ms` } as CSSProperties}
           >
             <div className="font-mono text-sm text-sky-300">
               0{index + 1}
@@ -30,4 +32,3 @@ export function ProcessSection() {
     </SectionShell>
   );
 }
-

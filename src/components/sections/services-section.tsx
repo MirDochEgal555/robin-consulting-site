@@ -1,3 +1,4 @@
+import type { CSSProperties } from "react";
 import { SectionShell } from "@/components/section-shell";
 import { siteContent } from "@/content/site-content";
 
@@ -10,10 +11,11 @@ export function ServicesSection() {
       description="The offer is positioned as fast, outcome-focused advisory rather than long, abstract consulting cycles."
     >
       <div className="grid gap-5 md:grid-cols-3">
-        {siteContent.services.map((service) => (
+        {siteContent.services.map((service, index) => (
           <article
             key={service.title}
-            className="glass-panel rounded-[1.75rem] p-6"
+            className="glass-panel card-lift reveal-up scroll-tilt-in rounded-[1.75rem] p-6"
+            style={{ "--delay": `${120 + index * 120}ms` } as CSSProperties}
           >
             <div className="font-mono text-xs uppercase tracking-[0.2em] text-sky-300">
               {service.eyebrow}
@@ -30,4 +32,3 @@ export function ServicesSection() {
     </SectionShell>
   );
 }
-

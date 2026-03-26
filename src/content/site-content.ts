@@ -5,7 +5,7 @@ const bookingUrl =
   process.env.NEXT_PUBLIC_BOOKING_URL ?? "https://www.cal.eu/robin-keim-consulting";
 
 export const siteContent = {
-  companyName: "Robin Consulting",
+  companyName: "IT Consulting by Robin Keim",
   bookingUrl,
   email: contactEmail,
   emailLink: `mailto:${contactEmail}`,
@@ -17,93 +17,94 @@ export const siteContent = {
     { label: "Contact", href: "#contact" },
   ],
   hero: {
-    headline: "From technical confusion to a working system.",
+    headline: "Technical consulting with a path to implementation.",
     description:
-      "Robin helps founders, professionals, and teams make better technical decisions quickly, without wasting time on the wrong architecture, tooling, or implementation path.",
+      "Robin Keim helps founders, operators, and small teams make better technical decisions, define a workable solution, and implement the right software when hands-on execution is needed.",
     promise:
-      "Get practical technical advisory that turns unclear options into a clear next move, with speed and cost-efficiency built into the process.",
+      "Get practical consulting on architecture, tooling, scope, and delivery, with the option to move from recommendation into focused software implementation.",
     highlights: [
-      { value: "5 sec", label: "Target window to communicate the value proposition" },
-      { value: "1 call", label: "Free initial consultation as the main conversion step" },
-      { value: "1 page", label: "Focused landing page funnel with clear CTA repetition" },
+      { value: "Fast clarity", label: "Focused consulting for decisions that cannot stall" },
+      { value: "Free intro call", label: "A simple first conversation to assess fit" },
+      { value: "From plan to build", label: "Advice that can continue into implementation" },
     ],
     problems: [
-      "You need to make a technical decision, but do not have time to research every option.",
-      "You understand the business problem, but not the tradeoffs behind the tech stack.",
-      "You want a system that works in practice, not a vague list of recommendations.",
+      "You need to make a technical decision soon, but the options all sound plausible.",
+      "You know the business outcome you want, but not the engineering tradeoffs behind it.",
+      "You need a realistic plan, not a long list of abstract recommendations.",
     ],
   },
   services: [
     {
-      eyebrow: "Advisory",
-      title: "Technical advisory for high-impact decisions",
+      eyebrow: "Strategy",
+      title: "Architecture and stack decisions",
       description:
-        "Clarify architecture, stack choices, implementation paths, and delivery risks before expensive mistakes happen.",
+        "Pressure-test technical options before you commit, so platform, tooling, and system design choices match the actual business need.",
     },
     {
-      eyebrow: "Direction",
-      title: "Outcome-focused guidance",
+      eyebrow: "Planning",
+      title: "Scoping and delivery planning",
       description:
-        "Translate messy requirements into a concrete plan with sensible tradeoffs, realistic scope, and a path to execution.",
+        "Turn broad requirements into a workable plan with clear priorities, realistic scope, and sensible tradeoffs for delivery.",
     },
     {
-      eyebrow: "Speed",
-      title: "Fast support without enterprise overhead",
+      eyebrow: "Implementation",
+      title: "Software solutions for focused use cases",
       description:
-        "A lightweight consulting format designed for founders and busy professionals who need useful answers quickly.",
+        "When the solution is clear, Robin can also implement selected software components, internal tools, automations, or product features without turning the engagement into a large agency process.",
     },
   ],
   process: [
     {
-      title: "Start with the real problem",
+      title: "Clarify the decision",
       description:
-        "Use the initial consultation to understand the business context, technical blockers, and what needs to move next.",
+        "Start with the business context, the blocker, and the decision that actually needs to be made now.",
     },
     {
-      title: "Reduce the options",
+      title: "Compare the real options",
       description:
-        "Narrow broad technical choices into a small set of defensible directions with clear tradeoffs and costs.",
+        "Reduce complexity into a small number of defensible paths, each with clear tradeoffs, cost implications, and delivery impact.",
     },
     {
-      title: "Move toward a working system",
+      title: "Leave with a direction",
       description:
-        "Leave with an actionable recommendation, next-step plan, or implementation direction that can actually be executed.",
+        "Walk away with a recommendation, a decision framework, or a concrete next-step plan, with implementation support available when it makes sense.",
     },
   ],
   about: {
     summary:
-      "Robin Keim is positioned here as a clear-thinking technical advisor who helps clients move from uncertainty to execution, with minimal fluff and strong emphasis on useful outcomes.",
+      "Robin works as a practical technical counterpart for clients who need clarity more than jargon. The focus is simple: understand the problem, expose the tradeoffs, define the most sensible next move, and help build the solution when execution support is needed.",
     points: [
-      "Problem-solver tone first, technical expertise second.",
-      "Messaging stays concise and practical for non-technical buyers.",
-      "The section is ready for a short founder story, credentials, and a professional image.",
-      "Use this area to make the offer feel personal and trustworthy rather than anonymous.",
+      "Best suited to founders, decision-makers, and lean teams moving quickly.",
+      "Advice is framed in business terms first, without losing technical depth.",
+      "Engagements stay lightweight, direct, and focused on useful outcomes.",
+      "A strong fit when you need both consulting judgment and selective implementation support.",
     ],
   },
   proof: {
     capabilities: [
-      "Architecture and stack decision support",
-      "Technical scoping and feasibility guidance",
-      "Clear recommendations with business-context tradeoffs",
-      "Bridging non-technical goals to implementation reality",
+      "Architecture reviews and implementation planning",
+      "Technical feasibility and delivery-risk assessment",
+      "Product, tooling, and vendor decision support",
+      "Business goals translated into practical engineering choices",
+      "Hands-on implementation of focused software solutions",
     ],
     placeholders: [
       {
-        title: "Case study slot",
+        title: "Add one strong case study",
         description:
-          "Add a short project summary showing the client problem, the decision made, and the concrete result.",
+          "A short before-and-after story will do the most work here: what the client needed, what decision was made, and what improved afterward.",
       },
       {
-        title: "Tools and experience slot",
+        title: "Add credible background detail",
         description:
-          "List technologies, domains, or delivery contexts that make the expertise feel credible and specific.",
+          "List relevant domains, technologies, or delivery contexts so the advisory offer feels specific and trustworthy rather than generic.",
       },
     ],
   },
   contact: {
     title: "Free initial consultation",
     description:
-      "The contact area is intentionally simple. It supports the main booking CTA, reinforces the no-risk first step, and keeps email available for people who prefer a direct conversation.",
+      "Start with a short consultation to discuss the problem, the decision in front of you, and whether the work calls for consulting, implementation, or both. If you prefer email, reach out directly.",
     email: contactEmail,
   },
 } as const;

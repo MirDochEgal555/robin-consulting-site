@@ -32,6 +32,11 @@ body {
   font-family: var(--font-sans), sans-serif;
 }
 
+main {
+  position: relative;
+  z-index: 1;
+}
+
 a {
   color: inherit;
   text-decoration: none;
@@ -83,3 +88,242 @@ img {
   scroll-margin-top: 6rem;
 }
 
+@keyframes reveal-up {
+  from {
+    opacity: 0;
+    transform: translateY(32px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes reveal-left {
+  from {
+    opacity: 0;
+    transform: translateX(-36px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes reveal-right {
+  from {
+    opacity: 0;
+    transform: translateX(36px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes float-y {
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+
+  50% {
+    transform: translate3d(0, -14px, 0);
+  }
+}
+
+@keyframes float-x {
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+
+  50% {
+    transform: translate3d(12px, -10px, 0);
+  }
+}
+
+@keyframes pulse-glow {
+  0%,
+  100% {
+    box-shadow: 0 0 0 0 rgba(56, 189, 248, 0.08);
+  }
+
+  50% {
+    box-shadow: 0 0 0 12px rgba(56, 189, 248, 0);
+  }
+}
+
+@keyframes scroll-reveal-up {
+  from {
+    transform: translateY(48px) scale(0.98);
+  }
+
+  to {
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes scroll-reveal-left {
+  from {
+    transform: translateX(-48px) scale(0.98);
+  }
+
+  to {
+    transform: translateX(0) scale(1);
+  }
+}
+
+@keyframes scroll-reveal-right {
+  from {
+    transform: translateX(48px) scale(0.98);
+  }
+
+  to {
+    transform: translateX(0) scale(1);
+  }
+}
+
+@keyframes scroll-tilt-in {
+  from {
+    transform: translateY(36px) rotateX(10deg) scale(0.97);
+  }
+
+  to {
+    transform: translateY(0) rotateX(0deg) scale(1);
+  }
+}
+
+.reveal-up,
+.reveal-left,
+.reveal-right {
+  opacity: 0;
+  animation-duration: 800ms;
+  animation-timing-function: cubic-bezier(0.22, 1, 0.36, 1);
+  animation-fill-mode: forwards;
+  animation-delay: var(--delay, 0ms);
+}
+
+.reveal-up {
+  animation-name: reveal-up;
+}
+
+.reveal-left {
+  animation-name: reveal-left;
+}
+
+.reveal-right {
+  animation-name: reveal-right;
+}
+
+.float-y {
+  animation: float-y 8s ease-in-out infinite;
+}
+
+.float-x {
+  animation: float-x 10s ease-in-out infinite;
+}
+
+.pulse-glow {
+  animation: pulse-glow 2.8s ease-in-out infinite;
+}
+
+.card-lift {
+  transition:
+    transform 220ms ease,
+    border-color 220ms ease,
+    background-color 220ms ease,
+    box-shadow 220ms ease;
+}
+
+.card-lift:hover {
+  transform: translateY(-6px);
+  border-color: rgba(125, 211, 252, 0.28);
+  box-shadow: 0 28px 60px rgba(2, 8, 23, 0.32);
+}
+
+.hero-orb {
+  position: absolute;
+  border-radius: 9999px;
+  pointer-events: none;
+  filter: blur(12px);
+}
+
+.hero-orb-one {
+  top: -1.5rem;
+  right: 14%;
+  width: 11rem;
+  height: 11rem;
+  background: radial-gradient(circle, rgba(56, 189, 248, 0.22), rgba(56, 189, 248, 0));
+}
+
+.hero-orb-two {
+  top: 16rem;
+  left: 6%;
+  width: 8rem;
+  height: 8rem;
+  background: radial-gradient(circle, rgba(96, 165, 250, 0.18), rgba(96, 165, 250, 0));
+}
+
+@supports (animation-timeline: view()) {
+  .scroll-reveal-up,
+  .scroll-reveal-left,
+  .scroll-reveal-right,
+  .scroll-tilt-in {
+    opacity: 1;
+    animation-duration: 1ms;
+    animation-fill-mode: both;
+    animation-timing-function: cubic-bezier(0.22, 1, 0.36, 1);
+    animation-timeline: view();
+    animation-range: entry 12% cover 36%;
+  }
+
+  .scroll-reveal-up {
+    animation-name: scroll-reveal-up;
+  }
+
+  .scroll-reveal-left {
+    animation-name: scroll-reveal-left;
+  }
+
+  .scroll-reveal-right {
+    animation-name: scroll-reveal-right;
+  }
+
+  .scroll-tilt-in {
+    transform-origin: center bottom;
+    animation-name: scroll-tilt-in;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .reveal-up,
+  .reveal-left,
+  .reveal-right,
+  .float-y,
+  .float-x,
+  .pulse-glow,
+  .scroll-reveal-up,
+  .scroll-reveal-left,
+  .scroll-reveal-right,
+  .scroll-tilt-in {
+    opacity: 1;
+    animation: none;
+  }
+
+  .card-lift {
+    transition: none;
+  }
+
+  .card-lift:hover {
+    transform: none;
+    box-shadow: var(--shadow);
+  }
+}

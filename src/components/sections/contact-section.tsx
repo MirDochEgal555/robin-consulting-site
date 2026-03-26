@@ -1,3 +1,4 @@
+import type { CSSProperties } from "react";
 import { ButtonLink } from "@/components/ui/button-link";
 import { SectionShell } from "@/components/section-shell";
 import { siteContent } from "@/content/site-content";
@@ -10,7 +11,10 @@ export function ContactSection() {
       title="Book the call or start the conversation by email"
       description="The primary CTA remains the consultation booking link, with email as the secondary path."
     >
-      <div className="glass-panel rounded-[2rem] p-8 sm:p-10">
+      <div
+        className="glass-panel reveal-up scroll-tilt-in rounded-[2rem] p-8 sm:p-10"
+        style={{ "--delay": "100ms" } as CSSProperties}
+      >
         <div className="grid gap-8 lg:grid-cols-[1fr_auto] lg:items-end">
           <div>
             <h3 className="text-2xl font-semibold text-white">
@@ -23,7 +27,7 @@ export function ContactSection() {
               {siteContent.contact.email}
             </div>
           </div>
-          <div className="flex flex-col gap-3 sm:flex-row lg:flex-col">
+          <div className="flex flex-col gap-3 sm:flex-row lg:flex-col pulse-glow">
             <ButtonLink href={siteContent.bookingUrl}>
               Book a free consultation
             </ButtonLink>
@@ -36,4 +40,3 @@ export function ContactSection() {
     </SectionShell>
   );
 }
-

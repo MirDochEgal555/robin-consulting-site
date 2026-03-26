@@ -9,9 +9,9 @@ import { SiteHeader } from "@/components/site-header";
 
 export default function HomePage() {
   return (
-    <div className="relative overflow-hidden">
+    <div className="relative overflow-x-hidden">
       <SiteHeader />
-      <main>
+      <main className="pt-24">
         <HeroSection />
         <ServicesSection />
         <ProcessSection />
@@ -23,4 +23,3 @@ export default function HomePage() {
     </div>
   );
 }
-
