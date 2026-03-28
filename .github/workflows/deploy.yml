@@ -19,8 +19,8 @@ jobs:
     runs-on: ubuntu-latest
     env:
       NEXT_PUBLIC_SITE_URL: https://mirdochegal555.github.io/robin-consulting-site
-      NEXT_PUBLIC_BOOKING_URL: https://cal.com/robin-keim
-      NEXT_PUBLIC_CONTACT_EMAIL: hello@example.com
+      NEXT_PUBLIC_BOOKING_URL: https://www.cal.eu/robin-keim-consulting
+      NEXT_PUBLIC_CONTACT_EMAIL: robin-keim@gmx.de
       NEXT_PUBLIC_ANALYTICS_ID: ""
     steps:
       - uses: actions/checkout@v4
