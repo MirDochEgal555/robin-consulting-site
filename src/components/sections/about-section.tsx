@@ -1,21 +1,32 @@
 import type { CSSProperties } from "react";
+import Image from "next/image";
 import { SectionShell } from "@/components/section-shell";
 import { siteContent } from "@/content/site-content";
+import robinPortrait from "../../../IMG_0169.jpeg";
 
 export function AboutSection() {
   return (
     <SectionShell
       id="about"
       eyebrow="About"
-      title="Robin Keim as the technical counterpart clients can actually work with"
-      description="This is where final positioning copy, credibility, and a personal image can be refined."
+      title="A technical partner who brings clarity, structure, and follow-through"
+      description="Independent consulting for founders and lean teams that need sound engineering judgment, plain communication, and hands-on support when the next step should be built."
     >
       <div className="grid gap-6 lg:grid-cols-[1fr_1.15fr]">
         <div
-          className="reveal-left scroll-reveal-left float-x rounded-[2rem] border border-dashed border-sky-300/30 bg-sky-400/[0.08] p-8 text-sm leading-7 text-slate-300"
+          className="reveal-left scroll-reveal-left float-x overflow-hidden rounded-[2rem] border border-white/10 bg-slate-950/55 shadow-[0_30px_90px_rgba(15,23,42,0.35)]"
           style={{ "--delay": "120ms" } as CSSProperties}
         >
-          Placeholder for Robin&apos;s photo, portrait, or a branded visual block.
+          <div className="relative aspect-[4/5] min-h-[320px]">
+            <Image
+              src={robinPortrait}
+              alt="Portrait of Robin Keim"
+              fill
+              priority
+              sizes="(min-width: 1024px) 32rem, (min-width: 640px) 70vw, 100vw"
+              className="object-cover object-center"
+            />
+          </div>
         </div>
         <div
           className="glass-panel reveal-right scroll-reveal-right rounded-[2rem] p-8"

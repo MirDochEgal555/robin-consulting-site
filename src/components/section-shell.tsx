@@ -5,6 +5,7 @@ type SectionShellProps = {
   eyebrow: string;
   title: string;
   description?: string;
+  headerClassName?: string;
   children: React.ReactNode;
 };
 
@@ -13,12 +14,13 @@ export function SectionShell({
   eyebrow,
   title,
   description,
+  headerClassName,
   children,
 }: SectionShellProps) {
   return (
     <section id={id} className="anchor-offset py-20 sm:py-24">
       <div className="container-shell">
-        <div className="mb-10 max-w-3xl">
+        <div className={`mb-10 max-w-3xl ${headerClassName ?? ""}`}>
           <div className="eyebrow-line section-label reveal-up scroll-reveal-up">{eyebrow}</div>
           <h2 className="mt-4 text-3xl font-semibold tracking-tight text-white sm:text-4xl reveal-up scroll-reveal-up" style={{ "--delay": "90ms" } as CSSProperties}>
             {title}

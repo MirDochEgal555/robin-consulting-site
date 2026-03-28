@@ -72,33 +72,60 @@ export const siteContent = {
   ],
   about: {
     summary:
-      "Robin works as a practical technical counterpart for clients who need clarity more than jargon. The focus is simple: understand the problem, expose the tradeoffs, define the most sensible next move, and help build the solution when execution support is needed.",
+      "Robin works best with founders, operators, and small teams that need a clear technical direction without adding unnecessary process. He turns business goals into concrete engineering decisions, explains tradeoffs in plain language, and stays close enough to delivery to help move the work forward when execution support is useful.",
     points: [
-      "Best suited to founders, decision-makers, and lean teams moving quickly.",
-      "Advice is framed in business terms first, without losing technical depth.",
-      "Engagements stay lightweight, direct, and focused on useful outcomes.",
+      "Recommendations are grounded in business priorities, delivery risk, and realistic scope.",
+      "Conversations stay direct and practical, so decisions are easier to make and act on.",
+      "Technical depth is there when it matters, without hiding the answer behind jargon.",
       "A strong fit when you need both consulting judgment and selective implementation support.",
     ],
   },
   proof: {
+    summary:
+      "The consulting offer is backed by formal training in business informatics and several years of hands-on software delivery in a professional environment.",
+    timeline: [
+      {
+        period: "2019-2022",
+        title: "B.Sc. in Business Informatics",
+        institution: "University of Mannheim",
+        description:
+          "Built the academic foundation across software, information systems, and business context that informs how technical decisions are framed.",
+      },
+      {
+        period: "2022-2026",
+        title: "M.Sc. in Business Informatics",
+        institution: "Karlsruhe Institute of Technology (KIT)",
+        description:
+          "Deepened the ability to analyze complex requirements and translate them into structured, workable technical solutions.",
+      },
+      {
+        period: "Since 2022",
+        title: "Application development at Omikron Data Solutions GmbH",
+        institution: "Professional software delivery",
+        description:
+          "Built several applications in an active delivery environment, with direct exposure to implementation, iteration, and product-oriented engineering work.",
+      },
+    ],
+    highlights: [
+      {
+        value: "2019-2026",
+        label: "Continuous formal training in business informatics",
+      },
+      {
+        value: "Since 2022",
+        label: "Building applications in a professional software company",
+      },
+      {
+        value: "Business + tech",
+        label: "Comfortable connecting business needs to technical execution",
+      },
+    ],
     capabilities: [
       "Architecture reviews and implementation planning",
       "Technical feasibility and delivery-risk assessment",
       "Product, tooling, and vendor decision support",
       "Business goals translated into practical engineering choices",
       "Hands-on implementation of focused software solutions",
-    ],
-    placeholders: [
-      {
-        title: "Add one strong case study",
-        description:
-          "A short before-and-after story will do the most work here: what the client needed, what decision was made, and what improved afterward.",
-      },
-      {
-        title: "Add credible background detail",
-        description:
-          "List relevant domains, technologies, or delivery contexts so the advisory offer feels specific and trustworthy rather than generic.",
-      },
     ],
   },
   contact: {
