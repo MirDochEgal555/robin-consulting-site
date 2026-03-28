@@ -1,16 +1,20 @@
 import type { CSSProperties } from "react";
 import { SectionShell } from "@/components/section-shell";
-import { siteContent } from "@/content/site-content";
+import type { SiteContent } from "@/content/site-content";
 
-export function ProofSection() {
-  const { proof } = siteContent;
+type ProofSectionProps = {
+  content: SiteContent;
+};
+
+export function ProofSection({ content }: ProofSectionProps) {
+  const { proof } = content;
 
   return (
     <SectionShell
       id="proof"
-      eyebrow="Proof"
-      title="Academic grounding and hands-on software delivery"
-      description="Formal training in business informatics and ongoing application development work provide the basis for consulting that stays analytical, practical, and close to implementation."
+      eyebrow={content.sections.proof.eyebrow}
+      title={content.sections.proof.title}
+      description={content.sections.proof.description}
       headerClassName="mb-12"
     >
       <div className="grid gap-6 lg:grid-cols-[1.08fr_0.92fr]">
@@ -19,7 +23,7 @@ export function ProofSection() {
           style={{ "--delay": "120ms" } as CSSProperties}
         >
           <div className="font-mono text-xs uppercase tracking-[0.2em] text-sky-300">
-            Education and experience
+            {content.sections.proof.timelineLabel}
           </div>
           <div className="mt-6 space-y-5">
             {proof.timeline.map((item, index) => (
@@ -50,7 +54,7 @@ export function ProofSection() {
             style={{ "--delay": "180ms" } as CSSProperties}
           >
             <div className="font-mono text-xs uppercase tracking-[0.2em] text-sky-300">
-              Why this is credible
+              {content.sections.proof.credibilityLabel}
             </div>
             <p className="mt-4 text-base leading-7 text-slate-200">
               {proof.summary}
@@ -74,7 +78,7 @@ export function ProofSection() {
             className="glass-panel reveal-right scroll-reveal-right overflow-hidden rounded-[1.75rem] p-7 lg:p-8"
             style={{ "--delay": "260ms" } as CSSProperties}
           >
-            <h3 className="text-xl font-semibold text-white">Relevant consulting fit</h3>
+            <h3 className="text-xl font-semibold text-white">{content.sections.proof.capabilitiesTitle}</h3>
             <ul className="mt-6 grid list-none gap-4 p-0 text-sm leading-7 text-slate-300">
               {proof.capabilities.map((item) => (
                 <li

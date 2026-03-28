@@ -1,16 +1,20 @@
 import type { CSSProperties } from "react";
 import Image from "next/image";
 import { SectionShell } from "@/components/section-shell";
-import { siteContent } from "@/content/site-content";
+import type { SiteContent } from "@/content/site-content";
 import robinPortrait from "../../../IMG_0169.jpeg";
 
-export function AboutSection() {
+type AboutSectionProps = {
+  content: SiteContent;
+};
+
+export function AboutSection({ content }: AboutSectionProps) {
   return (
     <SectionShell
       id="about"
-      eyebrow="About"
-      title="A technical partner who brings clarity, structure, and follow-through"
-      description="Independent consulting for founders and lean teams that need sound engineering judgment, plain communication, and hands-on support when the next step should be built."
+      eyebrow={content.sections.about.eyebrow}
+      title={content.sections.about.title}
+      description={content.sections.about.description}
     >
       <div className="grid gap-6 lg:grid-cols-[1fr_1.15fr]">
         <div
@@ -20,7 +24,7 @@ export function AboutSection() {
           <div className="relative aspect-[4/5] min-h-[320px]">
             <Image
               src={robinPortrait}
-              alt="Portrait of Robin Keim"
+              alt={content.sections.about.imageAlt}
               fill
               priority
               sizes="(min-width: 1024px) 32rem, (min-width: 640px) 70vw, 100vw"
@@ -33,10 +37,10 @@ export function AboutSection() {
           style={{ "--delay": "180ms" } as CSSProperties}
         >
           <p className="text-lg leading-8 text-slate-200">
-            {siteContent.about.summary}
+            {content.about.summary}
           </p>
           <div className="mt-8 grid gap-4 sm:grid-cols-2">
-            {siteContent.about.points.map((point, index) => (
+            {content.about.points.map((point, index) => (
               <div
                 key={point}
                 className="card-lift reveal-up scroll-reveal-up rounded-3xl border border-white/10 bg-slate-950/35 p-4 text-sm leading-7 text-slate-300"

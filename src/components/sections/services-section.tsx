@@ -1,17 +1,21 @@
 import type { CSSProperties } from "react";
 import { SectionShell } from "@/components/section-shell";
-import { siteContent } from "@/content/site-content";
+import type { SiteContent } from "@/content/site-content";
 
-export function ServicesSection() {
+type ServicesSectionProps = {
+  content: SiteContent;
+};
+
+export function ServicesSection({ content }: ServicesSectionProps) {
   return (
     <SectionShell
       id="services"
-      eyebrow="Services"
-      title="Practical help for technical decisions that need to move forward"
-      description="The offer is positioned as fast, outcome-focused advisory rather than long, abstract consulting cycles."
+      eyebrow={content.sections.services.eyebrow}
+      title={content.sections.services.title}
+      description={content.sections.services.description}
     >
       <div className="grid gap-5 md:grid-cols-3">
-        {siteContent.services.map((service, index) => (
+        {content.services.map((service, index) => (
           <article
             key={service.title}
             className="glass-panel card-lift reveal-up scroll-tilt-in rounded-[1.75rem] p-6"

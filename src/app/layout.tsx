@@ -18,23 +18,6 @@ const siteUrl =
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
-  title: "Robin Keim | IT Consulting",
-  description:
-    "Technical advisory for founders, professionals, and teams who need clarity and a working system fast.",
-  openGraph: {
-    title: "Robin Keim | IT Consulting",
-    description:
-      "Fast, practical IT consulting that turns technical uncertainty into clear execution.",
-    url: siteUrl,
-    siteName: "Robin Consulting",
-    type: "website",
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "Robin Keim | IT Consulting",
-    description:
-      "Fast, practical IT consulting that turns technical uncertainty into clear execution.",
-  },
 };
 
 export default function RootLayout({

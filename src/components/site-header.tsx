@@ -1,19 +1,24 @@
 "use client";
 
+import Link from "next/link";
 import { startTransition, useEffect, useState } from "react";
-import { siteContent } from "@/content/site-content";
 import { ButtonLink } from "@/components/ui/button-link";
+import type { SiteContent } from "@/content/site-content";
 
-const sections = [
-  { label: "Overview", href: "#top" },
-  ...siteContent.navItems,
-] as const;
+type SiteHeaderProps = {
+  content: SiteContent;
+};
 
-export function SiteHeader() {
+export function SiteHeader({ content }: SiteHeaderProps) {
   const [activeHref, setActiveHref] = useState("#top");
   const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
+    const sections = [
+      { label: content.sections.overviewLabel, href: "#top" },
+      ...content.navItems,
+    ];
+
     const updateHeaderState = () => {
       const offset = 140;
       let currentHref = "#top";
@@ -67,7 +72,7 @@ export function SiteHeader() {
       window.removeEventListener("scroll", queueUpdate);
       window.removeEventListener("resize", queueUpdate);
     };
-  }, []);
+  }, [content.navItems, content.sections.overviewLabel]);
 
   return (
     <header
@@ -80,12 +85,12 @@ export function SiteHeader() {
       <div className="container-shell flex items-center justify-between gap-4 py-4">
         <a href="#top" className="flex flex-col">
           <span className="text-sm font-medium uppercase tracking-[0.16em] text-sky-300">
-            Robin Keim
+            {content.brand.primary}
           </span>
-          <span className="text-sm text-slate-400">IT Consulting</span>
+          <span className="text-sm text-slate-400">{content.brand.secondary}</span>
         </a>
         <nav className="hidden items-center gap-2 rounded-full border border-white/10 bg-white/[0.04] p-1 text-sm text-slate-300 md:flex">
-          {siteContent.navItems.map((item) => (
+          {content.navItems.map((item) => (
             <a
               key={item.href}
               href={item.href}
@@ -100,7 +105,18 @@ export function SiteHeader() {
             </a>
           ))}
         </nav>
-        <ButtonLink href={siteContent.bookingUrl}>Book a free consultation</ButtonLink>
+        <div className="flex items-center gap-3">
+          <Link
+            href={content.languageSwitch.href}
+            aria-label={content.languageSwitch.ariaLabel}
+            className="inline-flex h-11 items-center justify-center rounded-full border border-white/[0.12] bg-white/[0.04] px-4 text-sm font-medium text-slate-200 transition hover:border-sky-300/50 hover:bg-white/[0.08] hover:text-white"
+          >
+            {content.languageSwitch.label}
+          </Link>
+          <ButtonLink href={content.bookingUrl}>
+            {content.cta.bookConsultation}
+          </ButtonLink>
+        </div>
       </div>
     </header>
   );
