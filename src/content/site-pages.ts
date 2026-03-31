@@ -57,16 +57,16 @@ const pageDefinitions = {
       metadata: {
         title: "Services | Robin Keim IT Consulting",
         description:
-          "A dedicated overview of consulting, scoping, architecture support, and focused software implementation.",
+          "AI consulting, task automation, and website creation and hosting for businesses that want practical digital leverage.",
         openGraphTitle: "Services | Robin Keim IT Consulting",
         openGraphDescription:
-          "Consulting and implementation support for architecture, planning, and delivery decisions that need to move forward.",
+          "A service overview covering AI consulting, task automation, and website creation and hosting.",
       },
       intro: {
         eyebrow: "Services",
-        title: "Consulting and implementation support with room to grow.",
+        title: "AI consulting, task automation, and websites built around business needs.",
         description:
-          "This route separates the service offer from the homepage so additional offers, case studies, and delivery formats can be added later without restructuring the site.",
+          "This page explains how businesses can benefit from practical AI use, cleaner task automation, and websites that are created and hosted as reliable business assets.",
       },
     },
     blog: {
@@ -99,16 +99,16 @@ const pageDefinitions = {
       metadata: {
         title: "Leistungen | Robin Keim IT-Beratung",
         description:
-          "Eine eigene Uebersicht fuer Beratung, Scoping, Architekturunterstuetzung und fokussierte Software-Umsetzung.",
+          "KI-Beratung, Aufgabenautomatisierung sowie Erstellung und Hosting von Websites fuer Unternehmen, die digitale Hebel praktisch nutzen wollen.",
         openGraphTitle: "Leistungen | Robin Keim IT-Beratung",
         openGraphDescription:
-          "Beratung und Umsetzung fuer Architektur, Planung und Delivery-Entscheidungen, die vorankommen muessen.",
+          "Eine Leistungsseite zu KI-Beratung, Aufgabenautomatisierung sowie Erstellung und Hosting von Websites.",
       },
       intro: {
         eyebrow: "Leistungen",
-        title: "Beratung und Umsetzung mit einer Struktur, die mitwachsen kann.",
+        title: "KI-Beratung, Automatisierung und Websites mit klarem Nutzen fuer Ihr Unternehmen.",
         description:
-          "Diese Route trennt das Leistungsangebot von der Startseite, damit weitere Angebote, Fallbeispiele und Formate spaeter ohne Umbau der Grundstruktur ergaenzt werden koennen.",
+          "Diese Seite zeigt, wie Unternehmen von praktischem KI-Einsatz, sauberer Aufgabenautomatisierung und professionell erstellten und gehosteten Websites profitieren koennen.",
       },
     },
     blog: {

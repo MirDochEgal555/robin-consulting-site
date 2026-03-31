@@ -1,10 +1,11 @@
 import { ContactSection } from "@/components/sections/contact-section";
 import { ProcessSection } from "@/components/sections/process-section";
-import { ServicesSection } from "@/components/sections/services-section";
+import { ServiceOfferingsSection } from "@/components/sections/service-offerings-section";
 import { PageIntro } from "@/components/page-intro";
 import { PageShell } from "@/components/page-shell";
 import { getSiteContent, type SiteLocale } from "@/content/site-content";
 import { getPageDefinition } from "@/content/site-pages";
+import { getServicesPageContent } from "@/content/services-page-content";
 
 type ServicesPageProps = {
   locale: SiteLocale;
@@ -13,9 +14,10 @@ type ServicesPageProps = {
 export function ServicesPage({ locale }: ServicesPageProps) {
   const content = getSiteContent(locale);
   const page = getPageDefinition(locale, "services");
+  const servicesPageContent = getServicesPageContent(locale);
   const pageNavItems = [
     { label: content.sections.overviewLabel, href: "#overview" },
-    { label: content.sections.services.eyebrow, href: "#services" },
+    { label: servicesPageContent.section.eyebrow, href: "#services" },
     { label: content.sections.process.eyebrow, href: "#process" },
     { label: content.sections.contact.eyebrow, href: "#contact" },
   ];
@@ -37,7 +39,7 @@ export function ServicesPage({ locale }: ServicesPageProps) {
         title={page.intro.title}
         description={page.intro.description}
       />
-      <ServicesSection content={content} />
+      <ServiceOfferingsSection locale={locale} />
       <ProcessSection content={content} />
       <ContactSection content={content} />
     </PageShell>
