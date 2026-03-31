@@ -351,7 +351,7 @@ const siteContent = {
     metadata: {
       title: "Robin Keim | IT-Beratung",
       description:
-        "Technische Beratung für Gründer, Professionals und Teams, die schnell Klarheit und ein funktionierendes System brauchen.",
+        "IT-Beratung für Unternehmen und Unternehmern, die schnell Klarheit und ein funktionierendes System brauchen.",
       openGraphTitle: "Robin Keim | IT-Beratung",
       openGraphDescription:
         "Schnelle, pragmatische IT-Beratung, die technische Unsicherheit in klare Umsetzung übersetzt.",
@@ -381,10 +381,10 @@ const siteContent = {
     },
     footerTagline: "Klare Systeme. Schnellere Entscheidungen.",
     hero: {
-      eyebrow: "Technische Beratung",
-      headline: "Technische Beratung mit klarem Weg in die Umsetzung.",
+      eyebrow: "IT-Beratung",
+      headline: "IT-Beratung mit klarem Weg in die Umsetzung.",
       description:
-        "Robin Keim hilft Gründern, Operatoren und kleinen Teams dabei, bessere technische Entscheidungen zu treffen, eine tragfähige Lösung zu definieren und die richtige Software umzusetzen, wenn praktische Umsetzung gefragt ist.",
+        "Robin Keim hilft Untenehmen und Unternehmern dabei, gute IT-Entscheidungen zu treffen, eine tragfähige Lösung zu definieren und die richtige Software umzusetzen, wenn praktische Umsetzung gefragt ist.",
       promiseLabel: "Kernversprechen",
       promise:
         "Sie erhalten pragmatische Beratung zu Architektur, Tooling, Scope und Delivery, mit der Option, aus einer Empfehlung direkt in eine fokussierte Software-Umsetzung zu wechseln.",
@@ -396,15 +396,15 @@ const siteContent = {
         },
         {
           value: "Kostenloses Erstgespräch",
-          label: "Ein unkompliziertes erstes Gespräch, um die Passung zu prüfen",
+          label: "Ein unkompliziertes erstes Gespräch, um Bedarfe zu klären und Lösungen zu skizzieren",
         },
         {
           value: "Von Plan zu Umsetzung",
-          label: "Beratung, die bei Bedarf direkt in Implementierung übergeht",
+          label: "Beratungvon der Planung bis hin zur effizienten Umsetzung in Ihrem Unternehmen",
         },
       ],
       problems: [
-        "Sie müssen bald eine technische Entscheidung treffen, aber alle Optionen klingen plausibel.",
+        "Sie müssen bald eine Entscheidung treffen, aber alle Optionen klingen plausibel.",
         "Sie kennen das gewünschte Geschäftsergebnis, aber nicht die technischen Trade-offs dahinter.",
         "Sie brauchen einen realistischen Plan und keine lange Liste abstrakter Empfehlungen.",
       ],
@@ -414,15 +414,15 @@ const siteContent = {
       services: {
         eyebrow: "Leistungen",
         title:
-          "Konkrete Unterstützung für technische Entscheidungen, die vorankommen müssen",
+          "Konkrete Unterstützung für IT-Systeme in Ihrem Unternehmen, die helfen Ihre Potenziale zu heben",
         description:
           "Das Angebot ist als schnelle, ergebnisorientierte Beratung angelegt und nicht als langer, abstrakter Beratungsprozess.",
       },
       process: {
         eyebrow: "Vorgehen",
-        title: "Ein kurzer Weg von Unsicherheit zu einer tragfähigen Richtung",
+        title: "Ein kurzer Weg von einer Idee zu einer tragfähigen Umsetzung",
         description:
-          "Der Ablauf betont Geschwindigkeit, Klarheit und konkrete Ergebnisse.",
+          "Der Prozess garantiert Geschwindigkeit, Klarheit und konkrete Ergebnisse.",
       },
       about: {
         eyebrow: "Über Robin",
@@ -438,7 +438,7 @@ const siteContent = {
           "Formale Ausbildung in Wirtschaftsinformatik und laufende Entwicklungsarbeit bilden die Grundlage für Beratung, die analytisch, pragmatisch und nah an der Umsetzung bleibt.",
         timelineLabel: "Ausbildung und Erfahrung",
         credibilityLabel: "Warum das belastbar ist",
-        capabilitiesTitle: "Wofür die Zusammenarbeit besonders passt",
+        capabilitiesTitle: "Meine Stärken",
       },
       contact: {
         eyebrow: "Kontakt",
@@ -452,41 +452,41 @@ const siteContent = {
         eyebrow: "Strategie",
         title: "Architektur- und Stack-Entscheidungen",
         description:
-          "Technische Optionen werden vor einer Festlegung belastbar geprüft, damit Plattform, Tooling und Systemdesign zum tatsächlichen Geschäftsbedarf passen.",
+          "Technische Optionen werden vor einer Festlegung auf Umsetzbarkeit geprüft, damit Plattform, Tooling und Systemdesign zum tatsächlichen Geschäftsbedarf passen.",
       },
       {
         eyebrow: "Planung",
         title: "Scoping und Umsetzungsplanung",
         description:
-          "Breite Anforderungen werden in einen umsetzbaren Plan mit klaren Prioritäten, realistischem Scope und sinnvollen Trade-offs für die Delivery übersetzt.",
+          "Breite Anforderungen werden in einen klar strukturierten Plan mit klaren Prioritäten, realistischem Scope und sinnvollen Trade-offs für die Delivery umgesetzt.",
       },
       {
         eyebrow: "Umsetzung",
         title: "Software-Lösungen für klar umrissene Anwendungsfälle",
         description:
-          "Wenn die Lösung klar ist, kann Robin auch ausgewählte Software-Bausteine, interne Tools, Automatisierungen oder Produktfunktionen umsetzen, ohne dass daraus ein großer Agenturprozess wird.",
+          "Wenn wir gemeinsam die Lösung gefunden haben, können ausgewählte Software-Bausteine, interne Tools, Automatisierungen oder Produktfunktionen umgesetzt werden, ohne dass daraus ein großer Agenturprozess wird.",
       },
     ],
     process: [
       {
-        title: "Die Entscheidung schärfen",
+        title: "Die Idee konkretisieren",
         description:
-          "Am Anfang stehen der Geschäftskontext, der aktuelle Blocker und die konkrete Entscheidung, die jetzt wirklich getroffen werden muss.",
+          "Am Anfang steht ein persönliches Gespräch um die gemeinsamen Ziele zu definieren.",
       },
       {
-        title: "Die realen Optionen vergleichen",
+        title: "Mögliche Optionen vergleichen",
         description:
-          "Komplexität wird auf wenige belastbare Wege reduziert, jeweils mit klaren Trade-offs, Kostenauswirkungen und Delivery-Folgen.",
+          "Komplexität wird auf wenige Möglichkeiten reduziert, jeweils mit klaren Trade-offs, Kostenauswirkungen und Delivery-Folgen.",
       },
       {
-        title: "Mit einer Richtung rausgehen",
+        title: "Ein einheitliches Commitment erzeugen",
         description:
-          "Sie verlassen das Gespräch mit einer Empfehlung, einem Entscheidungsrahmen oder einem konkreten Nächste-Schritte-Plan, bei Bedarf inklusive Umsetzungsunterstützung.",
+          "Sie bekommen eine klare Empfehlung und Sie entscheiden welche nächsten Schritte zu gehen sind bei denen ich Sie gerne unterstütze.",
       },
     ],
     about: {
       summary:
-        "Robin arbeitet am besten mit Gründern, Operatoren und kleinen Teams, die eine klare technische Richtung brauchen, ohne unnötigen Prozess aufzubauen. Er übersetzt Geschäftsziele in konkrete Engineering-Entscheidungen, erklärt Trade-offs in klarer Sprache und bleibt nah genug an der Delivery, um bei Bedarf auch in der Umsetzung zu helfen.",
+        "Unternehmen und Unternehmer, die eine klare technische Richtung brauchen, werden unterstützt ohne unnötigen Prozess aufzubauen. Er übersetzt Geschäftsziele in konkrete Engineering-Entscheidungen, erklärt Trade-offs in klarer Sprache und bleibt nah genug an der Delivery, um bei Bedarf auch in der Umsetzung zu helfen.",
       points: [
         "Empfehlungen orientieren sich an Geschäftsprioritäten, Liefer-Risiken und realistischem Scope.",
         "Gespräche bleiben direkt und pragmatisch, damit Entscheidungen leichter getroffen und umgesetzt werden.",
