@@ -90,11 +90,6 @@ export type SiteContent = {
       title: string;
       description: string;
       imageAlt: string;
-    };
-    proof: {
-      eyebrow: string;
-      title: string;
-      description: string;
       timelineLabel: string;
       credibilityLabel: string;
       capabilitiesTitle: string;
@@ -108,10 +103,6 @@ export type SiteContent = {
   services: Service[];
   process: ProcessStep[];
   about: {
-    summary: string;
-    points: string[];
-  };
-  proof: {
     summary: string;
     timeline: TimelineItem[];
     highlights: Highlight[];
@@ -160,7 +151,6 @@ const siteContent = {
       { label: "Services", href: "#services" },
       { label: "Process", href: "#process" },
       { label: "About", href: "#about" },
-      { label: "Proof", href: "#proof" },
       { label: "Contact", href: "#contact" },
     ],
     cta: {
@@ -176,9 +166,9 @@ const siteContent = {
     footerTagline: "Clear systems. Faster decisions.",
     hero: {
       eyebrow: "Technical advisory",
-      headline: "Technical consulting with a path to implementation.",
+      headline: "IT consulting with a path to implementation.",
       description:
-        "Robin Keim helps founders, operators, and small teams make better technical decisions, define a workable solution, and implement the right software when hands-on execution is needed.",
+        "Helping companies and founders make better technical decisions, define a workable solution, and implement the right software when hands-on execution is needed.",
       promiseLabel: "Core promise",
       promise:
         "Get practical consulting on architecture, tooling, scope, and delivery, with the option to move from recommendation into focused software implementation.",
@@ -224,21 +214,15 @@ const siteContent = {
         description:
           "Independent consulting for founders and lean teams that need sound engineering judgment, plain communication, and hands-on support when the next step should be built.",
         imageAlt: "Portrait of Robin Keim",
-      },
-      proof: {
-        eyebrow: "Proof",
-        title: "Academic grounding and hands-on software delivery",
-        description:
-          "Formal training in business informatics and ongoing application development work provide the basis for consulting that stays analytical, practical, and close to implementation.",
         timelineLabel: "Education and experience",
-        credibilityLabel: "Why this is credible",
-        capabilitiesTitle: "Relevant consulting fit",
+        credibilityLabel: "Highlights",
+        capabilitiesTitle: "Strengths",
       },
       contact: {
         eyebrow: "Contact",
         title: "Book the call or start the conversation by email",
         description:
-          "The primary CTA remains the consultation booking link, with email as the secondary path.",
+          "The primary contact remains the consultation booking link, with email as the secondary path if questions arise.",
       },
     },
     services: [
@@ -279,16 +263,6 @@ const siteContent = {
       },
     ],
     about: {
-      summary:
-        "Robin works best with founders, operators, and small teams that need a clear technical direction without adding unnecessary process. He turns business goals into concrete engineering decisions, explains tradeoffs in plain language, and stays close enough to delivery to help move the work forward when execution support is useful.",
-      points: [
-        "Recommendations are grounded in business priorities, delivery risk, and realistic scope.",
-        "Conversations stay direct and practical, so decisions are easier to make and act on.",
-        "Technical depth is there when it matters, without hiding the answer behind jargon.",
-        "A strong fit when you need both consulting judgment and selective implementation support.",
-      ],
-    },
-    proof: {
       summary:
         "The consulting offer is backed by formal training in business informatics and several years of hands-on software delivery in a professional environment.",
       timeline: [
@@ -365,8 +339,7 @@ const siteContent = {
     navItems: [
       { label: "Leistungen", href: "#services" },
       { label: "Vorgehen", href: "#process" },
-      { label: "Über Robin", href: "#about" },
-      { label: "Profil", href: "#proof" },
+      { label: "Über mich", href: "#about" },
       { label: "Kontakt", href: "#contact" },
     ],
     cta: {
@@ -384,7 +357,7 @@ const siteContent = {
       eyebrow: "IT-Beratung",
       headline: "IT-Beratung mit klarem Weg in die Umsetzung.",
       description:
-        "Robin Keim hilft Untenehmen und Unternehmern dabei, gute IT-Entscheidungen zu treffen, eine tragfähige Lösung zu definieren und die richtige Software umzusetzen, wenn praktische Umsetzung gefragt ist.",
+        "Unternehmen und Unternehmern wird dabei geholfen, gute IT-Entscheidungen zu treffen, eine tragfähige Lösung zu definieren und die richtige Software umzusetzen, wenn praktische Umsetzung gefragt ist.",
       promiseLabel: "Kernversprechen",
       promise:
         "Sie erhalten pragmatische Beratung zu Architektur, Tooling, Scope und Delivery, mit der Option, aus einer Empfehlung direkt in eine fokussierte Software-Umsetzung zu wechseln.",
@@ -425,26 +398,20 @@ const siteContent = {
           "Der Prozess garantiert Geschwindigkeit, Klarheit und konkrete Ergebnisse.",
       },
       about: {
-        eyebrow: "Über Robin",
-        title: "Ein technischer Partner mit Klarheit, Struktur und Umsetzungskraft",
+        eyebrow: "Über mich",
+        title: "Ihr IT-Partner mit Expertise, klarer Kommunikation und Kompetenz",
         description:
           "Unabhängige Beratung für Gründer und schlanke Teams, die fundiertes Engineering-Urteilsvermögen, klare Kommunikation und praktische Unterstützung brauchen, wenn der nächste Schritt gebaut werden soll.",
         imageAlt: "Porträt von Robin Keim",
-      },
-      proof: {
-        eyebrow: "Profil",
-        title: "Akademisches Fundament und praktische Software-Entwicklung",
-        description:
-          "Formale Ausbildung in Wirtschaftsinformatik und laufende Entwicklungsarbeit bilden die Grundlage für Beratung, die analytisch, pragmatisch und nah an der Umsetzung bleibt.",
         timelineLabel: "Ausbildung und Erfahrung",
-        credibilityLabel: "Warum das belastbar ist",
-        capabilitiesTitle: "Meine Stärken",
+        credibilityLabel: "Highlights",
+        capabilitiesTitle: "Stärken",
       },
       contact: {
         eyebrow: "Kontakt",
         title: "Call buchen oder per E-Mail ins Gespräch kommen",
         description:
-          "Der primäre CTA bleibt der Link zum Erstgespräch, E-Mail ist der direkte zweite Weg.",
+          "Die primäre Anlaufstelle ist ein Erstgespräch, aber gerne senden Sie mir auch eine E-Mail bei Fragen.",
       },
     },
     services: [
@@ -486,16 +453,6 @@ const siteContent = {
     ],
     about: {
       summary:
-        "Unternehmen und Unternehmer, die eine klare technische Richtung brauchen, werden unterstützt ohne unnötigen Prozess aufzubauen. Er übersetzt Geschäftsziele in konkrete Engineering-Entscheidungen, erklärt Trade-offs in klarer Sprache und bleibt nah genug an der Delivery, um bei Bedarf auch in der Umsetzung zu helfen.",
-      points: [
-        "Empfehlungen orientieren sich an Geschäftsprioritäten, Liefer-Risiken und realistischem Scope.",
-        "Gespräche bleiben direkt und pragmatisch, damit Entscheidungen leichter getroffen und umgesetzt werden.",
-        "Technische Tiefe ist vorhanden, wenn sie relevant ist, ohne die Antwort hinter Jargon zu verstecken.",
-        "Besonders passend, wenn sowohl Beratungssicherheit als auch selektive Umsetzung gebraucht werden.",
-      ],
-    },
-    proof: {
-      summary:
         "Das Beratungsangebot wird durch formale Ausbildung in Wirtschaftsinformatik und mehrere Jahre praktischer Software-Entwicklung im professionellen Umfeld gestützt.",
       timeline: [
         {
@@ -523,11 +480,11 @@ const siteContent = {
       highlights: [
         {
           value: "2019-2026",
-          label: "Durchgehende formale Ausbildung in Wirtschaftsinformatik",
+          label: "Durchgehendes Studium einer Kombination aus Wirtschaft und Informatik",
         },
         {
           value: "Seit 2022",
-          label: "Entwicklung von Anwendungen in einem professionellen Softwareunternehmen",
+          label: "Entwicklung von Anwendungen in einem professionellen IT-Unternehmen",
         },
         {
           value: "Business + Tech",
@@ -536,9 +493,9 @@ const siteContent = {
       ],
       capabilities: [
         "Architektur-Reviews und Implementierungsplanung",
-        "Bewertung technischer Machbarkeit und Delivery-Risiken",
+        "Bewertung technischer Umsetzbarkeit und Delivery-Risiken",
         "Unterstützung bei Produkt-, Tooling- und Anbieterentscheidungen",
-        "Übersetzung von Geschäftszielen in praktikable Engineering-Entscheidungen",
+        "Übersetzung von Geschäftszielen in praktikable Entscheidungen",
         "Hands-on-Umsetzung fokussierter Software-Lösungen",
       ],
     },
