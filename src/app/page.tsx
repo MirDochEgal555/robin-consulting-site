@@ -1,7 +1,7 @@
 import { HomePage } from "@/components/home-page";
-import { getSiteMetadata } from "@/content/site-content";
+import { getPageMetadata } from "@/content/site-pages";
 
-export const metadata = getSiteMetadata("en");
+export const metadata = getPageMetadata("en");
 
 export default function Page() {
   return <HomePage locale="en" />;

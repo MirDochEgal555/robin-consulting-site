@@ -1,39 +1,34 @@
 import type { MetadataRoute } from "next";
+import {
+  getAbsolutePageUrl,
+  sitePageKeys,
+} from "@/content/site-pages";
 
 export const dynamic = "force-static";
 
-const siteUrl =
-  (process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000").replace(
-    /\/$/,
-    "",
-  );
-
 export default function sitemap(): MetadataRoute.Sitemap {
-  return [
-    {
-      url: siteUrl,
+  const locales = ["en", "de"] as const;
+
+  return locales.flatMap((locale) =>
+    sitePageKeys.map((pageKey) => ({
+      url: getAbsolutePageUrl(locale, pageKey),
       lastModified: new Date(),
-      changeFrequency: "weekly",
-      priority: 1,
+      changeFrequency: pageKey === "blog" ? "monthly" : "weekly",
+      priority:
+        pageKey === "home"
+          ? locale === "en"
+            ? 1
+            : 0.9
+          : pageKey === "services"
+            ? 0.8
+            : 0.6,
       alternates: {
         languages: {
-          en: siteUrl,
-          de: `${siteUrl}/de`,
+          en: getAbsolutePageUrl("en", pageKey),
+          de: getAbsolutePageUrl("de", pageKey),
         },
       },
-    },
-    {
-      url: `${siteUrl}/de`,
-      lastModified: new Date(),
-      changeFrequency: "weekly",
-      priority: 0.9,
-      alternates: {
-        languages: {
-          en: siteUrl,
-          de: `${siteUrl}/de`,
-        },
-      },
-    },
-  ];
+    })),
+  );
 }
 
