@@ -1,0 +1,235 @@
+{
+    id: "discovery-before-delivery",
+    featured: true,
+    publishedAt: "2026-03-12",
+    updatedAt: "2026-03-20",
+    readingTimeMinutes: 6,
+    locales: {
+      en: {
+        slug: "discovery-before-delivery",
+        title: "When a software project needs discovery before delivery",
+        excerpt:
+          "A short discovery phase reduces avoidable risk when scope, ownership, or system boundaries are still unclear.",
+        seoDescription:
+          "How to recognize when a software initiative needs discovery before implementation starts, and what a useful discovery phase should produce.",
+        category: "Delivery strategy",
+        tags: ["Discovery", "Project scoping", "Delivery planning"],
+        sections: [
+          {
+            title: "The early warning signs",
+            paragraphs: [
+              "Teams often want to move straight into implementation because it feels faster. In practice, that only works when the problem, constraints, and decision-makers are already aligned.",
+              "If the same conversation keeps circling around ownership, missing requirements, integration points, or budget assumptions, the work is not ready for delivery. It is still in discovery, whether the team names it that way or not.",
+            ],
+            bullets: [
+              "Multiple stakeholders describe different success criteria.",
+              "The technical shape of the solution changes from meeting to meeting.",
+              "No one can explain what the first usable milestone should look like.",
+            ],
+          },
+          {
+            title: "What discovery should actually produce",
+            paragraphs: [
+              "A useful discovery phase is not a long deck or a vague research sprint. It should reduce uncertainty enough that implementation choices become defensible.",
+              "The output is usually a smaller set of realistic options, a first milestone with clear boundaries, and an explicit list of assumptions that still need validation.",
+            ],
+          },
+          {
+            title: "Why this matters for smaller teams",
+            paragraphs: [
+              "Lean teams do not have much room for expensive rework. A week spent clarifying scope is often cheaper than a month of building the wrong integration or workflow.",
+              "Discovery creates leverage because it protects delivery capacity. It keeps engineering effort tied to an actual business decision instead of to momentum alone.",
+            ],
+          },
+        ],
+      },
+      de: {
+        slug: "discovery-vor-der-umsetzung",
+        title: "Wann ein Softwareprojekt zuerst Discovery statt Umsetzung braucht",
+        excerpt:
+          "Eine kurze Discovery-Phase reduziert vermeidbares Risiko, wenn Scope, Verantwortlichkeiten oder Systemgrenzen noch unscharf sind.",
+        seoDescription:
+          "Woran man erkennt, dass ein Softwarevorhaben erst Discovery braucht, und welche Ergebnisse eine gute Discovery-Phase liefern sollte.",
+        category: "Delivery-Strategie",
+        tags: ["Discovery", "Scoping", "Delivery-Planung"],
+        sections: [
+          {
+            title: "Fruehe Warnsignale",
+            paragraphs: [
+              "Viele Teams wollen direkt in die Umsetzung gehen, weil das nach Geschwindigkeit aussieht. Das funktioniert in der Praxis aber nur, wenn Problem, Rahmenbedingungen und Verantwortliche bereits klar ausgerichtet sind.",
+              "Wenn sich Gespraeche immer wieder um Verantwortlichkeiten, fehlende Anforderungen, Integrationen oder Budgetannahmen drehen, ist die Arbeit noch nicht reif fuer Delivery. Sie befindet sich noch in der Discovery, auch wenn niemand es so nennt.",
+            ],
+            bullets: [
+              "Mehrere Stakeholder beschreiben unterschiedliche Erfolgskriterien.",
+              "Die technische Form der Loesung veraendert sich von Termin zu Termin.",
+              "Niemand kann das erste nutzbare Zwischenziel konkret benennen.",
+            ],
+          },
+          {
+            title: "Was Discovery wirklich liefern sollte",
+            paragraphs: [
+              "Eine gute Discovery-Phase ist weder ein langes Folienset noch ein unklarer Research-Sprint. Sie sollte Unsicherheit so weit reduzieren, dass Umsetzungsentscheidungen belastbar werden.",
+              "Typische Ergebnisse sind wenige realistische Optionen, ein erstes Zwischenziel mit klaren Grenzen und eine explizite Liste offener Annahmen, die noch validiert werden muessen.",
+            ],
+          },
+          {
+            title: "Warum das gerade fuer kleine Teams wichtig ist",
+            paragraphs: [
+              "Schlanke Teams haben wenig Spielraum fuer teure Nacharbeit. Eine Woche fuer Scope-Klarheit ist oft guenstiger als ein Monat Arbeit an der falschen Integration oder am falschen Workflow.",
+              "Discovery schafft Hebel, weil sie Delivery-Kapazitaet schuetzt. Engineering-Aufwand bleibt an eine echte Geschaeftsentscheidung gekoppelt statt nur an Momentum.",
+            ],
+          },
+        ],
+      },
+    },
+  },
+  {
+    id: "buy-vs-build-internal-tools",
+    featured: true,
+    publishedAt: "2026-02-24",
+    updatedAt: "2026-03-05",
+    readingTimeMinutes: 5,
+    locales: {
+      en: {
+        slug: "buy-vs-build-internal-tools",
+        title: "Buy vs. build for internal tools",
+        excerpt:
+          "The right answer depends less on ideology and more on process fit, integration depth, and the cost of future change.",
+        seoDescription:
+          "A practical framework for deciding whether internal tooling should be bought, customized, or built in-house.",
+        category: "Architecture decisions",
+        tags: ["Internal tools", "SaaS", "Architecture"],
+        sections: [
+          {
+            title: "Start with process fit, not feature count",
+            paragraphs: [
+              "Product comparisons often begin with checklists, but that is rarely where the real risk sits. The better question is how well a tool fits the workflow the team actually needs to run every week.",
+              "If the process is stable and standard, buying is often the rational default. If the process is a differentiator or still evolving fast, forced adaptation can become expensive very quickly.",
+            ],
+          },
+          {
+            title: "Integration depth changes the economics",
+            paragraphs: [
+              "A tool that works well in isolation can still create friction once data has to move across systems. Manual exports, brittle APIs, or unclear permissions quickly erase the apparent cost advantage of buying.",
+              "Building can make sense when the value is not the interface alone but the control over data, automation, and operational visibility around it.",
+            ],
+          },
+          {
+            title: "Use a three-way decision instead of a binary one",
+            paragraphs: [
+              "In many cases the best answer is neither a full custom build nor a pure off-the-shelf purchase. Teams often get better results from adopting a strong standard product and adding a focused custom layer around it.",
+              "That middle option keeps delivery lean while preserving room for the workflows that really matter.",
+            ],
+          },
+        ],
+      },
+      de: {
+        slug: "kaufen-oder-bauen-interne-tools",
+        title: "Kaufen oder bauen bei internen Tools",
+        excerpt:
+          "Die richtige Entscheidung haengt weniger von Ideologie ab als von Prozess-Fit, Integrationstiefe und den Kosten spaeterer Veraenderung.",
+        seoDescription:
+          "Ein pragmatisches Entscheidungsmodell dafuer, ob interne Tools gekauft, angepasst oder selbst gebaut werden sollten.",
+        category: "Architekturentscheidungen",
+        tags: ["Interne Tools", "SaaS", "Architektur"],
+        sections: [
+          {
+            title: "Mit Prozess-Fit starten, nicht mit Feature-Listen",
+            paragraphs: [
+              "Produktvergleiche beginnen oft mit Checklisten, aber dort liegt selten das eigentliche Risiko. Die bessere Frage ist, wie gut ein Tool zu dem Workflow passt, den das Team jede Woche wirklich braucht.",
+              "Wenn der Prozess stabil und standardisierbar ist, ist Kaufen oft der rationale Default. Wenn der Prozess ein echter Unterschied ist oder sich schnell veraendert, kann erzwungene Anpassung schnell teuer werden.",
+            ],
+          },
+          {
+            title: "Integrationstiefe veraendert die Wirtschaftlichkeit",
+            paragraphs: [
+              "Ein Tool kann isoliert gut aussehen und trotzdem Reibung erzeugen, sobald Daten zwischen mehreren Systemen bewegt werden muessen. Manuelle Exporte, fragile APIs oder unklare Berechtigungen vernichten den scheinbaren Kostenvorteil schnell.",
+              "Bauen kann sinnvoll sein, wenn der eigentliche Wert nicht nur in der Oberflaeche liegt, sondern in Kontrolle ueber Daten, Automatisierung und operative Transparenz.",
+            ],
+          },
+          {
+            title: "Besser drei Optionen pruefen statt nur zwei",
+            paragraphs: [
+              "In vielen Faellen ist die beste Antwort weder ein kompletter Eigenbau noch ein reiner Standardkauf. Teams fahren oft besser mit einem starken Standardprodukt plus einer fokussierten eigenen Schicht darum herum.",
+              "Diese Zwischenloesung haelt Delivery schlank und laesst trotzdem Raum fuer die Workflows, die wirklich wichtig sind.",
+            ],
+          },
+        ],
+      },
+    },
+  },
+  {
+    id: "reduce-risk-in-ai-automation",
+    featured: false,
+    publishedAt: "2026-01-30",
+    updatedAt: "2026-02-08",
+    readingTimeMinutes: 7,
+    locales: {
+      en: {
+        slug: "reduce-risk-in-ai-automation",
+        title: "Reducing delivery risk in AI automation projects",
+        excerpt:
+          "AI automation becomes more reliable when teams constrain the first workflow, define human review points, and instrument failure early.",
+        seoDescription:
+          "Practical steps for reducing delivery risk when introducing AI-driven automation into internal business workflows.",
+        category: "Automation",
+        tags: ["AI automation", "Risk management", "Operations"],
+        sections: [
+          {
+            title: "Do not automate the whole process first",
+            paragraphs: [
+              "Many AI automation efforts fail because the first release tries to absorb an entire messy workflow. That makes quality hard to measure and operational failure difficult to isolate.",
+              "A better first step is to choose one narrow decision or handoff inside the process, automate that, and prove that the surrounding system can safely absorb the output.",
+            ],
+          },
+          {
+            title: "Human review is part of the system design",
+            paragraphs: [
+              "Human review should not be treated as a temporary workaround. In many business processes it is a permanent control layer that keeps automation useful instead of reckless.",
+              "The goal is to decide which moments need approval, which ones need sampling, and which ones can run fully automated with monitoring only.",
+            ],
+          },
+          {
+            title: "Instrument failure before scale arrives",
+            paragraphs: [
+              "Teams often add dashboards after rollout, but by then the failure modes are already in production. Logging, confidence thresholds, replay paths, and manual recovery options should exist before the first broader launch.",
+              "That discipline turns AI automation from a demo into an operational system the business can trust.",
+            ],
+          },
+        ],
+      },
+      de: {
+        slug: "risiko-in-ki-automatisierung-reduzieren",
+        title: "Lieferungsrisiko in KI-Automatisierungsprojekten reduzieren",
+        excerpt:
+          "KI-Automatisierung wird verlaesslicher, wenn Teams den ersten Workflow klar begrenzen, Review-Punkte definieren und Fehler frueh messbar machen.",
+        seoDescription:
+          "Praktische Schritte, um Delivery-Risiken bei KI-getriebener Automatisierung in internen Prozessen zu reduzieren.",
+        category: "Automatisierung",
+        tags: ["KI-Automatisierung", "Risikomanagement", "Operations"],
+        sections: [
+          {
+            title: "Nicht zuerst den ganzen Prozess automatisieren",
+            paragraphs: [
+              "Viele KI-Automatisierungsinitiativen scheitern, weil der erste Release einen kompletten unaufgeraeumten Workflow aufnehmen soll. Dadurch wird Qualitaet schwer messbar und operative Fehler lassen sich kaum isolieren.",
+              "Der bessere Startpunkt ist eine eng begrenzte Entscheidung oder Uebergabe innerhalb des Prozesses. Diese wird automatisiert und zuerst geprueft, ob das umgebende System das Ergebnis sicher aufnehmen kann.",
+            ],
+          },
+          {
+            title: "Menschliches Review ist Teil des Systemdesigns",
+            paragraphs: [
+              "Menschliches Review sollte nicht als voruebergehender Workaround betrachtet werden. In vielen Geschaeftsprozessen ist es eine dauerhafte Kontrollschicht, die Automatisierung nuetzlich statt riskant macht.",
+              "Entscheidend ist, welche Momente Freigabe brauchen, welche per Stichprobe kontrolliert werden und welche mit Monitoring vollautomatisch laufen koennen.",
+            ],
+          },
+          {
+            title: "Fehlerpfade vor der Skalierung instrumentieren",
+            paragraphs: [
+              "Dashboards werden oft erst nach dem Rollout gebaut, aber dann sind die Fehlerbilder bereits in Produktion. Logging, Schwellenwerte, Replay-Pfade und manuelle Recovery-Optionen sollten vor dem breiteren Start stehen.",
+              "Genau diese Disziplin macht aus KI-Automatisierung ein belastbares Betriebssystem statt nur einer Demo.",
+            ],
+          },
+        ],
+      },
+    },
+  },

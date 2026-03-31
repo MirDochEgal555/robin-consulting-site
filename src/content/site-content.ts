@@ -75,6 +75,11 @@ export type SiteContent = {
   };
   sections: {
     overviewLabel: string;
+    blog: {
+      eyebrow: string;
+      title: string;
+      description: string;
+    };
     services: {
       eyebrow: string;
       title: string;
@@ -112,6 +117,15 @@ export type SiteContent = {
     title: string;
     description: string;
     email: string;
+  };
+  blog: {
+    featuredLabel: string;
+    latestLabel: string;
+    archiveLabel: string;
+    readArticleLabel: string;
+    browseAllLabel: string;
+    backToBlogLabel: string;
+    relatedPostsLabel: string;
   };
 };
 
@@ -151,6 +165,7 @@ const siteContent = {
       { label: "Services", href: "#services" },
       { label: "Process", href: "#process" },
       { label: "About", href: "#about" },
+      { label: "Insights", href: "#insights" },
       { label: "Contact", href: "#contact" },
     ],
     cta: {
@@ -195,6 +210,12 @@ const siteContent = {
     },
     sections: {
       overviewLabel: "Overview",
+      blog: {
+        eyebrow: "Insights",
+        title: "Recent articles that keep the site active and searchable",
+        description:
+          "The blog now works as a publishing surface for practical consulting notes, architecture guidance, and delivery insights that can compound discoverability over time.",
+      },
       services: {
         eyebrow: "Services",
         title: "Practical help for technical decisions that need to move forward",
@@ -316,6 +337,15 @@ const siteContent = {
         "Start with a short consultation to discuss the problem, the decision in front of you, and whether the work calls for consulting, implementation, or both. If you prefer email, reach out directly.",
       email: contactEmail,
     },
+    blog: {
+      featuredLabel: "Featured article",
+      latestLabel: "Latest article",
+      archiveLabel: "Article archive",
+      readArticleLabel: "Read article",
+      browseAllLabel: "Browse the blog",
+      backToBlogLabel: "Back to blog",
+      relatedPostsLabel: "Related reading",
+    },
     ...shared,
   },
   de: {
@@ -340,6 +370,7 @@ const siteContent = {
       { label: "Leistungen", href: "#services" },
       { label: "Vorgehen", href: "#process" },
       { label: "Über mich", href: "#about" },
+      { label: "Blog", href: "#insights" },
       { label: "Kontakt", href: "#contact" },
     ],
     cta: {
@@ -384,6 +415,12 @@ const siteContent = {
     },
     sections: {
       overviewLabel: "Überblick",
+      blog: {
+        eyebrow: "Blog",
+        title: "Neue Beiträge, die Sichtbarkeit und Relevanz aufbauen",
+        description:
+          "Der Blog dient jetzt als Publishing-Fläche für praxisnahe Inhalte zu Beratung, Architektur und Delivery, die über die Zeit neue Suchanfragen adressieren können.",
+      },
       services: {
         eyebrow: "Leistungen",
         title:
@@ -504,6 +541,15 @@ const siteContent = {
       description:
         "Starten Sie mit einem kurzen Gespräch über das Problem, die anstehende Entscheidung und die Frage, ob Beratung, Umsetzung oder beides gebraucht wird. Wenn Sie lieber per E-Mail starten, schreiben Sie direkt.",
       email: contactEmail,
+    },
+    blog: {
+      featuredLabel: "Hervorgehobener Beitrag",
+      latestLabel: "Neuester Beitrag",
+      archiveLabel: "Beitragsarchiv",
+      readArticleLabel: "Beitrag lesen",
+      browseAllLabel: "Zum Blog",
+      backToBlogLabel: "Zurück zum Blog",
+      relatedPostsLabel: "Weiterführende Beiträge",
     },
     ...shared,
   },

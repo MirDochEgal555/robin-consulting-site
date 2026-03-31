@@ -26,6 +26,19 @@ function normalizePath(path: string) {
   return path.replace(/\/+$/, "");
 }
 
+function isPathActive(targetHref: string, activePath: string) {
+  const normalizedTarget = normalizePath(targetHref);
+
+  if (normalizedTarget === "/") {
+    return activePath === "/";
+  }
+
+  return (
+    activePath === normalizedTarget ||
+    activePath.startsWith(`${normalizedTarget}/`)
+  );
+}
+
 export function SiteHeader({
   content,
   brandHref,
@@ -138,7 +151,7 @@ export function SiteHeader({
     const isAnchor = item.href.startsWith("#");
     const isActive = isAnchor
       ? activeHref === item.href
-      : activePath === normalizePath(item.href);
+      : isPathActive(item.href, activePath);
     const className = `rounded-full px-4 py-2 transition ${
       isActive
         ? "bg-sky-400 text-slate-950 shadow-[0_12px_30px_rgba(56,189,248,0.24)]"
@@ -270,7 +283,7 @@ export function SiteHeader({
           </div>
           <nav className="mt-4 flex flex-col gap-2">
             {pageMenuItems.map((item) => {
-              const isActive = activePath === normalizePath(item.href);
+              const isActive = isPathActive(item.href, activePath);
 
               return (
                 <Link

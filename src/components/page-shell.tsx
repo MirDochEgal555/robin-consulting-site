@@ -5,6 +5,7 @@ import { getSiteContent, type SiteLocale } from "@/content/site-content";
 import {
   getLanguageSwitch,
   getPrimaryNavItems,
+  type LanguageSwitchLink,
   type SiteNavItem,
   type SitePageKey,
 } from "@/content/site-pages";
@@ -16,6 +17,7 @@ type PageShellProps = {
   pageNavItems: SiteNavItem[];
   children: React.ReactNode;
   mainClassName?: string;
+  languageSwitchOverride?: LanguageSwitchLink;
 };
 
 export function PageShell({
@@ -25,6 +27,7 @@ export function PageShell({
   pageNavItems,
   children,
   mainClassName = "pt-24",
+  languageSwitchOverride,
 }: PageShellProps) {
   const content = getSiteContent(locale);
 
@@ -36,7 +39,9 @@ export function PageShell({
         brandHref={brandHref}
         pageNavItems={pageNavItems}
         pageMenuItems={getPrimaryNavItems(locale)}
-        languageSwitch={getLanguageSwitch(locale, pageKey)}
+        languageSwitch={
+          languageSwitchOverride ?? getLanguageSwitch(locale, pageKey)
+        }
       />
       <main className={mainClassName}>{children}</main>
       <SiteFooter content={content} />

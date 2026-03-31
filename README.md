@@ -25,9 +25,11 @@ Production is deployed via GitHub Pages and served on the custom domain `https:/
 - `/`
 - `/services/`
 - `/blog/`
+- `/blog/[slug]/`
 - `/de/`
 - `/de/services/`
 - `/de/blog/`
+- `/de/blog/[slug]/`
 
 ## Architecture
 
@@ -37,6 +39,8 @@ The codebase is structured to support future expansion without reworking the cur
   Holds locale-specific copy and shared site content.
 - `src/content/site-pages.ts`
   Defines page keys, localized paths, navigation labels, metadata, and language-switch targets.
+- `src/content/blog-posts.ts`
+  Holds localized blog post content, article metadata, and helpers for article routes, structured data, and sitemap generation.
 - `src/components/page-shell.tsx`
   Shared page wrapper for header, footer, and language sync.
 - `src/components/home-page.tsx`
@@ -54,9 +58,13 @@ The codebase is structured to support future expansion without reworking the cur
 src/
   app/
     blog/
+      [slug]/
+        page.tsx
       page.tsx
     de/
       blog/
+        [slug]/
+          page.tsx
         page.tsx
       services/
         page.tsx
@@ -78,6 +86,7 @@ src/
     ui/
       button-link.tsx
     blog-page.tsx
+    blog-post-page.tsx
     home-page.tsx
     lang-sync.tsx
     page-intro.tsx
@@ -87,9 +96,20 @@ src/
     site-footer.tsx
     site-header.tsx
   content/
+    blog-posts.ts
     site-content.ts
     site-pages.ts
 ```
+
+## Publishing Blog Content
+
+Blog posts are managed in `src/content/blog-posts.ts`.
+
+For each new post:
+
+1. Add a new entry with `id`, publish dates, reading time, and both locale variants.
+2. Provide localized `slug`, `title`, `excerpt`, `seoDescription`, `category`, `tags`, and article sections.
+3. The site will automatically include the post on `/blog/`, generate localized article pages, and add the URLs to `sitemap.xml`.
 
 ## Environment Variables
 

@@ -75,22 +75,16 @@ const pageDefinitions = {
       metadata: {
         title: "Blog | Robin Keim IT Consulting",
         description:
-          "A future home for insights, technical breakdowns, and practical notes on consulting and software delivery.",
+          "Practical articles on IT consulting, architecture decisions, delivery planning, and software implementation.",
         openGraphTitle: "Blog | Robin Keim IT Consulting",
         openGraphDescription:
-          "Planned articles and case-based writing on architecture, delivery planning, and hands-on software execution.",
+          "Published insights on architecture, delivery planning, internal tools, and focused software execution.",
       },
       intro: {
         eyebrow: "Blog",
-        title: "Insights, case notes, and technical writing.",
+        title: "Published insights, case notes, and technical writing.",
         description:
-          "The blog route is in place so articles, updates, and case studies can be added as first-class pages instead of being folded into the homepage.",
-      },
-      emptyState: {
-        status: "Coming soon",
-        title: "The publishing structure is ready.",
-        description:
-          "Future posts can be added here without changing the global navigation or page architecture again.",
+          "This page now acts as a proper publishing hub for articles that can rank independently, be shared directly, and support long-term discoverability.",
       },
     },
   },
@@ -123,22 +117,16 @@ const pageDefinitions = {
       metadata: {
         title: "Blog | Robin Keim IT-Beratung",
         description:
-          "Der kuenftige Ort fuer Einordnungen, technische Notizen und praxisnahe Beitraege zu Beratung und Software-Umsetzung.",
+          "Praxisnahe Beitraege zu IT-Beratung, Architekturentscheidungen, Delivery-Planung und Software-Umsetzung.",
         openGraphTitle: "Blog | Robin Keim IT-Beratung",
         openGraphDescription:
-          "Geplante Beitraege und Fallbeispiele zu Architektur, Delivery-Planung und praktischer Software-Umsetzung.",
+          "Veroeffentlichte Einordnungen zu Architektur, Delivery-Planung, internen Tools und fokussierter Software-Umsetzung.",
       },
       intro: {
         eyebrow: "Blog",
-        title: "Ein Platz fuer Einordnungen, Fallbeispiele und technische Notizen.",
+        title: "Veroeffentlichte Einordnungen, Fallbeispiele und technische Notizen.",
         description:
-          "Die Blog-Route steht bereits, damit spaetere Artikel, Updates und Inhalte als eigene Seiten wachsen koennen statt wieder in die Startseite eingebaut zu werden.",
-      },
-      emptyState: {
-        status: "In Vorbereitung",
-        title: "Die Struktur fuer Inhalte steht bereits.",
-        description:
-          "Neue Beitraege koennen hier spaeter ergaenzt werden, ohne Navigation oder Routing erneut umzubauen.",
+          "Diese Seite ist jetzt ein echter Publishing-Hub fuer Artikel, die eigenstaendig ranken, direkt geteilt werden und langfristig neue Suchanfragen erreichen koennen.",
       },
     },
   },

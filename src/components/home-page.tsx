@@ -1,6 +1,7 @@
 import { AboutSection } from "@/components/sections/about-section";
 import { ContactSection } from "@/components/sections/contact-section";
 import { HeroSection } from "@/components/sections/hero-section";
+import { InsightsSection } from "@/components/sections/insights-section";
 import { ProcessSection } from "@/components/sections/process-section";
 import { ServicesSection } from "@/components/sections/services-section";
 import { PageShell } from "@/components/page-shell";
@@ -24,6 +25,7 @@ export function HomePage({ locale }: HomePageProps) {
       <ServicesSection content={content} />
       <ProcessSection content={content} />
       <AboutSection content={content} />
+      <InsightsSection content={content} />
       <ContactSection content={content} />
     </PageShell>
   );
