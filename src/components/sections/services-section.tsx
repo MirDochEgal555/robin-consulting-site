@@ -1,12 +1,20 @@
 import type { CSSProperties } from "react";
+import { ButtonLink } from "@/components/ui/button-link";
 import { SectionShell } from "@/components/section-shell";
 import type { SiteContent } from "@/content/site-content";
+import { getPagePath } from "@/content/site-pages";
 
 type ServicesSectionProps = {
   content: SiteContent;
+  showPageLink?: boolean;
 };
 
-export function ServicesSection({ content }: ServicesSectionProps) {
+export function ServicesSection({
+  content,
+  showPageLink = false,
+}: ServicesSectionProps) {
+  const servicesPath = getPagePath(content.locale, "services");
+
   return (
     <SectionShell
       id="services"
@@ -33,6 +41,16 @@ export function ServicesSection({ content }: ServicesSectionProps) {
           </article>
         ))}
       </div>
+      {showPageLink ? (
+        <div
+          className="reveal-up scroll-reveal-up pt-2"
+          style={{ "--delay": "260ms" } as CSSProperties}
+        >
+          <ButtonLink href={servicesPath} variant="secondary">
+            {content.sections.services.pageLinkLabel}
+          </ButtonLink>
+        </div>
+      ) : null}
     </SectionShell>
   );
 }

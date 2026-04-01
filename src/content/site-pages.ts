@@ -63,8 +63,8 @@ const pageDefinitions = {
           "A service overview covering AI consulting, task automation, and website creation and hosting.",
       },
       intro: {
-        eyebrow: "Services",
-        title: "AI consulting, task automation, and websites built around business needs.",
+        eyebrow: "Overview",
+        title: "Technical solutions built around business needs.",
         description:
           "This page explains how businesses can benefit from practical AI use, cleaner task automation, and websites that are created and hosted as reliable business assets.",
       },
@@ -84,7 +84,7 @@ const pageDefinitions = {
         eyebrow: "Blog",
         title: "Published insights, case notes, and technical writing.",
         description:
-          "This page now acts as a proper publishing hub for articles that can rank independently, be shared directly, and support long-term discoverability.",
+          "",
       },
     },
   },
@@ -106,9 +106,9 @@ const pageDefinitions = {
       },
       intro: {
         eyebrow: "Leistungen",
-        title: "KI-Beratung, Automatisierung und Websites mit klarem Nutzen fuer Ihr Unternehmen.",
+        title: "Lösungen mit klarem Nutzen fuer Ihr Unternehmen.",
         description:
-          "Diese Seite zeigt, wie Unternehmen von praktischem KI-Einsatz, sauberer Aufgabenautomatisierung und professionell erstellten und gehosteten Websites profitieren koennen.",
+          "Diese Seite zeigt, wie Unternehmen von praktischem KI-Einsatz, sauberer Aufgabenautomatisierung und professionell erstellten und gehosteten Websites profitieren können.",
       },
     },
     blog: {
@@ -120,13 +120,13 @@ const pageDefinitions = {
           "Praxisnahe Beitraege zu IT-Beratung, Architekturentscheidungen, Delivery-Planung und Software-Umsetzung.",
         openGraphTitle: "Blog | Robin Keim IT-Beratung",
         openGraphDescription:
-          "Veroeffentlichte Einordnungen zu Architektur, Delivery-Planung, internen Tools und fokussierter Software-Umsetzung.",
+          "Veröffentlichte Blog-Posts zu Lösungen, Use-Cases, internen Tools und fokussierter Software-Umsetzung.",
       },
       intro: {
         eyebrow: "Blog",
-        title: "Veroeffentlichte Einordnungen, Fallbeispiele und technische Notizen.",
+        title: "Veröffentlichte Blog-Posts zu Lösungen, Use-Cases, internen Tools und fokussierter Software-Umsetzung.",
         description:
-          "Diese Seite ist jetzt ein echter Publishing-Hub fuer Artikel, die eigenstaendig ranken, direkt geteilt werden und langfristig neue Suchanfragen erreichen koennen.",
+          "",
       },
     },
   },

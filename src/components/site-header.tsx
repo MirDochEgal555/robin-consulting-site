@@ -46,7 +46,7 @@ export function SiteHeader({
   pageMenuItems,
   languageSwitch,
 }: SiteHeaderProps) {
-  const menuLabel = content.locale === "de" ? "Seiten" : "Pages";
+  const menuLabel = content.locale === "de" ? "Inhalt" : "Content";
   const openMenuLabel =
     content.locale === "de" ? "Seitenmenue oeffnen" : "Open page menu";
   const closeMenuLabel =

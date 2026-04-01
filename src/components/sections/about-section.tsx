@@ -19,7 +19,7 @@ export function AboutSection({ content }: AboutSectionProps) {
       description={content.sections.about.description}
       headerClassName="mb-12"
     >
-      <div className="grid gap-6 lg:grid-cols-[1.08fr_0.92fr]">
+      <div className="mt-6 grid gap-6 lg:grid-cols-[minmax(0,1.4fr)_minmax(0,1fr)]">
         <div
           className="glass-panel reveal-left scroll-reveal-left rounded-[2rem] p-7 lg:p-8"
           style={{ "--delay": "120ms" } as CSSProperties}

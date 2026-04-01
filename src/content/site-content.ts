@@ -84,6 +84,7 @@ export type SiteContent = {
       eyebrow: string;
       title: string;
       description: string;
+      pageLinkLabel: string;
     };
     process: {
       eyebrow: string;
@@ -221,6 +222,7 @@ const siteContent = {
         title: "Practical help for technical decisions that need to move forward",
         description:
           "The offer is positioned as fast, outcome-focused advisory rather than long, abstract consulting cycles.",
+        pageLinkLabel: "To concrete services",
       },
       process: {
         eyebrow: "Process",
@@ -427,6 +429,7 @@ const siteContent = {
           "Konkrete Unterstützung für IT-Systeme in Ihrem Unternehmen, die helfen Ihre Potenziale zu heben",
         description:
           "Das Angebot ist als schnelle, ergebnisorientierte Beratung angelegt und nicht als langer, abstrakter Beratungsprozess.",
+        pageLinkLabel: "Zu den konkreten Leistungen",
       },
       process: {
         eyebrow: "Vorgehen",

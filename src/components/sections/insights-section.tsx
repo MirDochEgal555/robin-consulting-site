@@ -29,7 +29,7 @@ export function InsightsSection({ content }: InsightsSectionProps) {
       title={content.sections.blog.title}
       description={content.sections.blog.description}
     >
-      <div className="grid gap-6 lg:grid-cols-[minmax(0,1.4fr)_minmax(0,1fr)]">
+      <div className="mt-6 grid gap-6 lg:grid-cols-[minmax(0,1.4fr)_minmax(0,1fr)]">
         <article
           className="glass-panel card-lift reveal-left scroll-reveal-left rounded-[2rem] p-8 sm:p-10"
           style={{ "--delay": "100ms" } as CSSProperties}

@@ -22,7 +22,7 @@ export function HomePage({ locale }: HomePageProps) {
       pageNavItems={content.navItems}
     >
       <HeroSection content={content} />
-      <ServicesSection content={content} />
+      <ServicesSection content={content} showPageLink />
       <ProcessSection content={content} />
       <AboutSection content={content} />
       <InsightsSection content={content} />

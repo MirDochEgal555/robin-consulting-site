@@ -63,7 +63,7 @@ const servicesPageContent = {
   de: {
     section: {
       eyebrow: "Leistungsueberblick",
-      title: "KI, Automatisierung und Websites mit praktischem Nutzen fuer Unternehmen.",
+      title: "KI, Automatisierung und Websites mit praktischem Nutzen für Unternehmen.",
       description:
         "Im Mittelpunkt steht nicht Technik um der Technik willen. Jede Leistung soll dabei helfen, Zeit zu sparen, die Qualitaet zu verbessern oder den digitalen Auftritt des Unternehmens zu staerken.",
     },
@@ -72,31 +72,31 @@ const servicesPageContent = {
         eyebrow: "KI",
         title: "KI-Beratung",
         description:
-          "Gemeinsam wird geklaert, wie KI in Ihrem Unternehmen sinnvoll eingesetzt werden kann, damit echte Arbeitsablaeufe unterstuetzt werden statt nur neue Komplexitaet zu entstehen.",
+          "Gemeinsam wird geklärt, wie KI in Ihrem Unternehmen sinnvoll eingesetzt werden kann, damit echte Arbeitsabläufe unterstützt werden statt nur neue Komplexität entstehen zu lassen.",
         outcomes: [
-          "Sinnvolle KI-Anwendungsfaelle im aktuellen Geschaeft identifizieren",
-          "Bereiche priorisieren, in denen KI Tempo, Qualitaet oder Entscheidungen verbessert",
-          "Einen pragmatischen Einfuehrungsweg mit ueberschaubarer Komplexitaet festlegen",
+          "Sinnvolle KI-Anwendungsfaelle im aktuellen Geschäft identifizieren",
+          "Bereiche priorisieren, in denen KI Tempo, Qualität oder Entscheidungen verbessert",
+          "Einen pragmatischen Einführungsweg mit überschaubarer Komplexität festlegen",
         ],
       },
       {
         eyebrow: "Automatisierung",
         title: "Aufgaben automatisieren",
         description:
-          "Wiederkehrende manuelle Arbeit in Ablaeufen, Kommunikation, Reporting und internen Prozessen wird durch saubere Automatisierungen ersetzt.",
+          "Wiederkehrende manuelle Arbeit in Abläufen, Kommunikation, Reporting und internen Prozessen wird durch saubere Automatisierungen ersetzt.",
         outcomes: [
           "Repetitive Verwaltungsarbeit im Alltag reduzieren",
           "Tools verbinden und Informationen ohne manuelles Kopieren bewegen",
-          "Zeit sparen und vermeidbare Fehler sowie Verzoegerungen reduzieren",
+          "Zeit sparen und vermeidbare Fehler sowie Verzögerungen reduzieren",
         ],
       },
       {
         eyebrow: "Web",
         title: "Websites erstellen und hosten",
         description:
-          "Es wird eine Unternehmenswebsite aufgebaut, die Ihr Angebot klar praesentiert, gut funktioniert und verlaesslich gehostet wird, ohne unnoetigen Betriebsaufwand zu erzeugen.",
+          "Es wird eine Unternehmenswebsite aufgebaut, die Ihr Angebot klar präsentiert, gut funktioniert und verlässlich gehostet wird, ohne unnötigen Betriebsaufwand zu erzeugen.",
         outcomes: [
-          "Einen professionellen digitalen Auftritt fuer Ihr Unternehmen aufbauen",
+          "Einen professionellen digitalen Auftritt für Ihr Unternehmen aufbauen",
           "Eine schnelle und wartbare Website mit klarer Kommunikation erhalten",
           "Erstellung und Hosting an einer Stelle zusammenfassen",
         ],
