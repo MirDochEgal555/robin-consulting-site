@@ -112,7 +112,12 @@ For each new post:
 
 1. Add a new entry with `id`, publish dates, reading time, and both locale variants.
 2. Provide localized `slug`, `title`, `excerpt`, `seoDescription`, `category`, `tags`, and article sections.
-3. The site will automatically include the post on `/blog/`, generate localized article pages, and add the URLs to `sitemap.xml`.
+3. Posts with a future `publishedAt` date can be preloaded in the file and remain hidden until their publication day.
+4. The site will include published posts on `/blog/`, generate localized article pages, and add the URLs to `sitemap.xml`.
+
+Publication visibility uses `BLOG_PUBLICATION_TIME_ZONE` and defaults to `Europe/Berlin`.
+
+Because the site is exported statically, future-dated posts become visible only after the next build that runs on or after the publication date.
 
 ## Environment Variables
 
@@ -123,6 +128,7 @@ NEXT_PUBLIC_SITE_URL=http://localhost:3000
 NEXT_PUBLIC_BOOKING_URL=https://cal.com/robin-keim
 NEXT_PUBLIC_CONTACT_EMAIL=hello@example.com
 NEXT_PUBLIC_ANALYTICS_ID=
+BLOG_PUBLICATION_TIME_ZONE=Europe/Berlin
 ```
 
 Production values are currently injected by the GitHub Actions deploy workflow.

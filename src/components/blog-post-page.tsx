@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { Fragment, type ReactNode } from "react";
 import type { CSSProperties } from "react";
 import { ContactSection } from "@/components/sections/contact-section";
 import { PageShell } from "@/components/page-shell";
@@ -16,6 +17,129 @@ type BlogPostPageProps = {
   locale: SiteLocale;
   slug: string;
 };
+
+const internalSiteHosts = new Set(
+  [
+    process.env.NEXT_PUBLIC_SITE_URL,
+    "https://www.keim-consulting.com",
+    "https://keim-consulting.com",
+  ]
+    .filter(Boolean)
+    .map((value) => {
+      try {
+        return new URL(value as string).hostname;
+      } catch {
+        return null;
+      }
+    })
+    .filter((value): value is string => Boolean(value)),
+);
+
+const inlineLinkPattern =
+  /\[([^\]]+)\]\(([^)\s]+)\)|(https?:\/\/\S+|www\.\S+|\/\S+)/g;
+
+function normalizeLinkHref(href: string) {
+  return href.startsWith("www.") ? `https://${href}` : href;
+}
+
+function splitTrailingPunctuation(value: string) {
+  const match = value.match(/([.,!?;:]+)$/);
+
+  if (!match) {
+    return { value, trailing: "" };
+  }
+
+  return {
+    value: value.slice(0, -match[1].length),
+    trailing: match[1],
+  };
+}
+
+function getInternalHref(href: string) {
+  if (href.startsWith("/")) {
+    return href;
+  }
+
+  try {
+    const url = new URL(normalizeLinkHref(href));
+
+    if (!internalSiteHosts.has(url.hostname)) {
+      return null;
+    }
+
+    return `${url.pathname}${url.search}${url.hash}`;
+  } catch {
+    return null;
+  }
+}
+
+function renderInlineLinks(text: string): ReactNode[] {
+  const nodes: ReactNode[] = [];
+  let lastIndex = 0;
+  let matchIndex = 0;
+
+  for (const match of text.matchAll(inlineLinkPattern)) {
+    const [fullMatch, markdownLabel, markdownHref, autoHref] = match;
+    const startIndex = match.index ?? 0;
+
+    if (startIndex > lastIndex) {
+      nodes.push(text.slice(lastIndex, startIndex));
+    }
+
+    const rawHref = markdownHref ?? autoHref;
+
+    if (!rawHref) {
+      nodes.push(fullMatch);
+      lastIndex = startIndex + fullMatch.length;
+      continue;
+    }
+
+    const normalizedHref = normalizeLinkHref(rawHref);
+    const { value: cleanHref, trailing } = splitTrailingPunctuation(
+      normalizedHref,
+    );
+    const linkLabel = markdownLabel ?? cleanHref;
+    const internalHref = getInternalHref(cleanHref);
+    const key = `${cleanHref}-${matchIndex}`;
+
+    if (internalHref) {
+      nodes.push(
+        <Link
+          key={key}
+          href={internalHref}
+          className="break-words text-sky-300 underline decoration-sky-300/50 underline-offset-4 transition hover:text-sky-200 hover:decoration-sky-200"
+        >
+          {linkLabel}
+        </Link>,
+      );
+    } else {
+      nodes.push(
+        <a
+          key={key}
+          href={cleanHref}
+          target="_blank"
+          rel="noreferrer"
+          className="break-words text-sky-300 underline decoration-sky-300/50 underline-offset-4 transition hover:text-sky-200 hover:decoration-sky-200"
+        >
+          {linkLabel}
+        </a>,
+      );
+    }
+
+    if (trailing) {
+      nodes.push(<Fragment key={`${key}-trailing`}>{trailing}</Fragment>);
+    }
+
+    lastIndex = startIndex + fullMatch.length;
+    matchIndex += 1;
+  }
+
+  if (lastIndex < text.length) {
+    nodes.push(text.slice(lastIndex));
+  }
+
+  return nodes.length > 0 ? nodes : [text];
+}
 
 export function BlogPostPage({ locale, slug }: BlogPostPageProps) {
   const content = getSiteContent(locale);
@@ -115,7 +239,7 @@ export function BlogPostPage({ locale, slug }: BlogPostPageProps) {
                   </h2>
                   <div className="mt-5 space-y-5 text-base leading-8 text-slate-300">
                     {section.paragraphs.map((paragraph) => (
-                      <p key={paragraph}>{paragraph}</p>
+                      <p key={paragraph}>{renderInlineLinks(paragraph)}</p>
                     ))}
                   </div>
                   {section.bullets ? (
@@ -125,7 +249,7 @@ export function BlogPostPage({ locale, slug }: BlogPostPageProps) {
                           key={bullet}
                           className="rounded-[1.25rem] border border-white/10 bg-white/[0.03] px-4 py-4"
                         >
-                          {bullet}
+                          {renderInlineLinks(bullet)}
                         </li>
                       ))}
                     </ul>
