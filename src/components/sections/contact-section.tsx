@@ -32,10 +32,19 @@ export function ContactSection({ content }: ContactSectionProps) {
             </div>
           </div>
           <div className="flex flex-col gap-3 sm:flex-row lg:flex-col pulse-glow">
-            <ButtonLink href={content.bookingUrl}>
+            <ButtonLink
+              href={content.bookingUrl}
+              trackingEvent="cta_click"
+              trackingLabel={content.cta.bookConsultation}
+            >
               {content.cta.bookConsultation}
             </ButtonLink>
-            <ButtonLink href={content.emailLink} variant="secondary">
+            <ButtonLink
+              href={content.emailLink}
+              variant="secondary"
+              trackingEvent="cta_click"
+              trackingLabel={content.cta.sendEmail}
+            >
               {content.cta.sendEmail}
             </ButtonLink>
           </div>

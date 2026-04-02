@@ -3,7 +3,9 @@ import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
 import { getSiteContent, type SiteLocale } from "@/content/site-content";
 import {
+  getPageDefinition,
   getLanguageSwitch,
+  getPagePath,
   getPrimaryNavItems,
   type LanguageSwitchLink,
   type SiteNavItem,
@@ -30,6 +32,7 @@ export function PageShell({
   languageSwitchOverride,
 }: PageShellProps) {
   const content = getSiteContent(locale);
+  const dashboardPage = getPageDefinition(locale, "dashboard");
 
   return (
     <div className="relative overflow-x-hidden">
@@ -44,7 +47,11 @@ export function PageShell({
         }
       />
       <main className={mainClassName}>{children}</main>
-      <SiteFooter content={content} />
+      <SiteFooter
+        content={content}
+        dashboardHref={getPagePath(locale, "dashboard")}
+        dashboardLabel={dashboardPage.label}
+      />
     </div>
   );
 }

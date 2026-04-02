@@ -30,10 +30,19 @@ export function HeroSection({ content }: HeroSectionProps) {
             className="mt-8 flex flex-col gap-3 sm:flex-row reveal-up"
             style={{ "--delay": "340ms" } as CSSProperties}
           >
-            <ButtonLink href={content.bookingUrl}>
+            <ButtonLink
+              href={content.bookingUrl}
+              trackingEvent="cta_click"
+              trackingLabel={content.cta.bookConsultation}
+            >
               {content.cta.bookConsultation}
             </ButtonLink>
-            <ButtonLink href={content.emailLink} variant="secondary">
+            <ButtonLink
+              href={content.emailLink}
+              variant="secondary"
+              trackingEvent="cta_click"
+              trackingLabel={content.cta.emailRobin}
+            >
               {content.cta.emailRobin}
             </ButtonLink>
           </div>

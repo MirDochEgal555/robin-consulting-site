@@ -9,6 +9,7 @@ Production is deployed via GitHub Pages and served on the custom domain `https:/
 - Multi-page App Router structure with localized routes
 - English and German entrypoints
 - Main pages: `Home`, `Services`, `Blog`
+- Browser-side dashboard for SEO, tracking, and performance checks
 - Shared content and page configuration separated into content modules
 - Static export enabled for GitHub Pages deployment
 - SEO basics in place via `metadata`, `robots.ts`, and `sitemap.ts`
@@ -26,10 +27,12 @@ Production is deployed via GitHub Pages and served on the custom domain `https:/
 - `/services/`
 - `/blog/`
 - `/blog/[slug]/`
+- `/dashboard/`
 - `/de/`
 - `/de/services/`
 - `/de/blog/`
 - `/de/blog/[slug]/`
+- `/de/dashboard/`
 
 ## Architecture
 
@@ -124,6 +127,8 @@ NEXT_PUBLIC_ANALYTICS_ID=
 
 Production values are currently injected by the GitHub Actions deploy workflow.
 
+The dashboard works without a backend by storing events and recent performance metrics in the browser. GA4 forwarding is enabled only when `NEXT_PUBLIC_ANALYTICS_ID` is set in local env or as a GitHub repository variable for the deploy workflow.
+
 ## Local Development
 
 ```bash
@@ -165,6 +170,7 @@ The workflow currently sets these production values:
 - `NEXT_PUBLIC_SITE_URL=https://www.keim-consulting.com`
 - `NEXT_PUBLIC_BOOKING_URL=https://www.cal.eu/robin-keim-consulting`
 - `NEXT_PUBLIC_CONTACT_EMAIL=info@keim-consulting.com`
+- `NEXT_PUBLIC_ANALYTICS_ID=${{ vars.NEXT_PUBLIC_ANALYTICS_ID }}`
 
 ## Notes
 

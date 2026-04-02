@@ -4,12 +4,16 @@ type ButtonLinkProps = {
   href: string;
   children: React.ReactNode;
   variant?: "primary" | "secondary";
+  trackingEvent?: "cta_click";
+  trackingLabel?: string;
 };
 
 export function ButtonLink({
   href,
   children,
   variant = "primary",
+  trackingEvent,
+  trackingLabel,
 }: ButtonLinkProps) {
   const styles =
     variant === "primary"
@@ -22,7 +26,12 @@ export function ButtonLink({
 
   if (!external && !specialScheme) {
     return (
-      <Link href={href} className={className}>
+      <Link
+        href={href}
+        className={className}
+        data-analytics-event={trackingEvent}
+        data-analytics-label={trackingLabel}
+      >
         {children}
       </Link>
     );
@@ -34,6 +43,8 @@ export function ButtonLink({
       target={external ? "_blank" : undefined}
       rel={external ? "noreferrer" : undefined}
       className={className}
+      data-analytics-event={trackingEvent}
+      data-analytics-label={trackingLabel}
     >
       {children}
     </a>

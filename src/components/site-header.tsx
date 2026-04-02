@@ -235,12 +235,18 @@ export function SiteHeader({
             <Link
               href={languageSwitch.href}
               aria-label={languageSwitch.ariaLabel}
+              data-analytics-event="locale_switch"
+              data-analytics-label={languageSwitch.label}
               className="inline-flex h-11 items-center justify-center rounded-full border border-white/[0.12] bg-white/[0.04] px-4 text-sm font-medium text-slate-200 transition hover:border-sky-300/50 hover:bg-white/[0.08] hover:text-white"
             >
               {languageSwitch.label}
             </Link>
             <div className="hidden sm:block">
-              <ButtonLink href={content.bookingUrl}>
+              <ButtonLink
+                href={content.bookingUrl}
+                trackingEvent="cta_click"
+                trackingLabel={content.cta.bookConsultation}
+              >
                 {content.cta.bookConsultation}
               </ButtonLink>
             </div>

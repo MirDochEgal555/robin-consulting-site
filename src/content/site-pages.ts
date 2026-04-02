@@ -2,8 +2,9 @@ import type { Metadata } from "next";
 import { getSiteContent, type SiteLocale } from "@/content/site-content";
 
 export const sitePageKeys = ["home", "services", "blog"] as const;
+export const allSitePageKeys = [...sitePageKeys, "dashboard"] as const;
 
-export type SitePageKey = (typeof sitePageKeys)[number];
+export type SitePageKey = (typeof allSitePageKeys)[number];
 
 export type SiteNavItem = {
   label: string;
@@ -87,6 +88,24 @@ const pageDefinitions = {
           "",
       },
     },
+    dashboard: {
+      label: "Dashboard",
+      slug: "dashboard",
+      metadata: {
+        title: "Dashboard | Robin Keim IT Consulting",
+        description:
+          "A lightweight browser dashboard for SEO, analytics wiring, and recent performance signals.",
+        openGraphTitle: "Dashboard | Robin Keim IT Consulting",
+        openGraphDescription:
+          "A browser-side dashboard showing SEO readiness, tracking status, and recent performance metrics.",
+      },
+      intro: {
+        eyebrow: "Site pulse",
+        title: "A small control room for SEO, tracking, and performance.",
+        description:
+          "Use this page to confirm what the current deployment is emitting, which events the browser is capturing, and whether analytics forwarding is actually configured.",
+      },
+    },
   },
   de: {
     home: {
@@ -129,6 +148,24 @@ const pageDefinitions = {
           "",
       },
     },
+    dashboard: {
+      label: "Dashboard",
+      slug: "dashboard",
+      metadata: {
+        title: "Dashboard | Robin Keim IT-Beratung",
+        description:
+          "Ein leichtgewichtiges Browser-Dashboard fuer SEO, Analytics-Verkabelung und aktuelle Performance-Signale.",
+        openGraphTitle: "Dashboard | Robin Keim IT-Beratung",
+        openGraphDescription:
+          "Ein browserseitiges Dashboard fuer SEO-Bereitschaft, Tracking-Status und aktuelle Performance-Metriken.",
+      },
+      intro: {
+        eyebrow: "Site pulse",
+        title: "Ein kleines Kontrollzentrum fuer SEO, Tracking und Performance.",
+        description:
+          "Diese Seite zeigt, was die aktuelle Deployment wirklich ausliefert, welche Events der Browser erfasst und ob Analytics-Weiterleitung derzeit ueberhaupt konfiguriert ist.",
+      },
+    },
   },
 } as const satisfies Record<SiteLocale, Record<SitePageKey, SitePageDefinition>>;
 
@@ -163,6 +200,10 @@ export function getPageDefinition(
   locale: SiteLocale,
   pageKey: "blog",
 ): (typeof pageDefinitions)[SiteLocale]["blog"];
+export function getPageDefinition(
+  locale: SiteLocale,
+  pageKey: "dashboard",
+): (typeof pageDefinitions)[SiteLocale]["dashboard"];
 export function getPageDefinition(
   locale: SiteLocale,
   pageKey: SitePageKey,
