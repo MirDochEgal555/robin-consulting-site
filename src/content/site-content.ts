@@ -181,8 +181,8 @@ const siteContent = {
     },
     footerTagline: "Clear systems. Faster decisions.",
     hero: {
-      eyebrow: "Technical advisory",
-      headline: "IT consulting with a path to implementation.",
+      eyebrow: "IT Consulting",
+      headline: "AI Consulting. Task Automation.",
       description:
         "Helping companies and founders make better technical decisions, define a workable solution, and implement the right software when hands-on execution is needed.",
       promiseLabel: "Core promise",
@@ -213,13 +213,13 @@ const siteContent = {
       overviewLabel: "Overview",
       blog: {
         eyebrow: "Insights",
-        title: "Recent articles that keep the site active and searchable",
+        title: "Recent articles about current trends and the professional offering",
         description:
-          "The blog now works as a publishing surface for practical consulting notes, architecture guidance, and delivery insights that can compound discoverability over time.",
+          "The blog serves as practical consulting notes, architecture guidance, and delivery insights.",
       },
       services: {
         eyebrow: "Services",
-        title: "Practical help for technical decisions that need to move forward",
+        title: "Technical Advisory and Solution Engineering",
         description:
           "The offer is positioned as fast, outcome-focused advisory rather than long, abstract consulting cycles.",
         pageLinkLabel: "To concrete services",
@@ -304,7 +304,7 @@ const siteContent = {
             "Deepened the ability to analyze complex requirements and translate them into structured, workable technical solutions.",
         },
         {
-          period: "Since 2022",
+          period: "Since 2023",
           title: "Application development at Omikron Data Solutions GmbH",
           institution: "Professional software delivery",
           description:
@@ -317,7 +317,7 @@ const siteContent = {
           label: "Continuous formal training in business informatics",
         },
         {
-          value: "Since 2022",
+          value: "Since 2023",
           label: "Building applications in a professional software company",
         },
         {
@@ -388,7 +388,7 @@ const siteContent = {
     footerTagline: "Klare Systeme. Schnellere Entscheidungen.",
     hero: {
       eyebrow: "IT-Beratung",
-      headline: "IT-Beratung mit klarem Weg in die Umsetzung.",
+      headline: "KI-Beratung. Prozessautomatisierung.",
       description:
         "Unternehmen und Unternehmern wird dabei geholfen, gute IT-Entscheidungen zu treffen, eine tragfähige Lösung zu definieren und die richtige Software umzusetzen, wenn praktische Umsetzung gefragt ist.",
       promiseLabel: "Kernversprechen",
@@ -419,9 +419,9 @@ const siteContent = {
       overviewLabel: "Überblick",
       blog: {
         eyebrow: "Blog",
-        title: "Neue Beiträge, die Sichtbarkeit und Relevanz aufbauen",
+        title: "Neue Beiträge über aktuelle Neuigkeiten und das Beratungsangebot",
         description:
-          "Der Blog dient jetzt als Publishing-Fläche für praxisnahe Inhalte zu Beratung, Architektur und Delivery, die über die Zeit neue Suchanfragen adressieren können.",
+          "Der Blog besteht aus Inhalten zur Beratung, Architektur und aktuellen Trends.",
       },
       services: {
         eyebrow: "Leistungen",
@@ -441,7 +441,7 @@ const siteContent = {
         eyebrow: "Über mich",
         title: "Ihr IT-Partner mit Expertise, klarer Kommunikation und Kompetenz",
         description:
-          "Unabhängige Beratung für Gründer und schlanke Teams, die fundiertes Engineering-Urteilsvermögen, klare Kommunikation und praktische Unterstützung brauchen, wenn der nächste Schritt gebaut werden soll.",
+          "Unabhängige Beratung für Unternehmen, die fundiertes Engineering-Urteilsvermögen, klare Kommunikation und praktische Unterstützung im IT-Bereich brauchen.",
         imageAlt: "Porträt von Robin Keim",
         timelineLabel: "Ausbildung und Erfahrung",
         credibilityLabel: "Highlights",
@@ -451,7 +451,7 @@ const siteContent = {
         eyebrow: "Kontakt",
         title: "Call buchen oder per E-Mail ins Gespräch kommen",
         description:
-          "Die primäre Anlaufstelle ist ein Erstgespräch, aber gerne senden Sie mir auch eine E-Mail bei Fragen.",
+          "Die primäre Anlaufstelle ist ein Erstgespräch, aber senden Sie mir auch gerne eine E-Mail bei Fragen.",
       },
     },
     services: [
@@ -510,7 +510,7 @@ const siteContent = {
             "Dort wurde die Fähigkeit vertieft, komplexe Anforderungen zu analysieren und in strukturierte, tragfähige technische Lösungen zu übersetzen.",
         },
         {
-          period: "Seit 2022",
+          period: "Seit 2023",
           title: "Anwendungsentwicklung bei Omikron Data Solutions GmbH",
           institution: "Professionelle Software-Entwicklung",
           description:
@@ -523,7 +523,7 @@ const siteContent = {
           label: "Durchgehendes Studium einer Kombination aus Wirtschaft und Informatik",
         },
         {
-          value: "Seit 2022",
+          value: "Seit 2023",
           label: "Entwicklung von Anwendungen in einem professionellen IT-Unternehmen",
         },
         {
