@@ -4,7 +4,7 @@ import {
   getAbsoluteBlogPostUrl,
 } from "@/content/blog-posts";
 import {
-  sitePageKeys,
+  allSitePageKeys,
   getAbsolutePageUrl as getAbsoluteStaticPageUrl,
 } from "@/content/site-pages";
 
@@ -14,7 +14,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const locales = ["en", "de"] as const;
 
   return locales.flatMap((locale) => [
-    ...sitePageKeys.map((pageKey) => ({
+    ...allSitePageKeys.map((pageKey) => ({
       url: getAbsoluteStaticPageUrl(locale, pageKey),
       lastModified: new Date(),
       changeFrequency: "weekly" as const,
@@ -25,7 +25,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
             : 0.9
           : pageKey === "services"
             ? 0.8
-            : 0.75,
+            : pageKey === "blog"
+              ? 0.75
+              : 0.3,
       alternates: {
         languages: {
           en: getAbsoluteStaticPageUrl("en", pageKey),

@@ -63,6 +63,11 @@ export type SiteContent = {
   };
   languageSwitch: LanguageSwitch;
   footerTagline: string;
+  footerLinks: {
+    legalNotice: string;
+    privacy: string;
+    cookieSettings: string;
+  };
   hero: {
     eyebrow: string;
     headline: string;
@@ -180,6 +185,11 @@ const siteContent = {
       ariaLabel: "Switch to the German version",
     },
     footerTagline: "Clear systems. Faster decisions.",
+    footerLinks: {
+      legalNotice: "Legal notice",
+      privacy: "Privacy",
+      cookieSettings: "Cookie settings",
+    },
     hero: {
       eyebrow: "IT Consulting",
       headline: "AI Consulting. Task Automation.",
@@ -386,6 +396,11 @@ const siteContent = {
       ariaLabel: "Zur englischen Version wechseln",
     },
     footerTagline: "Klare Systeme. Schnellere Entscheidungen.",
+    footerLinks: {
+      legalNotice: "Impressum",
+      privacy: "Datenschutz",
+      cookieSettings: "Cookie-Einstellungen",
+    },
     hero: {
       eyebrow: "IT-Beratung",
       headline: "KI-Beratung. Prozessautomatisierung.",

@@ -1,5 +1,7 @@
 "use client";
 
+import { hasSiteConsent } from "@/lib/site-consent";
+
 export const ANALYTICS_STORAGE_KEY = "rk-site-pulse";
 export const ANALYTICS_UPDATE_EVENT = "rk-site-pulse:update";
 const MAX_STORED_EVENTS = 80;
@@ -77,7 +79,7 @@ function isBrowser() {
 }
 
 function readSnapshotInternal(): AnalyticsSnapshot {
-  if (!isBrowser()) {
+  if (!isBrowser() || !hasSiteConsent()) {
     return createInitialSnapshot();
   }
 
@@ -107,7 +109,7 @@ function readSnapshotInternal(): AnalyticsSnapshot {
 }
 
 function saveSnapshot(snapshot: AnalyticsSnapshot) {
-  if (!isBrowser()) {
+  if (!isBrowser() || !hasSiteConsent()) {
     return;
   }
 
@@ -134,6 +136,19 @@ export function getAnalyticsSnapshot(): AnalyticsSnapshot {
   return readSnapshotInternal();
 }
 
+export function clearAnalyticsData() {
+  if (!isBrowser()) {
+    return;
+  }
+
+  window.localStorage.removeItem(ANALYTICS_STORAGE_KEY);
+  window.dispatchEvent(
+    new CustomEvent(ANALYTICS_UPDATE_EVENT, {
+      detail: createInitialSnapshot(),
+    }),
+  );
+}
+
 export function trackAnalyticsEvent(input: {
   type: AnalyticsEventType;
   label: string;
@@ -141,6 +156,10 @@ export function trackAnalyticsEvent(input: {
   href?: string;
   locale?: "en" | "de";
 }) {
+  if (!hasSiteConsent()) {
+    return createInitialSnapshot();
+  }
+
   const timestamp = new Date().toISOString();
 
   return updateSnapshot((current) => {
@@ -235,6 +254,10 @@ export function trackMetric(input: {
   path: string;
   value: number;
 }) {
+  if (!hasSiteConsent()) {
+    return createInitialSnapshot();
+  }
+
   const timestamp = new Date().toISOString();
   const nextMetric: AnalyticsMetric = {
     id: createId("metric"),

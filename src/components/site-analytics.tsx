@@ -2,8 +2,15 @@
 
 import Script from "next/script";
 import { usePathname } from "next/navigation";
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
+import { ConsentBanner } from "@/components/consent-banner";
+import { getPagePath } from "@/content/site-pages";
 import { trackAnalyticsEvent, trackMetric, trackPageView } from "@/lib/site-analytics";
+import {
+  SITE_CONSENT_UPDATE_EVENT,
+  getSiteConsentStatus,
+  type SiteConsentStatus,
+} from "@/lib/site-consent";
 
 declare global {
   interface Window {
@@ -17,6 +24,7 @@ declare global {
 }
 
 const analyticsId = process.env.NEXT_PUBLIC_ANALYTICS_ID?.trim();
+const GA_READY_EVENT = "rk-site-ga:ready";
 
 function getLocaleFromPath(pathname: string) {
   return pathname.startsWith("/de") ? "de" : "en";
@@ -29,27 +37,72 @@ function isExternalUrl(url: URL) {
 export function SiteAnalytics() {
   const pathname = usePathname() ?? "/";
   const initialPathnameRef = useRef(pathname);
+  const [consentStatus, setConsentStatus] = useState<SiteConsentStatus>(
+    getSiteConsentStatus,
+  );
+  const [gaReady, setGaReady] = useState(false);
+  const locale = getLocaleFromPath(pathname);
 
   useEffect(() => {
-    const locale = getLocaleFromPath(pathname);
+    const syncConsent = () => {
+      const nextStatus = getSiteConsentStatus();
+      setConsentStatus(nextStatus);
+
+      if (nextStatus !== "accepted") {
+        setGaReady(false);
+      }
+    };
+
+    syncConsent();
+    window.addEventListener(SITE_CONSENT_UPDATE_EVENT, syncConsent);
+
+    return () => {
+      window.removeEventListener(SITE_CONSENT_UPDATE_EVENT, syncConsent);
+    };
+  }, []);
+
+  useEffect(() => {
+    if (consentStatus !== "accepted") {
+      return;
+    }
 
     trackPageView({
       path: pathname,
       title: document.title,
       locale,
     });
-
-    if (analyticsId && window.gtag) {
-      window.gtag("event", "page_view", {
-        page_path: pathname,
-        page_title: document.title,
-        page_location: window.location.href,
-        send_to: analyticsId,
-      });
-    }
-  }, [pathname]);
+  }, [consentStatus, locale, pathname]);
 
   useEffect(() => {
+    if (consentStatus !== "accepted" || !analyticsId || !gaReady || !window.gtag) {
+      return;
+    }
+
+    window.gtag("event", "page_view", {
+      page_path: pathname,
+      page_title: document.title,
+      page_location: window.location.href,
+      send_to: analyticsId,
+    });
+  }, [consentStatus, gaReady, pathname]);
+
+  useEffect(() => {
+    const markGaReady = () => {
+      setGaReady(true);
+    };
+
+    window.addEventListener(GA_READY_EVENT, markGaReady);
+
+    return () => {
+      window.removeEventListener(GA_READY_EVENT, markGaReady);
+    };
+  }, []);
+
+  useEffect(() => {
+    if (consentStatus !== "accepted") {
+      return;
+    }
+
     const flushNavigationMetrics = () => {
       const navigationEntry = performance.getEntriesByType(
         "navigation",
@@ -153,9 +206,13 @@ export function SiteAnalytics() {
       clsObserver?.disconnect();
       document.removeEventListener("visibilitychange", handleVisibilityChange);
     };
-  }, []);
+  }, [consentStatus]);
 
   useEffect(() => {
+    if (consentStatus !== "accepted") {
+      return;
+    }
+
     const handleDocumentClick = (event: MouseEvent) => {
       const target = event.target;
 
@@ -177,8 +234,6 @@ export function SiteAnalytics() {
 
       const dataEvent = link.getAttribute("data-analytics-event");
       const dataLabel = link.getAttribute("data-analytics-label") ?? link.textContent?.trim() ?? href;
-      const locale = getLocaleFromPath(pathname);
-
       if (dataEvent === "cta_click") {
         trackAnalyticsEvent({
           type: "cta_click",
@@ -239,27 +294,33 @@ export function SiteAnalytics() {
     return () => {
       document.removeEventListener("click", handleDocumentClick);
     };
-  }, [pathname]);
-
-  if (!analyticsId) {
-    return null;
-  }
+  }, [consentStatus, locale, pathname]);
 
   return (
     <>
-      <Script
-        src={`https://www.googletagmanager.com/gtag/js?id=${analyticsId}`}
-        strategy="afterInteractive"
+      <ConsentBanner
+        locale={locale}
+        legalNoticeHref={getPagePath(locale, "legalNotice")}
+        privacyHref={getPagePath(locale, "privacy")}
       />
-      <Script id="google-analytics" strategy="afterInteractive">
-        {`
-          window.dataLayer = window.dataLayer || [];
-          function gtag(){dataLayer.push(arguments);}
-          window.gtag = gtag;
-          gtag('js', new Date());
-          gtag('config', '${analyticsId}', { send_page_view: false });
-        `}
-      </Script>
+      {consentStatus === "accepted" && analyticsId ? (
+        <>
+          <Script
+            src={`https://www.googletagmanager.com/gtag/js?id=${analyticsId}`}
+            strategy="afterInteractive"
+          />
+          <Script id="google-analytics" strategy="afterInteractive">
+            {`
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              window.gtag = gtag;
+              gtag('js', new Date());
+              gtag('config', '${analyticsId}', { send_page_view: false });
+              window.dispatchEvent(new Event('${GA_READY_EVENT}'));
+            `}
+          </Script>
+        </>
+      ) : null}
     </>
   );
 }

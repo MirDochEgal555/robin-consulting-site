@@ -3,7 +3,7 @@ import { PageIntro } from "@/components/page-intro";
 import { PageShell } from "@/components/page-shell";
 import { getBlogPosts } from "@/content/blog-posts";
 import { getSiteContent, type SiteLocale } from "@/content/site-content";
-import { getPageDefinition } from "@/content/site-pages";
+import { allSitePageKeys, getPageDefinition } from "@/content/site-pages";
 
 type DashboardPageProps = {
   locale: SiteLocale;
@@ -20,7 +20,7 @@ export function DashboardPage({ locale }: DashboardPageProps) {
   const page = getPageDefinition(locale, "dashboard");
   const analyticsLabel = locale === "de" ? "Analytics" : "Analytics";
   const performanceLabel = locale === "de" ? "Performance" : "Performance";
-  const localizedRouteCount = 8;
+  const localizedRouteCount = allSitePageKeys.length * 2;
   const localizedBlogPostCount = getBlogPosts(locale).length * 2;
   const indexablePageCount = localizedRouteCount + localizedBlogPostCount;
   const pageNavItems = [

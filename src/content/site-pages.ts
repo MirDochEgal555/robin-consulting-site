@@ -2,7 +2,12 @@ import type { Metadata } from "next";
 import { getSiteContent, type SiteLocale } from "@/content/site-content";
 
 export const sitePageKeys = ["home", "services", "blog"] as const;
-export const allSitePageKeys = [...sitePageKeys, "dashboard"] as const;
+export const utilitySitePageKeys = [
+  "dashboard",
+  "legalNotice",
+  "privacy",
+] as const;
+export const allSitePageKeys = [...sitePageKeys, ...utilitySitePageKeys] as const;
 
 export type SitePageKey = (typeof allSitePageKeys)[number];
 
@@ -106,6 +111,30 @@ const pageDefinitions = {
           "Use this page to confirm what the current deployment is emitting, which events the browser is capturing, and whether analytics forwarding is actually configured.",
       },
     },
+    legalNotice: {
+      label: "Legal notice",
+      slug: "legal-notice",
+      metadata: {
+        title: "Legal Notice | Robin Keim IT Consulting",
+        description:
+          "Provider identification and mandatory legal disclosures for Robin Keim IT Consulting.",
+        openGraphTitle: "Legal Notice | Robin Keim IT Consulting",
+        openGraphDescription:
+          "Provider identification and mandatory legal disclosures for this website.",
+      },
+    },
+    privacy: {
+      label: "Privacy",
+      slug: "privacy",
+      metadata: {
+        title: "Privacy Policy | Robin Keim IT Consulting",
+        description:
+          "Privacy information for the website, contact flow, booking flow, and optional analytics.",
+        openGraphTitle: "Privacy Policy | Robin Keim IT Consulting",
+        openGraphDescription:
+          "Privacy information for the website, contact flow, booking flow, and optional analytics.",
+      },
+    },
   },
   de: {
     home: {
@@ -166,6 +195,30 @@ const pageDefinitions = {
           "Diese Seite zeigt, was die aktuelle Deployment wirklich ausliefert, welche Events der Browser erfasst und ob Analytics-Weiterleitung derzeit ueberhaupt konfiguriert ist.",
       },
     },
+    legalNotice: {
+      label: "Impressum",
+      slug: "impressum",
+      metadata: {
+        title: "Impressum | Robin Keim IT-Beratung",
+        description:
+          "Anbieterkennzeichnung und Pflichtangaben fuer Robin Keim IT-Beratung.",
+        openGraphTitle: "Impressum | Robin Keim IT-Beratung",
+        openGraphDescription:
+          "Anbieterkennzeichnung und Pflichtangaben fuer diese Website.",
+      },
+    },
+    privacy: {
+      label: "Datenschutz",
+      slug: "datenschutz",
+      metadata: {
+        title: "Datenschutzerklaerung | Robin Keim IT-Beratung",
+        description:
+          "Datenschutzhinweise fuer Website, Kontaktweg, Terminbuchung und optionale Analytics.",
+        openGraphTitle: "Datenschutzerklaerung | Robin Keim IT-Beratung",
+        openGraphDescription:
+          "Datenschutzhinweise fuer Website, Kontaktweg, Terminbuchung und optionale Analytics.",
+      },
+    },
   },
 } as const satisfies Record<SiteLocale, Record<SitePageKey, SitePageDefinition>>;
 
@@ -204,6 +257,14 @@ export function getPageDefinition(
   locale: SiteLocale,
   pageKey: "dashboard",
 ): (typeof pageDefinitions)[SiteLocale]["dashboard"];
+export function getPageDefinition(
+  locale: SiteLocale,
+  pageKey: "legalNotice",
+): (typeof pageDefinitions)[SiteLocale]["legalNotice"];
+export function getPageDefinition(
+  locale: SiteLocale,
+  pageKey: "privacy",
+): (typeof pageDefinitions)[SiteLocale]["privacy"];
 export function getPageDefinition(
   locale: SiteLocale,
   pageKey: SitePageKey,

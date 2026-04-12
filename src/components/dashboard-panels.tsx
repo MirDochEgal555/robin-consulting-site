@@ -10,6 +10,11 @@ import {
   type AnalyticsMetric,
   type AnalyticsSnapshot,
 } from "@/lib/site-analytics";
+import {
+  SITE_CONSENT_UPDATE_EVENT,
+  getSiteConsentStatus,
+  type SiteConsentStatus,
+} from "@/lib/site-consent";
 
 type DashboardPanelsProps = {
   locale: SiteLocale;
@@ -31,7 +36,7 @@ const copy = {
     analytics: "Analytics",
     analyticsTitle: "Traffic and activity signals",
     analyticsDescription:
-      "Page views and meaningful interactions are stored locally and forwarded to GA4 when the analytics ID is configured.",
+      "Page views and meaningful interactions are stored locally only after consent, and they are forwarded to GA4 only when consent exists and the analytics ID is configured.",
     performance: "Performance",
     performanceTitle: "Recent browser load metrics",
     performanceDescription:
@@ -42,13 +47,16 @@ const copy = {
       "The exported site already emits crawlable files and route metadata. These cards show the current configured surface.",
     deployment: "Deployment",
     trackingStatus: "Tracking status",
+    trackingModeValueBlocked: "Blocked until consent",
     trackingModeValueLocal: "Local dashboard only",
     trackingModeValueGa: "Local dashboard + GA4 forwarding",
     gaStatusLabel: "GA4",
     gaStatusEnabled: "Configured",
     gaStatusDisabled: "Missing analytics ID",
+    gaStatusAwaitingConsent: "Waiting for consent",
     localStatusLabel: "First-party tracker",
     localStatusValue: "Active in this browser",
+    localStatusBlocked: "Blocked until consent",
     pageViews: "Page views",
     ctaClicks: "CTA clicks",
     outboundClicks: "Outbound clicks",
@@ -80,7 +88,7 @@ const copy = {
     analytics: "Analytics",
     analyticsTitle: "Traffic- und Aktivitaetssignale",
     analyticsDescription:
-      "Seitenaufrufe und relevante Interaktionen werden lokal gespeichert und an GA4 weitergeleitet, sobald eine Analytics-ID gesetzt ist.",
+      "Seitenaufrufe und relevante Interaktionen werden erst nach Einwilligung lokal gespeichert und nur dann an GA4 weitergeleitet, wenn zusaetzlich eine Analytics-ID gesetzt ist.",
     performance: "Performance",
     performanceTitle: "Aktuelle Browser-Lade-Metriken",
     performanceDescription:
@@ -91,13 +99,16 @@ const copy = {
       "Die exportierte Seite liefert bereits crawlbare Dateien und Routen-Metadaten aus. Diese Karten zeigen den aktuell konfigurierten Surface.",
     deployment: "Deployment",
     trackingStatus: "Tracking-Status",
+    trackingModeValueBlocked: "Bis zur Einwilligung blockiert",
     trackingModeValueLocal: "Nur lokales Dashboard",
     trackingModeValueGa: "Lokales Dashboard + GA4-Weiterleitung",
     gaStatusLabel: "GA4",
     gaStatusEnabled: "Konfiguriert",
     gaStatusDisabled: "Analytics-ID fehlt",
+    gaStatusAwaitingConsent: "Wartet auf Einwilligung",
     localStatusLabel: "First-Party-Tracker",
     localStatusValue: "In diesem Browser aktiv",
+    localStatusBlocked: "Bis zur Einwilligung blockiert",
     pageViews: "Seitenaufrufe",
     ctaClicks: "CTA-Klicks",
     outboundClicks: "Externe Klicks",
@@ -176,18 +187,24 @@ export function DashboardPanels({
 }: DashboardPanelsProps) {
   const labels = copy[locale];
   const [snapshot, setSnapshot] = useState<AnalyticsSnapshot>(readSnapshot);
+  const [consentStatus, setConsentStatus] = useState<SiteConsentStatus>(
+    getSiteConsentStatus,
+  );
 
   useEffect(() => {
     const refresh = () => {
       setSnapshot(readSnapshot());
+      setConsentStatus(getSiteConsentStatus());
     };
 
     refresh();
     window.addEventListener(ANALYTICS_UPDATE_EVENT, refresh);
+    window.addEventListener(SITE_CONSENT_UPDATE_EVENT, refresh);
     window.addEventListener("storage", refresh);
 
     return () => {
       window.removeEventListener(ANALYTICS_UPDATE_EVENT, refresh);
+      window.removeEventListener(SITE_CONSENT_UPDATE_EVENT, refresh);
       window.removeEventListener("storage", refresh);
     };
   }, []);
@@ -199,6 +216,22 @@ export function DashboardPanels({
     (left, right) =>
       new Date(right.timestamp).getTime() - new Date(left.timestamp).getTime(),
   );
+  const consentGranted = consentStatus === "accepted";
+  const gaStatusClassName = consentGranted
+    ? analyticsEnabled
+      ? "border-emerald-400/30 bg-emerald-400/10 text-emerald-200"
+      : "border-amber-400/30 bg-amber-400/10 text-amber-200"
+    : "border-slate-400/30 bg-slate-400/10 text-slate-300";
+  const gaStatusLabel = consentGranted
+    ? analyticsEnabled
+      ? labels.gaStatusEnabled
+      : labels.gaStatusDisabled
+    : labels.gaStatusAwaitingConsent;
+  const trackingMode = consentGranted
+    ? analyticsEnabled
+      ? labels.trackingModeValueGa
+      : labels.trackingModeValueLocal
+    : labels.trackingModeValueBlocked;
 
   return (
     <div className="container-shell space-y-12 pb-20">
@@ -220,28 +253,24 @@ export function DashboardPanels({
                 {labels.trackingStatus}
               </div>
               <div className="mt-3 text-xl font-semibold text-white">
-                {analyticsEnabled
-                  ? labels.trackingModeValueGa
-                  : labels.trackingModeValueLocal}
+                {trackingMode}
               </div>
               <div className="mt-4 space-y-2 text-sm text-slate-300">
                 <div className="flex items-center justify-between gap-3">
                   <span>{labels.gaStatusLabel}</span>
                   <span
-                    className={`rounded-full border px-3 py-1 text-xs font-medium uppercase tracking-[0.18em] ${
-                      analyticsEnabled
-                        ? "border-emerald-400/30 bg-emerald-400/10 text-emerald-200"
-                        : "border-amber-400/30 bg-amber-400/10 text-amber-200"
-                    }`}
+                    className={`rounded-full border px-3 py-1 text-xs font-medium uppercase tracking-[0.18em] ${gaStatusClassName}`}
                   >
-                    {analyticsEnabled
-                      ? labels.gaStatusEnabled
-                      : labels.gaStatusDisabled}
+                    {gaStatusLabel}
                   </span>
                 </div>
                 <div className="flex items-center justify-between gap-3">
                   <span>{labels.localStatusLabel}</span>
-                  <span className="text-sky-200">{labels.localStatusValue}</span>
+                  <span className="text-sky-200">
+                    {consentGranted
+                      ? labels.localStatusValue
+                      : labels.localStatusBlocked}
+                  </span>
                 </div>
               </div>
             </div>
