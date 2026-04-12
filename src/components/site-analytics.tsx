@@ -37,9 +37,7 @@ function isExternalUrl(url: URL) {
 export function SiteAnalytics() {
   const pathname = usePathname() ?? "/";
   const initialPathnameRef = useRef(pathname);
-  const [consentStatus, setConsentStatus] = useState<SiteConsentStatus>(
-    getSiteConsentStatus,
-  );
+  const [consentStatus, setConsentStatus] = useState<SiteConsentStatus>("pending");
   const [gaReady, setGaReady] = useState(false);
   const locale = getLocaleFromPath(pathname);
 

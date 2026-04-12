@@ -63,14 +63,14 @@ export function ConsentBanner({
   privacyHref,
 }: ConsentBannerProps) {
   const labels = copy[locale];
-  const [status, setStatus] = useState<SiteConsentStatus>(getSiteConsentStatus);
-  const [open, setOpen] = useState(() => isOpenByDefault(getSiteConsentStatus()));
+  const [status, setStatus] = useState<SiteConsentStatus>("pending");
+  const [open, setOpen] = useState(false);
 
   useEffect(() => {
     const syncStatus = () => {
       const nextStatus = getSiteConsentStatus();
       setStatus(nextStatus);
-      setOpen((current) => current || isOpenByDefault(nextStatus));
+      setOpen(isOpenByDefault(nextStatus));
     };
 
     const openPreferences = () => {

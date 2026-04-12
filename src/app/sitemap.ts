@@ -25,6 +25,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
             : 0.9
           : pageKey === "services"
             ? 0.8
+            : pageKey === "projects"
+              ? 0.76
             : pageKey === "blog"
               ? 0.75
               : 0.3,

@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { getSiteContent, type SiteLocale } from "@/content/site-content";
 
-export const sitePageKeys = ["home", "services", "blog"] as const;
+export const sitePageKeys = ["home", "services", "projects", "blog"] as const;
 export const utilitySitePageKeys = [
   "dashboard",
   "legalNotice",
@@ -73,6 +73,24 @@ const pageDefinitions = {
         title: "Technical solutions built around business needs.",
         description:
           "This page explains how businesses can benefit from practical AI use, cleaner task automation, and websites that are created and hosted as reliable business assets.",
+      },
+    },
+    projects: {
+      label: "Projects",
+      slug: "projects",
+      metadata: {
+        title: "Previous Projects | Robin Keim IT Consulting",
+        description:
+          "A growing archive of previous projects, GitHub work, professional web development experience, and coding knowledge built through college and practice.",
+        openGraphTitle: "Previous Projects | Robin Keim IT Consulting",
+        openGraphDescription:
+          "Selected older projects, GitHub repositories, working student experience, and coding background.",
+      },
+      intro: {
+        eyebrow: "Previous projects",
+        title: "Earlier project work, public repositories, and practical coding experience.",
+        description:
+          "This page gathers public GitHub work, selected older repositories, working student experience in web development and task automation, and the broader coding foundation built through business informatics studies.",
       },
     },
     blog: {
@@ -157,6 +175,24 @@ const pageDefinitions = {
         title: "Lösungen mit klarem Nutzen fuer Ihr Unternehmen.",
         description:
           "Diese Seite zeigt, wie Unternehmen von praktischem KI-Einsatz, sauberer Aufgabenautomatisierung und professionell erstellten und gehosteten Websites profitieren können.",
+      },
+    },
+    projects: {
+      label: "Projekte",
+      slug: "projekte",
+      metadata: {
+        title: "Fruehere Projekte | Robin Keim IT-Beratung",
+        description:
+          "Ein wachsendes Archiv frueherer Projekte, GitHub-Arbeit, werkstudentischer Webentwicklung und Coding-Wissen aus Studium und Praxis.",
+        openGraphTitle: "Fruehere Projekte | Robin Keim IT-Beratung",
+        openGraphDescription:
+          "Ausgewaehlte aeltere Projekte, GitHub-Repositories, Berufserfahrung und technischer Hintergrund.",
+      },
+      intro: {
+        eyebrow: "Fruehere Projekte",
+        title: "Fruehere Projektarbeit, oeffentliche Repositories und praktische Coding-Erfahrung.",
+        description:
+          "Diese Seite buendelt oeffentliche GitHub-Arbeit, ausgewaehlte aeltere Repositories, werkstudentische Erfahrung in Webentwicklung und Aufgabenautomatisierung sowie das breitere Coding-Fundament aus dem Wirtschaftsinformatik-Studium.",
       },
     },
     blog: {
@@ -249,6 +285,10 @@ export function getPageDefinition(
   locale: SiteLocale,
   pageKey: "services",
 ): (typeof pageDefinitions)[SiteLocale]["services"];
+export function getPageDefinition(
+  locale: SiteLocale,
+  pageKey: "projects",
+): (typeof pageDefinitions)[SiteLocale]["projects"];
 export function getPageDefinition(
   locale: SiteLocale,
   pageKey: "blog",
