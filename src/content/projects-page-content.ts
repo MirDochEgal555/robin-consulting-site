@@ -75,7 +75,7 @@ const projectsPageContent = {
       eyebrow: "GitHub",
       title: "Public repositories, experiments, and older implementation work.",
       description:
-        "The GitHub profile acts as the public archive for personal code, research-driven implementations, and smaller experiments. This page highlights a few older entries and will keep expanding over time.",
+        "Earlier implementation work, technical depth, and the path from idea to working software become visible here. Potential clients get a clearer sense of how problems are approached in code and execution.",
       profileLabel: "MirDochEgal555 / Robin Keim",
       profileHref: githubProfileHref,
       ctaLabel: "Open GitHub profile",
@@ -95,10 +95,10 @@ const projectsPageContent = {
       ],
     },
     projectSection: {
-      eyebrow: "Selected projects",
+      eyebrow: "Projects",
       title: "A few older repositories that show range and technical curiosity.",
       description:
-        "These are not framed as polished products. They are part of an evolving archive that shows experimentation across dashboards, research-heavy implementations, and Python-based idea work.",
+        "These examples show how different technical challenges were approached in practice, from dashboards and research-driven implementations to fast Python-based prototyping.",
       archiveNote:
         "More older projects and context notes will be added here over time.",
     },
@@ -144,7 +144,7 @@ const projectsPageContent = {
       eyebrow: "Experience",
       title: "Working student experience in web development and task automation.",
       description:
-        "The professional experience section focuses on applied delivery: building for real use cases, improving internal workflows, and working in an environment where software has to be useful beyond a demo.",
+        "Hands-on delivery in a real working environment shaped this background: building useful software, improving internal workflows, and shipping solutions that need to hold up in day-to-day use.",
     },
     experience: [
       {
@@ -173,7 +173,7 @@ const projectsPageContent = {
       },
     ],
     knowledgeSection: {
-      eyebrow: "Coding knowledge",
+      eyebrow: "Knowledge",
       title: "General coding knowledge shaped by college work and applied projects.",
       description:
         "The college path in business informatics added structure to the practical experience: not just writing code, but understanding why a system should be built in a certain way and where it creates business value.",
@@ -216,7 +216,7 @@ const projectsPageContent = {
       eyebrow: "GitHub",
       title: "Oeffentliche Repositories, Experimente und fruehere Implementierungsarbeit.",
       description:
-        "Das GitHub-Profil dient als oeffentliches Archiv fuer persoenlichen Code, forschungsnahe Implementierungen und kleinere Experimente. Diese Seite hebt einige aeltere Eintraege hervor und wird mit der Zeit weiter ausgebaut.",
+        "Fruehere Implementierungsarbeit, technische Tiefe und der Weg von der Idee zur funktionierenden Software werden hier sichtbar. Potenzielle Kunden erhalten so ein klareres Bild davon, wie Probleme in Code und Umsetzung angegangen werden.",
       profileLabel: "MirDochEgal555 / Robin Keim",
       profileHref: githubProfileHref,
       ctaLabel: "GitHub-Profil oeffnen",
@@ -236,10 +236,10 @@ const projectsPageContent = {
       ],
     },
     projectSection: {
-      eyebrow: "Ausgewaehlte Projekte",
+      eyebrow: "Projekte",
       title: "Einige aeltere Repositories, die technische Bandbreite und Neugier zeigen.",
       description:
-        "Diese Projekte sind nicht als polierte Produkte gedacht, sondern als Teil eines wachsenden Archivs. Sie zeigen Experimente rund um Dashboards, forschungsnahe Implementierungen und Python-basierte Ideenarbeit.",
+        "Diese Beispiele zeigen, wie unterschiedliche technische Herausforderungen praktisch angegangen wurden, von Dashboards und forschungsnahen Implementierungen bis hin zu schneller Python-basierter Prototyping-Arbeit.",
       archiveNote:
         "Weitere fruehere Projekte und kurze Kontextbeschreibungen werden hier nach und nach ergaenzt.",
     },
@@ -285,7 +285,7 @@ const projectsPageContent = {
       eyebrow: "Erfahrung",
       title: "Werkstudentische Erfahrung in Webentwicklung und Aufgabenautomatisierung.",
       description:
-        "Der berufliche Teil steht fuer anwendungsnahe Umsetzung: Software fuer echte Use Cases bauen, interne Ablaeufe verbessern und in einem Umfeld arbeiten, in dem Software ueber eine Demo hinaus funktionieren muss.",
+        "Praktische Umsetzung im echten Arbeitsumfeld praegt diesen Hintergrund: nuetzliche Software bauen, interne Ablaeufe verbessern und Loesungen ausliefern, die im Alltag verlaesslich funktionieren muessen.",
     },
     experience: [
       {
@@ -314,7 +314,7 @@ const projectsPageContent = {
       },
     ],
     knowledgeSection: {
-      eyebrow: "Coding-Wissen",
+      eyebrow: "Wissen",
       title: "Allgemeines Coding-Wissen aus Studium und praktischer Projektarbeit.",
       description:
         "Der Studienweg in Wirtschaftsinformatik hat der praktischen Erfahrung Struktur gegeben: nicht nur Code schreiben, sondern verstehen, warum ein System auf bestimmte Weise gebaut werden sollte und welchen Nutzen es fachlich stiftet.",

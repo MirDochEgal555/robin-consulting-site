@@ -81,16 +81,16 @@ const pageDefinitions = {
       metadata: {
         title: "Previous Projects | Robin Keim IT Consulting",
         description:
-          "A growing archive of previous projects, GitHub work, professional web development experience, and coding knowledge built through college and practice.",
+          "Selected repositories covering thesis-oriented implementation work, research-heavy Python projects, dashboard experiments, and applied experience in web development and automation.",
         openGraphTitle: "Previous Projects | Robin Keim IT Consulting",
         openGraphDescription:
-          "Selected older projects, GitHub repositories, working student experience, and coding background.",
+          "Selected repositories, dashboard experiments, and applied web and automation experience.",
       },
       intro: {
         eyebrow: "Previous projects",
         title: "Earlier project work, public repositories, and practical coding experience.",
         description:
-          "This page gathers public GitHub work, selected older repositories, working student experience in web development and task automation, and the broader coding foundation built through business informatics studies.",
+          "Thesis-oriented implementation work, research-heavy Python repositories, dashboard experiments, and practical experience in web development and task automation come together here.",
       },
     },
     blog: {
@@ -183,16 +183,16 @@ const pageDefinitions = {
       metadata: {
         title: "Fruehere Projekte | Robin Keim IT-Beratung",
         description:
-          "Ein wachsendes Archiv frueherer Projekte, GitHub-Arbeit, werkstudentischer Webentwicklung und Coding-Wissen aus Studium und Praxis.",
+          "Ausgewaehlte Repositories zu thesisnaher Implementierungsarbeit, forschungsintensiven Python-Projekten, Dashboard-Experimenten sowie praktischer Erfahrung in Webentwicklung und Automatisierung.",
         openGraphTitle: "Fruehere Projekte | Robin Keim IT-Beratung",
         openGraphDescription:
-          "Ausgewaehlte aeltere Projekte, GitHub-Repositories, Berufserfahrung und technischer Hintergrund.",
+          "Ausgewaehlte Repositories, Dashboard-Experimente sowie praktische Erfahrung in Webentwicklung und Automatisierung.",
       },
       intro: {
         eyebrow: "Fruehere Projekte",
         title: "Fruehere Projektarbeit, oeffentliche Repositories und praktische Coding-Erfahrung.",
         description:
-          "Diese Seite buendelt oeffentliche GitHub-Arbeit, ausgewaehlte aeltere Repositories, werkstudentische Erfahrung in Webentwicklung und Aufgabenautomatisierung sowie das breitere Coding-Fundament aus dem Wirtschaftsinformatik-Studium.",
+          "Thesisnahe Implementierungsarbeit, forschungsintensive Python-Repositories, Dashboard-Experimente sowie praktische Erfahrung in Webentwicklung und Aufgabenautomatisierung kommen hier zusammen.",
       },
     },
     blog: {

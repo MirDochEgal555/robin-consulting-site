@@ -10,16 +10,16 @@ type ProjectsTeaserSectionProps = {
 const teaserCopy = {
   en: {
     eyebrow: "Previous projects",
-    title: "See older work, public repositories, and technical background.",
+    title: "Take a look at previous projects.",
     description:
-      "A separate projects page collects earlier GitHub work, selected older repositories, and more detail on web development, automation, and college-based coding experience.",
+      "See selected past work and get a clearer picture of the technical range, practical experience, and problem-solving approach behind the consulting offer.",
     linkLabel: "View previous projects",
   },
   de: {
     eyebrow: "Fruehere Projekte",
-    title: "Mehr zu aelteren Arbeiten, oeffentlichen Repositories und technischem Hintergrund.",
+    title: "Werfen Sie einen Blick auf fruehere Projekte.",
     description:
-      "Eine eigene Projektseite sammelt fruehere GitHub-Arbeit, ausgewaehlte aeltere Repositories sowie mehr Kontext zu Webentwicklung, Automatisierung und dem im Studium aufgebauten Coding-Wissen.",
+      "Sehen Sie ausgewaehlte fruehere Arbeiten und gewinnen Sie einen klareren Eindruck von technischer Bandbreite, praktischer Erfahrung und der Herangehensweise hinter dem Beratungsangebot.",
     linkLabel: "Zu den frueheren Projekten",
   },
 } as const;
