@@ -144,6 +144,42 @@ npm run dev
 
 Open `http://localhost:3000`.
 
+## Testing
+
+The project now uses a small deploy-gated test stack:
+
+- `Vitest` for fast unit coverage around content helpers, localized routing, consent state, analytics state, and metadata routes
+- `Playwright` for smoke tests against the exported static site in `out/`
+
+Run the unit suite with:
+
+```bash
+npm run test:unit
+```
+
+Run the smoke suite with:
+
+```bash
+npx playwright install chromium
+npm run build
+npm run test:e2e:smoke
+```
+
+The smoke suite serves the generated `out/` directory with `scripts/serve-static.mjs` and checks launch-critical behavior:
+
+- key English and German routes load from the exported site
+- header navigation and locale switching work
+- the consent banner gates analytics storage correctly
+- the latest blog card opens a published article
+
+The unit suite focuses on the logic that is easiest to break during content or route changes:
+
+- blog publication filtering, localized post paths, metadata, and sitemap inputs
+- page path generation, language-switch targets, and alternates metadata
+- consent persistence and events
+- browser-side analytics counters and metric classification
+- `robots.ts` and `sitemap.ts`
+
 ## Build
 
 The project uses static export:
@@ -166,10 +202,12 @@ Current deployment flow:
 
 1. Push to `main`
 2. GitHub Actions runs `npm ci`
-3. Next.js builds and exports the site to `out/`
-4. `.nojekyll` is added
-5. The `out/` directory is deployed to GitHub Pages
-6. GitHub Pages serves the site on the configured custom domain
+3. `npm run test:unit` validates routing, blog publication logic, consent logic, analytics logic, and metadata helpers
+4. Next.js builds and exports the site to `out/`
+5. Playwright installs Chromium and runs `npm run test:e2e:smoke` against the exported site
+6. `.nojekyll` is added
+7. The `out/` directory is uploaded as the GitHub Pages artifact
+8. GitHub Pages deploys the artifact on the configured custom domain
 
 The workflow currently sets these production values:
 
@@ -181,4 +219,5 @@ The workflow currently sets these production values:
 ## Notes
 
 - `npm run lint` is currently not usable as-is because the repo still has `.eslintrc.json` while ESLint 9 expects an `eslint.config.*` file.
-- `npm run build` is the reliable verification step right now.
+- The current release gate is `npm run test:unit`, `npm run build`, and `npm run test:e2e:smoke`.
+- The Playwright smoke suite is intentionally narrow and protects the GitHub Pages upload path rather than trying to replace broader component or visual regression coverage.
