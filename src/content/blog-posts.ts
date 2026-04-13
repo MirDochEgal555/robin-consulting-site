@@ -61,6 +61,713 @@ export const blogSettings = {
 
 const blogPostEntries = [
   {
+    id: "identify-automation-opportunities",
+    featured: true,
+    publishedAt: "2026-05-04",
+    updatedAt: "2026-05-04",
+    readingTimeMinutes: 6,
+    locales: {
+      en: {
+        slug: "identify-automation-opportunities-business",
+        title: "How to Identify Automation Opportunities in Your Business",
+        excerpt:
+          "Not sure where to start with automation? Here’s a simple, practical framework to identify the biggest opportunities in your business.",
+        seoDescription:
+          "Learn how to identify automation opportunities in your business and improve efficiency with practical steps and real examples.",
+        category: "Automation",
+        tags: ["Automation", "AI", "Efficiency", "Workflows"],
+        sections: [
+          {
+            title: "Introduction",
+            paragraphs: [
+              "Most businesses know they should automate — but they don’t know where to start.",
+              "The problem is not a lack of tools. It’s a lack of clarity.",
+              "If you’ve already noticed inefficiencies, this article might sound familiar: /en/blog/hidden-cost-of-manual-work",
+            ],
+          },
+          {
+            title: "Why Automation Feels Hard",
+            paragraphs: [
+              "Automation often feels like a big technical project.",
+              "But in reality, most opportunities are simple — once you know where to look.",
+            ],
+            bullets: [
+              "Processes are not clearly documented",
+              "Workflows evolved over time",
+              "Inefficiencies feel “normal”",
+            ],
+          },
+          {
+            title: "Step 1: Look for Repetition",
+            paragraphs: [
+              "Repetition is the clearest signal for automation.",
+              "If something happens frequently, it’s a strong candidate.",
+            ],
+            bullets: [
+              "Daily tasks",
+              "Weekly reports",
+              "Recurring emails",
+              "Data transfers between tools",
+            ],
+          },
+          {
+            title: "Step 2: Identify Manual Work",
+            paragraphs: [
+              "Any task that requires copying, pasting, or moving data manually is a red flag.",
+              "These processes are slow, error-prone, and unnecessary.",
+            ],
+          },
+          {
+            title: "Step 3: Find Bottlenecks",
+            paragraphs: [
+              "Look at where work slows down.",
+              "These points often reveal the biggest opportunities.",
+            ],
+            bullets: [
+              "Waiting for approvals",
+              "Missing information",
+              "Too many handoffs",
+            ],
+          },
+          {
+            title: "Step 4: Check for Tool Gaps",
+            paragraphs: [
+              "Many inefficiencies come from tools that don’t work well together.",
+              "Instead of replacing everything, connecting systems is often enough.",
+              "This is where smart system design matters: /blog/build-vs-buy-custom-software",
+            ],
+          },
+          {
+            title: "Step 5: Prioritize Impact",
+            paragraphs: [
+              "Not every automation is worth it.",
+              "Focus on what creates the biggest impact first.",
+            ],
+            bullets: [
+              "Time saved",
+              "Error reduction",
+              "Process speed",
+              "Scalability",
+            ],
+          },
+          {
+            title: "Where AI Fits In",
+            paragraphs: [
+              "AI expands what can be automated.",
+              "It enables systems to handle more complex tasks.",
+              "For real examples, see: /blog/ai-use-cases-every-business-should-use",
+            ],
+          },
+          {
+            title: "From Opportunity to Implementation",
+            paragraphs: [
+              "Identifying opportunities is only the first step.",
+              "The real value comes from turning them into working systems.",
+              "If you want to understand how this works in practice: /blog/what-i-actually-do-as-an-it-consultant",
+            ],
+          },
+          {
+            title: "Final Thoughts",
+            paragraphs: [
+              "Automation is not about replacing everything.",
+              "It’s about removing unnecessary work and improving how your business operates.",
+              "Once you start looking, you’ll see opportunities everywhere.",
+            ],
+          },
+          {
+            title: "Get Started",
+            paragraphs: [
+              "If you’re unsure where your biggest opportunities are, that’s completely normal.",
+              "Let’s identify them together and turn them into real improvements.",
+            ],
+          },
+        ],
+      },
+
+      de: {
+        slug: "automatisierungspotenziale-erkennen",
+        title: "Wie du Automatisierungspotenziale in deinem Unternehmen erkennst",
+        excerpt:
+          "Du willst automatisieren, weißt aber nicht wo anfangen? Hier ist ein einfacher Leitfaden für die größten Hebel in deinem Business.",
+        seoDescription:
+          "Erfahre, wie du Automatisierungspotenziale erkennst und dein Unternehmen effizienter machst — mit konkreten Schritten.",
+        category: "Automatisierung",
+        tags: ["Automatisierung", "KI", "Effizienz", "Prozesse"],
+        sections: [
+          {
+            title: "Einleitung",
+            paragraphs: [
+              "Viele Unternehmen wissen, dass sie automatisieren sollten — aber nicht, wo sie anfangen sollen.",
+              "Das Problem ist nicht die Technik, sondern die fehlende Klarheit.",
+              "Wenn dir ineffiziente Prozesse bekannt vorkommen, lies auch: /de/blog/versteckte-kosten-manuelle-arbeit",
+            ],
+          },
+          {
+            title: "Warum es schwer wirkt",
+            paragraphs: [
+              "Automatisierung wirkt oft wie ein großes Projekt.",
+              "Dabei sind die meisten Potenziale einfacher als gedacht.",
+            ],
+            bullets: [
+              "Keine klaren Prozesse",
+              "Historisch gewachsene Abläufe",
+              "Ineffizienzen wirken normal",
+            ],
+          },
+          {
+            title: "Schritt 1: Wiederholung erkennen",
+            paragraphs: [
+              "Alles, was regelmäßig passiert, ist ein Kandidat für Automatisierung.",
+            ],
+            bullets: [
+              "Tägliche Aufgaben",
+              "Wöchentliche Reports",
+              "Wiederkehrende E-Mails",
+              "Datentransfers",
+            ],
+          },
+          {
+            title: "Schritt 2: Manuelle Arbeit finden",
+            paragraphs: [
+              "Kopieren, Einfügen oder manuelle Dateneingabe sind klare Signale.",
+              "Diese Prozesse sind langsam und fehleranfällig.",
+            ],
+          },
+          {
+            title: "Schritt 3: Engpässe identifizieren",
+            paragraphs: [
+              "Wo Arbeit stockt, liegen oft große Hebel.",
+            ],
+            bullets: [
+              "Freigaben",
+              "Fehlende Informationen",
+              "Viele Übergaben",
+            ],
+          },
+          {
+            title: "Schritt 4: Tool-Probleme prüfen",
+            paragraphs: [
+              "Viele Probleme entstehen durch schlecht integrierte Tools.",
+              "Oft reicht es, Systeme zu verbinden statt sie zu ersetzen.",
+              "Mehr dazu: /de/blog/build-vs-buy-software",
+            ],
+          },
+          {
+            title: "Schritt 5: Priorisieren",
+            paragraphs: [
+              "Nicht alles lohnt sich sofort.",
+              "Fokus auf den größten Impact.",
+            ],
+            bullets: [
+              "Zeitersparnis",
+              "Fehlerreduktion",
+              "Geschwindigkeit",
+              "Skalierbarkeit",
+            ],
+          },
+          {
+            title: "KI als Verstärker",
+            paragraphs: [
+              "KI erweitert die Möglichkeiten der Automatisierung.",
+              "Sie ermöglicht komplexere Abläufe.",
+              "Beispiele: /de/blog/ki-anwendungsfaelle-unternehmen",
+            ],
+          },
+          {
+            title: "Von der Idee zur Umsetzung",
+            paragraphs: [
+              "Erkennen ist nur der erste Schritt.",
+              "Der echte Mehrwert entsteht durch Umsetzung.",
+              "So funktioniert das in der Praxis: /de/blog/was-ich-als-it-consultant-eigentlich-mache",
+            ],
+          },
+          {
+            title: "Fazit",
+            paragraphs: [
+              "Automatisierung bedeutet nicht, alles zu ersetzen.",
+              "Es geht darum, unnötige Arbeit zu eliminieren.",
+            ],
+          },
+          {
+            title: "Start",
+            paragraphs: [
+              "Wenn du unsicher bist, wo deine größten Potenziale liegen, ist das normal.",
+              "Lass uns gemeinsam die besten Möglichkeiten identifizieren.",
+            ],
+          },
+        ],
+      },
+    },
+  },
+  {
+    id: "build-vs-buy-software",
+    featured: true,
+    publishedAt: "2026-04-27",
+    updatedAt: "2026-04-27",
+    readingTimeMinutes: 6,
+    locales: {
+      en: {
+        slug: "build-vs-buy-custom-software",
+        title: "Build vs Buy: When Custom Software Actually Makes Sense",
+        excerpt:
+          "Should you build custom software or use existing tools? Here’s a practical guide to making the right decision for your business.",
+        seoDescription:
+          "Learn when custom software makes sense vs buying existing tools. A practical guide for businesses deciding between build vs buy.",
+        category: "IT Strategy",
+        tags: ["Custom Software", "Automation", "IT Strategy", "Business"],
+        sections: [
+          {
+            title: "Introduction",
+            paragraphs: [
+              "One of the most common questions businesses face is simple: should we build something ourselves, or just use an existing tool?",
+              "There is no universal answer — but there is a clear way to think about it.",
+              "If you're already dealing with inefficient processes, this article might resonate: /blog/hidden-cost-of-manual-work",
+            ],
+          },
+          {
+            title: "The Default: Buy First",
+            paragraphs: [
+              "In most cases, buying an existing solution is the right starting point.",
+              "Modern tools are powerful, affordable, and fast to implement.",
+            ],
+            bullets: [
+              "Lower upfront cost",
+              "Faster setup",
+              "Proven reliability",
+              "No maintenance required",
+            ],
+          },
+          {
+            title: "Where Buying Breaks Down",
+            paragraphs: [
+              "At some point, standard tools stop fitting your needs.",
+              "This is where friction starts to build inside your business.",
+            ],
+            bullets: [
+              "Too many manual workarounds",
+              "Tools don’t integrate properly",
+              "Limited flexibility",
+              "Scaling becomes difficult",
+            ],
+          },
+          {
+            title: "When Custom Software Makes Sense",
+            paragraphs: [
+              "Custom solutions are not about building everything from scratch.",
+              "They are about solving specific problems in the most effective way.",
+            ],
+            bullets: [
+              "Your processes are unique",
+              "You rely heavily on manual workflows",
+              "Your tools don’t work well together",
+              "You are losing time or money due to inefficiencies",
+            ],
+          },
+          {
+            title: "The Hybrid Approach (What Actually Works)",
+            paragraphs: [
+              "The best solution is often not build OR buy — but a combination of both.",
+              "You use existing tools where they fit, and build custom layers where needed.",
+              "This is how modern systems are designed: /blog/what-i-actually-do-as-an-it-consultant",
+            ],
+          },
+          {
+            title: "Where AI Changes the Equation",
+            paragraphs: [
+              "AI makes custom solutions more powerful and more accessible.",
+              "You can now build smarter systems without massive complexity.",
+              "To understand the bigger shift, read: /blog/how-ai-is-changing-websites",
+            ],
+          },
+          {
+            title: "A Simple Rule of Thumb",
+            paragraphs: [
+              "Start simple — but don’t stay stuck.",
+            ],
+            bullets: [
+              "Use tools early",
+              "Automate where possible",
+              "Build when friction becomes expensive",
+            ],
+          },
+          {
+            title: "Real-World Example",
+            paragraphs: [
+              "A business starts with spreadsheets and standard tools.",
+              "Over time, manual work increases, processes slow down, and errors appear.",
+              "At that point, a custom solution or automation layer creates massive leverage.",
+              "For concrete examples, see: /blog/ai-use-cases-every-business-should-use",
+            ],
+          },
+          {
+            title: "Final Thoughts",
+            paragraphs: [
+              "Build vs buy is not a technical decision — it’s a business decision.",
+              "The goal is always the same: reduce friction, save time, and create scalable systems.",
+            ],
+          },
+          {
+            title: "Get Started",
+            paragraphs: [
+              "If you’re unsure whether your current setup still makes sense, it’s worth taking a closer look.",
+              "Let’s figure out where tools are enough — and where custom solutions create real value.",
+            ],
+          },
+        ],
+      },
+
+      de: {
+        slug: "build-vs-buy-software",
+        title: "Build vs Buy: Wann individuelle Software wirklich sinnvoll ist",
+        excerpt:
+          "Solltest du Software selbst entwickeln oder bestehende Tools nutzen? Ein praktischer Leitfaden für die richtige Entscheidung.",
+        seoDescription:
+          "Erfahre, wann individuelle Software sinnvoll ist und wann bestehende Tools ausreichen. Ein Guide für Build vs Buy Entscheidungen.",
+        category: "IT-Strategie",
+        tags: ["Software", "Automatisierung", "Strategie", "Business"],
+        sections: [
+          {
+            title: "Einleitung",
+            paragraphs: [
+              "Eine der häufigsten Fragen in Unternehmen ist: selbst entwickeln oder bestehende Tools nutzen?",
+              "Eine einfache Antwort gibt es nicht — aber eine klare Entscheidungslogik.",
+              "Wenn du bereits ineffiziente Prozesse hast, könnte dieser Artikel relevant sein: /de/blog/versteckte-kosten-manuelle-arbeit",
+            ],
+          },
+          {
+            title: "Standard: Erst kaufen",
+            paragraphs: [
+              "In den meisten Fällen ist es sinnvoll, mit bestehenden Tools zu starten.",
+              "Sie sind schnell verfügbar und kostengünstig.",
+            ],
+            bullets: [
+              "Geringe Kosten",
+              "Schnelle Umsetzung",
+              "Bewährte Lösungen",
+              "Kein Wartungsaufwand",
+            ],
+          },
+          {
+            title: "Wann Tools an Grenzen kommen",
+            paragraphs: [
+              "Irgendwann passen Standardlösungen nicht mehr perfekt.",
+              "Dann entstehen Reibungsverluste im Alltag.",
+            ],
+            bullets: [
+              "Manuelle Workarounds",
+              "Fehlende Integration",
+              "Zu wenig Flexibilität",
+              "Schlechte Skalierbarkeit",
+            ],
+          },
+          {
+            title: "Wann individuelle Lösungen sinnvoll sind",
+            paragraphs: [
+              "Individuelle Software löst gezielt Probleme.",
+            ],
+            bullets: [
+              "Einzigartige Prozesse",
+              "Viele manuelle Aufgaben",
+              "Tools arbeiten nicht zusammen",
+              "Zeit- oder Geldverlust",
+            ],
+          },
+          {
+            title: "Die beste Lösung: Kombination",
+            paragraphs: [
+              "Die Realität ist meist eine Mischung aus beidem.",
+              "Tools + individuelle Erweiterungen führen zum besten Ergebnis.",
+              "So entstehen moderne Systeme: /de/blog/was-ich-als-it-consultant-eigentlich-mache",
+            ],
+          },
+          {
+            title: "KI verändert alles",
+            paragraphs: [
+              "KI macht individuelle Lösungen leistungsfähiger und zugänglicher.",
+              "Mehr dazu hier: /de/blog/wie-ki-websites-veraendert",
+            ],
+          },
+          {
+            title: "Faustregel",
+            paragraphs: [
+              "Einfach starten — aber nicht stehen bleiben.",
+            ],
+            bullets: [
+              "Tools nutzen",
+              "Automatisieren",
+              "Bei Bedarf individuell erweitern",
+            ],
+          },
+          {
+            title: "Beispiel",
+            paragraphs: [
+              "Viele starten mit Excel und Standardtools.",
+              "Mit Wachstum entstehen Probleme — hier helfen Automatisierung und individuelle Lösungen.",
+              "Konkrete Beispiele: /de/blog/ki-anwendungsfaelle-unternehmen",
+            ],
+          },
+          {
+            title: "Fazit",
+            paragraphs: [
+              "Build vs Buy ist eine strategische Entscheidung.",
+              "Ziel ist Effizienz und Skalierbarkeit.",
+            ],
+          },
+          {
+            title: "Start",
+            paragraphs: [
+              "Wenn du unsicher bist, ob deine aktuellen Tools noch passen, lohnt sich ein genauer Blick.",
+              "Lass uns gemeinsam die beste Lösung finden.",
+            ],
+          },
+        ],
+      },
+    },
+  },
+  {
+    id: "hidden-cost-manual-work",
+    featured: true,
+    publishedAt: "2026-04-20",
+    updatedAt: "2026-04-20",
+    readingTimeMinutes: 6,
+    locales: {
+      en: {
+        slug: "hidden-cost-of-manual-work",
+        title: "The Hidden Cost of Manual Work (You’re Losing More Than You Think)",
+        excerpt:
+          "Manual work feels harmless — but it silently costs your business time, money, and growth. Here’s what it’s really doing to you.",
+        seoDescription:
+          "Discover the hidden cost of manual work in your business and how automation and AI can save time, reduce errors, and improve efficiency.",
+        category: "Business Efficiency",
+        tags: ["Automation", "Efficiency", "AI", "Workflows"],
+        sections: [
+          {
+            title: "Introduction",
+            paragraphs: [
+              "Most businesses don’t realize how much manual work is actually costing them.",
+              "It feels normal — copying data, sending emails, updating spreadsheets, repeating the same steps every day.",
+              "But over time, these small tasks add up to a massive hidden cost.",
+            ],
+          },
+          {
+            title: "The Problem: It Doesn’t Feel Expensive",
+            paragraphs: [
+              "Manual work is dangerous because it doesn’t look like a problem.",
+              "It’s not a big failure — it’s a thousand tiny inefficiencies.",
+            ],
+            bullets: [
+              "“It only takes 5 minutes”",
+              "“We’ve always done it this way”",
+              "“It’s not worth automating”",
+            ],
+          },
+          {
+            title: "The Real Cost of Manual Work",
+            paragraphs: [
+              "When you zoom out, the impact becomes clear.",
+              "Manual work doesn’t just cost time — it affects your entire business.",
+            ],
+            bullets: [
+              "Lost time across the team",
+              "Higher error rates",
+              "Slower processes",
+              "Missed opportunities",
+              "Limited scalability",
+            ],
+          },
+          {
+            title: "1. Time Loss Compounds Fast",
+            paragraphs: [
+              "A task that takes 10 minutes per day becomes over 40 hours per year — per person.",
+              "Multiply that across a team, and you’re losing weeks of productive time.",
+            ],
+          },
+          {
+            title: "2. Errors Are Inevitable",
+            paragraphs: [
+              "Manual processes are prone to mistakes.",
+              "Wrong data, missed steps, or inconsistent execution create problems that often cost more than the task itself.",
+            ],
+          },
+          {
+            title: "3. It Slows Down Growth",
+            paragraphs: [
+              "Manual systems don’t scale.",
+              "As your business grows, the workload increases linearly — or worse.",
+            ],
+          },
+          {
+            title: "4. It Blocks Better Systems",
+            paragraphs: [
+              "Manual work often hides the need for better systems.",
+              "Instead of fixing the root cause, teams adapt and keep working around inefficiencies.",
+            ],
+          },
+          {
+            title: "Where Automation & AI Come In",
+            paragraphs: [
+              "This is exactly where automation and AI create real value.",
+              "Instead of doing tasks manually, systems can handle them faster, more reliably, and at scale.",
+              "If you want to see concrete examples, check out: /en/blog/ai-use-cases-every-business-should-use",
+            ],
+          },
+          {
+            title: "What a Better System Looks Like",
+            paragraphs: [
+              "A well-designed system removes unnecessary work and lets your team focus on what actually matters.",
+            ],
+            bullets: [
+              "Automated workflows instead of repetitive tasks",
+              "Connected systems instead of isolated tools",
+              "Clear processes instead of improvisation",
+              "AI support where it makes sense",
+            ],
+          },
+          {
+            title: "Why Most Businesses Don’t Fix This",
+            paragraphs: [
+              "Even when the problem is obvious, many companies don’t act.",
+              "Not because they don’t care — but because they don’t know where to start.",
+              "This is exactly where structured IT consulting comes in: /en/blog/what-i-actually-do-as-an-it-consultant",
+            ],
+          },
+          {
+            title: "Final Thoughts",
+            paragraphs: [
+              "Manual work is not just inefficient — it’s a hidden growth blocker.",
+              "The longer it stays in your business, the more it costs you.",
+              "The good news: most of it can be improved quickly once you identify the right opportunities.",
+            ],
+          },
+          {
+            title: "Get Started",
+            paragraphs: [
+              "If you feel like your business is wasting time on repetitive work, you’re probably right.",
+              "Let’s identify the biggest inefficiencies and turn them into scalable systems.",
+            ],
+          },
+        ],
+      },
+
+      de: {
+        slug: "versteckte-kosten-manuelle-arbeit",
+        title: "Die versteckten Kosten manueller Arbeit (Du verlierst mehr als du denkst)",
+        excerpt:
+          "Manuelle Arbeit wirkt harmlos — kostet dein Unternehmen aber Zeit, Geld und Wachstum. Hier ist, was wirklich dahinter steckt.",
+        seoDescription:
+          "Erfahre, welche versteckten Kosten manuelle Arbeit verursacht und wie Automatisierung und KI dein Unternehmen effizienter machen.",
+        category: "Effizienz",
+        tags: ["Automatisierung", "Effizienz", "KI", "Prozesse"],
+        sections: [
+          {
+            title: "Einleitung",
+            paragraphs: [
+              "Viele Unternehmen unterschätzen, wie teuer manuelle Arbeit wirklich ist.",
+              "Sie fühlt sich normal an — Daten kopieren, E-Mails schreiben, Tabellen pflegen.",
+              "Doch genau diese kleinen Aufgaben summieren sich zu großen Kosten.",
+            ],
+          },
+          {
+            title: "Das Problem: Es fühlt sich harmlos an",
+            paragraphs: [
+              "Manuelle Arbeit ist gefährlich, weil sie nicht wie ein Problem aussieht.",
+              "Es sind viele kleine Ineffizienzen statt ein großer Fehler.",
+            ],
+            bullets: [
+              "„Das dauert doch nur kurz“",
+              "„Das haben wir schon immer so gemacht“",
+              "„Lohnt sich nicht zu automatisieren“",
+            ],
+          },
+          {
+            title: "Die echten Kosten",
+            paragraphs: [
+              "Wenn man das Gesamtbild betrachtet, wird der Effekt deutlich.",
+              "Manuelle Arbeit beeinflusst das gesamte Unternehmen.",
+            ],
+            bullets: [
+              "Zeitverlust",
+              "Fehleranfälligkeit",
+              "Langsame Prozesse",
+              "Verpasste Chancen",
+              "Keine Skalierbarkeit",
+            ],
+          },
+          {
+            title: "1. Zeitverlust",
+            paragraphs: [
+              "10 Minuten pro Tag werden zu über 40 Stunden im Jahr.",
+              "Multipliziert über ein Team entsteht ein enormer Verlust.",
+            ],
+          },
+          {
+            title: "2. Fehler",
+            paragraphs: [
+              "Manuelle Prozesse führen zwangsläufig zu Fehlern.",
+              "Diese kosten oft mehr als die eigentliche Aufgabe.",
+            ],
+          },
+          {
+            title: "3. Wachstum wird gebremst",
+            paragraphs: [
+              "Manuelle Systeme skalieren nicht.",
+              "Mehr Wachstum bedeutet mehr Aufwand.",
+            ],
+          },
+          {
+            title: "4. Schlechte Systeme bleiben bestehen",
+            paragraphs: [
+              "Manuelle Arbeit kaschiert strukturelle Probleme.",
+              "Anstatt sie zu lösen, wird weiter improvisiert.",
+            ],
+          },
+          {
+            title: "Automatisierung & KI",
+            paragraphs: [
+              "Hier kommen Automatisierung und KI ins Spiel.",
+              "Sie übernehmen Aufgaben schneller und zuverlässiger.",
+              "Konkrete Beispiele findest du hier: /de/blog/ki-anwendungsfaelle-unternehmen",
+            ],
+          },
+          {
+            title: "Bessere Systeme",
+            paragraphs: [
+              "Ein gutes System reduziert unnötige Arbeit und schafft Klarheit.",
+            ],
+            bullets: [
+              "Automatisierte Abläufe",
+              "Verbundene Systeme",
+              "Klare Prozesse",
+              "Sinnvoll eingesetzte KI",
+            ],
+          },
+          {
+            title: "Warum viele nichts ändern",
+            paragraphs: [
+              "Viele Unternehmen wissen, dass etwas nicht optimal läuft.",
+              "Aber sie wissen nicht, wo sie anfangen sollen.",
+              "Hier hilft strukturiertes IT-Consulting: /de/blog/was-ich-als-it-consultant-eigentlich-mache",
+            ],
+          },
+          {
+            title: "Fazit",
+            paragraphs: [
+              "Manuelle Arbeit ist ein versteckter Wachstumsbremser.",
+              "Je länger sie bleibt, desto teurer wird sie.",
+            ],
+          },
+          {
+            title: "Start",
+            paragraphs: [
+              "Wenn du das Gefühl hast, dass viel Zeit verloren geht, lohnt sich ein genauer Blick.",
+              "Lass uns gemeinsam die größten Hebel identifizieren.",
+            ],
+          },
+        ],
+      },
+    },
+  },
+  {
     id: "ai-use-cases-business",
     featured: true,
     publishedAt: "2026-04-13",
