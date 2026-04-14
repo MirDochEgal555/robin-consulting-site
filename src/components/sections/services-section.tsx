@@ -21,6 +21,7 @@ export function ServicesSection({
       eyebrow={content.sections.services.eyebrow}
       title={content.sections.services.title}
       description={content.sections.services.description}
+      sectionClassName="pt-8 sm:pt-10 lg:pt-12"
     >
       <div className="grid gap-5 md:grid-cols-3">
         {content.services.map((service, index) => (

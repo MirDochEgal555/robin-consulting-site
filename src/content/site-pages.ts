@@ -72,7 +72,7 @@ const pageDefinitions = {
         eyebrow: "Overview",
         title: "Technical solutions built around business needs.",
         description:
-          "This page explains how businesses can benefit from practical AI use, cleaner task automation, and websites that are created and hosted as reliable business assets.",
+          "On this page, I show how businesses can benefit from practical AI use, cleaner task automation, and websites I create and host as reliable business assets.",
       },
     },
     projects: {
@@ -90,7 +90,7 @@ const pageDefinitions = {
         eyebrow: "Previous projects",
         title: "Proof of hands-on delivery, earlier project work, and technical range.",
         description:
-          "Potential clients can quickly see the kinds of problems Robin has worked on, how solutions are approached, and what practical delivery experience stands behind the consulting offer.",
+          "Here you can quickly see the kinds of problems I have worked on, how I approach solutions, and what practical delivery experience stands behind my consulting work.",
       },
     },
     blog: {
@@ -107,7 +107,8 @@ const pageDefinitions = {
       intro: {
         eyebrow: "Blog",
         title: "Published insights, case notes, and technical writing.",
-        description: "",
+        description:
+          "These articles help you understand how I think about automation, software decisions, and implementation work before reaching out, so you can assess fit and expected value more quickly.",
       },
     },
     dashboard: {
@@ -173,7 +174,7 @@ const pageDefinitions = {
         eyebrow: "Leistungen",
         title: "Lösungen mit klarem Nutzen für Ihr Unternehmen.",
         description:
-          "Diese Seite zeigt, wie Unternehmen von praktischem KI-Einsatz, sauberer Aufgabenautomatisierung und professionell erstellten und gehosteten Websites profitieren können.",
+          "Auf dieser Seite zeige ich, wie Unternehmen von praktischem KI-Einsatz, sauberer Aufgabenautomatisierung und Websites profitieren können, die ich professionell erstelle und hoste.",
       },
     },
     projects: {
@@ -191,7 +192,7 @@ const pageDefinitions = {
         eyebrow: "Frühere Projekte",
         title: "Praxisnahe Projektarbeit, frühere Umsetzungen und technische Bandbreite.",
         description:
-          "Potenzielle Kunden erkennen hier schnell, an welchen Problemtypen gearbeitet wurde, wie Lösungen umgesetzt werden und welche praktische Delivery-Erfahrung hinter dem Angebot steht.",
+          "Hier sehen Sie schnell, an welchen Problemtypen ich gearbeitet habe, wie ich Lösungen umsetze und welche praktische Delivery-Erfahrung hinter meinem Angebot steht.",
       },
     },
     blog: {
@@ -208,7 +209,8 @@ const pageDefinitions = {
       intro: {
         eyebrow: "Blog",
         title: "Veröffentlichte Blog-Posts zu Lösungen, Use-Cases, internen Tools und fokussierter Software-Umsetzung.",
-        description: "",
+        description:
+          "Diese Beiträge helfen Ihnen schon vor der ersten Kontaktaufnahme zu verstehen, wie ich an Automatisierung, Software-Entscheidungen und Umsetzungsfragen herangehe, damit Nutzen und Passung schneller einschätzbar werden.",
       },
     },
     dashboard: {

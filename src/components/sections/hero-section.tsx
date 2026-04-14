@@ -8,7 +8,7 @@ type HeroSectionProps = {
 
 export function HeroSection({ content }: HeroSectionProps) {
   return (
-    <section id="top" className="relative py-20 sm:py-28">
+    <section id="top" className="relative py-16 sm:py-20">
       <div className="hero-orb hero-orb-one float-y" />
       <div className="hero-orb hero-orb-two float-x" />
       <div className="container-shell grid gap-10 lg:grid-cols-[1.1fr_0.9fr] lg:items-center">

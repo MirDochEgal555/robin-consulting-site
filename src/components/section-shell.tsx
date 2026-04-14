@@ -5,6 +5,7 @@ type SectionShellProps = {
   eyebrow: string;
   title: string;
   description?: string;
+  sectionClassName?: string;
   headerClassName?: string;
   children: React.ReactNode;
 };
@@ -14,11 +15,15 @@ export function SectionShell({
   eyebrow,
   title,
   description,
+  sectionClassName,
   headerClassName,
   children,
 }: SectionShellProps) {
   return (
-    <section id={id} className="anchor-offset py-20 sm:py-24">
+    <section
+      id={id}
+      className={`anchor-offset py-16 sm:py-20 ${sectionClassName ?? ""}`}
+    >
       <div className="container-shell flex flex-col gap-10">
         <div className={`max-w-3xl ${headerClassName ?? ""}`}>
           <div className="eyebrow-line section-label reveal-up scroll-reveal-up">{eyebrow}</div>

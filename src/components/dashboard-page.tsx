@@ -39,7 +39,7 @@ export function DashboardPage({ locale }: DashboardPageProps) {
       pageKey="dashboard"
       brandHref="#dashboard-top"
       pageNavItems={pageNavItems}
-      mainClassName="pt-24 pb-8"
+      mainClassName="pt-20 pb-8"
     >
       <PageIntro
         id="dashboard-top"

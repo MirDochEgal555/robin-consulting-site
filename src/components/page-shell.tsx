@@ -28,7 +28,7 @@ export function PageShell({
   brandHref,
   pageNavItems,
   children,
-  mainClassName = "pt-24",
+  mainClassName = "pt-20",
   languageSwitchOverride,
 }: PageShellProps) {
   const content = getSiteContent(locale);

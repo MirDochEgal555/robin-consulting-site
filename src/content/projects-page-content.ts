@@ -75,7 +75,7 @@ const projectsPageContent = {
       eyebrow: "GitHub",
       title: "Public repositories that show how ideas turn into working software.",
       description:
-        "Public code, experiments, and earlier implementation work give technically minded clients an extra layer of confidence in how solutions are built.",
+        "Public code, experiments, and earlier implementation work give technically minded clients an extra layer of confidence in how I build solutions.",
       profileLabel: "MirDochEgal555 / Robin Keim",
       profileHref: githubProfileHref,
       ctaLabel: "Open GitHub profile",
@@ -98,7 +98,7 @@ const projectsPageContent = {
       eyebrow: "Selected work",
       title: "Selected project work that shows range, execution, and technical judgment.",
       description:
-        "Different problem types, practical constraints, and implementation styles come into focus here, from research-heavy work to dashboards and fast Python prototyping.",
+        "Here I show different problem types, practical constraints, and implementation styles, from research-heavy work to dashboards and fast Python prototyping.",
       archiveNote:
         "More older projects and context notes will be added here over time.",
     },
@@ -144,7 +144,7 @@ const projectsPageContent = {
       eyebrow: "Delivery experience",
       title: "Professional delivery experience behind the work.",
       description:
-        "Real delivery experience matters more than side projects alone: useful software, better workflows, and solutions that have to hold up in real working environments.",
+        "My real delivery experience matters more than side projects alone: I build useful software, improve workflows, and deliver solutions that have to hold up in real working environments.",
     },
     experience: [
       {
@@ -152,11 +152,11 @@ const projectsPageContent = {
         title: "Working student in application development",
         organization: "Omikron Data Solutions GmbH",
         description:
-          "Hands-on engineering work in a professional setting with direct exposure to implementation, iteration, and product-minded delivery.",
+          "I work hands-on in a professional setting with direct exposure to implementation, iteration, and product-minded delivery.",
         points: [
-          "Contributed to web development work with a focus on practical interfaces and usable internal or customer-facing functionality.",
-          "Built and refined task automation approaches to reduce repetitive work and make workflows more reliable.",
-          "Worked with real implementation constraints, changing requirements, and the need to ship solutions that hold up in day-to-day use.",
+          "I contribute to web development work with a focus on practical interfaces and usable internal or customer-facing functionality.",
+          "I build and refine task automation approaches to reduce repetitive work and make workflows more reliable.",
+          "I work with real implementation constraints, changing requirements, and the need to ship solutions that hold up in day-to-day use.",
         ],
       },
       {
@@ -164,11 +164,11 @@ const projectsPageContent = {
         title: "Academic project experience in business informatics",
         organization: "University of Mannheim and Karlsruhe Institute of Technology",
         description:
-          "Formal coursework and implementation-heavy university work strengthened both the technical and analytical side of software development.",
+          "Formal coursework and implementation-heavy university work strengthened both my technical and analytical side in software development.",
         points: [
-          "Translated theoretical concepts into concrete implementations, prototypes, and project deliverables.",
-          "Worked across software engineering, information systems, data-oriented tasks, and business-context problem solving.",
-          "Learned to connect requirements, process thinking, and technical design instead of treating code as an isolated output.",
+          "I translated theoretical concepts into concrete implementations, prototypes, and project deliverables.",
+          "I worked across software engineering, information systems, data-oriented tasks, and business-context problem solving.",
+          "I learned to connect requirements, process thinking, and technical design instead of treating code as an isolated output.",
         ],
       },
     ],
@@ -176,13 +176,13 @@ const projectsPageContent = {
       eyebrow: "Technical foundation",
       title: "The technical foundation behind the delivery work.",
       description:
-        "Structured problem solving, solid engineering fundamentals, and the ability to translate business needs into implementation underpin the work on client-facing solutions.",
+        "Structured problem solving, solid engineering fundamentals, and the ability to translate business needs into implementation underpin my work on client-facing solutions.",
     },
     knowledgeAreas: [
       {
         title: "Software engineering foundations",
         description:
-          "Academic work reinforced the fundamentals that make implementation dependable instead of improvised.",
+          "My academic work reinforced the fundamentals that make implementation dependable instead of improvised.",
         topics: [
           "Data structures, algorithms, and structured problem solving",
           "Clean code, debugging, testing, and maintainability",
@@ -192,7 +192,7 @@ const projectsPageContent = {
       {
         title: "Web and application development",
         description:
-          "Practical coding experience expanded into building interfaces, application logic, and small software systems that solve real problems.",
+          "My practical coding experience expanded into building interfaces, application logic, and small software systems that solve real problems.",
         topics: [
           "Frontend and web application implementation",
           "APIs, data handling, and internal tools",
@@ -202,7 +202,7 @@ const projectsPageContent = {
       {
         title: "Business informatics perspective",
         description:
-          "College projects trained the ability to connect technical choices with business context and operational usefulness.",
+          "College projects trained me to connect technical choices with business context and operational usefulness.",
         topics: [
           "Requirements analysis and process modeling",
           "Identifying automation opportunities",
@@ -216,7 +216,7 @@ const projectsPageContent = {
       eyebrow: "GitHub",
       title: "Öffentliche Repositories, die den Weg von der Idee zur funktionierenden Software zeigen.",
       description:
-        "Öffentliche Code-Arbeit, Experimente und frühere Implementierungen geben technisch interessierten Kunden zusätzliche Sicherheit, wie Lösungen aufgebaut werden.",
+        "Öffentliche Code-Arbeit, Experimente und frühere Implementierungen geben technisch interessierten Kunden zusätzliche Sicherheit darin, wie ich Lösungen aufbaue.",
       profileLabel: "MirDochEgal555 / Robin Keim",
       profileHref: githubProfileHref,
       ctaLabel: "GitHub-Profil öffnen",
@@ -239,7 +239,7 @@ const projectsPageContent = {
       eyebrow: "Ausgewählte Arbeiten",
       title: "Ausgewählte Projektarbeit, die Bandbreite, Umsetzung und technisches Urteilsvermögen zeigt.",
       description:
-        "Unterschiedliche Problemtypen, praktische Rahmenbedingungen und Umsetzungsstile werden hier greifbar, von forschungsnahen Implementierungen bis zu Dashboards und schnellem Python-Prototyping.",
+        "Hier zeige ich unterschiedliche Problemtypen, praktische Rahmenbedingungen und Umsetzungsstile, von forschungsnahen Implementierungen bis zu Dashboards und schnellem Python-Prototyping.",
       archiveNote:
         "Weitere frühere Projekte und kurze Kontextbeschreibungen werden hier nach und nach ergänzt.",
     },
@@ -285,7 +285,7 @@ const projectsPageContent = {
       eyebrow: "Delivery-Erfahrung",
       title: "Berufliche Delivery-Erfahrung hinter dem Angebot.",
       description:
-        "Wichtiger als reine Nebenprojekte ist diese praktische Delivery-Erfahrung: nützliche Software bauen, Abläufe verbessern und Lösungen liefern, die im echten Arbeitsalltag funktionieren müssen.",
+        "Wichtiger als reine Nebenprojekte ist meine praktische Delivery-Erfahrung: Ich baue nützliche Software, verbessere Abläufe und liefere Lösungen, die im echten Arbeitsalltag funktionieren müssen.",
     },
     experience: [
       {
@@ -293,11 +293,11 @@ const projectsPageContent = {
         title: "Werkstudent in der Anwendungsentwicklung",
         organization: "Omikron Data Solutions GmbH",
         description:
-          "Praktische Engineering-Arbeit in einem professionellen Umfeld mit direktem Bezug zu Implementierung, Iteration und produktnaher Delivery.",
+          "Ich arbeite praktisch an Engineering-Themen in einem professionellen Umfeld mit direktem Bezug zu Implementierung, Iteration und produktnaher Delivery.",
         points: [
-          "Beitrag zu Webentwicklungsaufgaben mit Fokus auf praktische Oberflächen und nutzbare interne oder kundennahe Funktionalität.",
-          "Aufgabenautomatisierung mitentwickelt und verbessert, um wiederkehrende Arbeit zu reduzieren und Workflows robuster zu machen.",
-          "Mit realen Umsetzungsgrenzen, wechselnden Anforderungen und der Notwendigkeit gearbeitet, Lösungen alltagstauglich auszuliefern.",
+          "Ich arbeite an Webentwicklungsaufgaben mit Fokus auf praktische Oberflächen und nutzbare interne oder kundennahe Funktionalität.",
+          "Ich entwickle Aufgabenautomatisierung mit und verbessere sie, um wiederkehrende Arbeit zu reduzieren und Workflows robuster zu machen.",
+          "Ich arbeite mit realen Umsetzungsgrenzen, wechselnden Anforderungen und der Notwendigkeit, Lösungen alltagstauglich auszuliefern.",
         ],
       },
       {
@@ -305,7 +305,7 @@ const projectsPageContent = {
         title: "Akademische Projekterfahrung in Wirtschaftsinformatik",
         organization: "Universität Mannheim und Karlsruher Institut für Technologie",
         description:
-          "Formale Studieninhalte und umsetzungsnahe Projektarbeit haben sowohl die technische als auch die analytische Seite der Software-Entwicklung gestärkt.",
+          "Formale Studieninhalte und umsetzungsnahe Projektarbeit haben sowohl meine technische als auch meine analytische Seite in der Software-Entwicklung gestärkt.",
         points: [
           "Theoretische Konzepte in konkrete Implementierungen, Prototypen und Projektergebnisse übersetzt.",
           "Mit Software Engineering, Informationssystemen, datenbezogenen Aufgaben und betriebswirtschaftlich geprägten Problemstellungen gearbeitet.",
@@ -317,13 +317,13 @@ const projectsPageContent = {
       eyebrow: "Technische Basis",
       title: "Die technische Grundlage hinter der Umsetzungsarbeit.",
       description:
-        "Strukturiertes Problemlösen, sauberes Software Engineering und die Fähigkeit, Business-Bedarf in technische Umsetzung zu übersetzen, tragen die Kundenarbeit fachlich.",
+        "Strukturiertes Problemlösen, sauberes Software Engineering und meine Fähigkeit, Business-Bedarf in technische Umsetzung zu übersetzen, tragen meine Kundenarbeit fachlich.",
     },
     knowledgeAreas: [
       {
         title: "Software-Engineering-Grundlagen",
         description:
-          "Das Studium hat die Grundlagen verstärkt, die Implementierung verlässlich statt improvisiert machen.",
+          "Mein Studium hat die Grundlagen verstärkt, die Implementierung verlässlich statt improvisiert machen.",
         topics: [
           "Datenstrukturen, Algorithmen und strukturiertes Problemlösen",
           "Clean Code, Debugging, Testing und Wartbarkeit",
@@ -333,7 +333,7 @@ const projectsPageContent = {
       {
         title: "Web- und Anwendungsentwicklung",
         description:
-          "Die praktische Coding-Erfahrung wurde auf Interfaces, Anwendungslogik und kleinere Softwaresysteme erweitert, die echte Probleme lösen.",
+          "Meine praktische Coding-Erfahrung hat sich auf Interfaces, Anwendungslogik und kleinere Softwaresysteme erweitert, die echte Probleme lösen.",
         topics: [
           "Frontend- und Webanwendungsentwicklung",
           "APIs, Datenverarbeitung und interne Tools",
@@ -343,7 +343,7 @@ const projectsPageContent = {
       {
         title: "Wirtschaftsinformatik-Perspektive",
         description:
-          "Studienprojekte haben trainiert, technische Entscheidungen mit fachlichem Kontext und operativem Nutzen zu verbinden.",
+          "Studienprojekte haben mich darin trainiert, technische Entscheidungen mit fachlichem Kontext und operativem Nutzen zu verbinden.",
         topics: [
           "Anforderungsanalyse und Prozessmodellierung",
           "Identifikation von Automatisierungspotenzialen",

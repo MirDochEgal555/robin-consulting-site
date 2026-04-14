@@ -22,7 +22,7 @@ const servicesPageContent = {
       eyebrow: "Service overview",
       title: "AI, automation, and websites that create practical business leverage.",
       description:
-        "The focus is not technology for its own sake. Each service is designed to help a business save time, improve quality, or strengthen how it presents itself online.",
+        "I do not focus on technology for its own sake. I design each service to help your business save time, improve quality, or strengthen how it presents itself online.",
     },
     offerings: [
       {
@@ -65,14 +65,14 @@ const servicesPageContent = {
       eyebrow: "Leistungsüberblick",
       title: "KI, Automatisierung und Websites mit praktischem Nutzen für Unternehmen.",
       description:
-        "Im Mittelpunkt steht nicht Technik um der Technik willen. Jede Leistung soll dabei helfen, Zeit zu sparen, die Qualität zu verbessern oder den digitalen Auftritt des Unternehmens zu stärken.",
+        "Ich setze nicht auf Technik um der Technik willen. Jede Leistung soll Ihrem Unternehmen helfen, Zeit zu sparen, die Qualität zu verbessern oder den digitalen Auftritt zu stärken.",
     },
     offerings: [
       {
         eyebrow: "KI",
         title: "KI-Beratung",
         description:
-          "Gemeinsam wird geklärt, wie KI in Ihrem Unternehmen sinnvoll eingesetzt werden kann, damit echte Arbeitsabläufe unterstützt werden statt nur neue Komplexität entstehen zu lassen.",
+          "Ich kläre gemeinsam mit Ihnen, wie KI in Ihrem Unternehmen sinnvoll eingesetzt werden kann, damit echte Arbeitsabläufe unterstützt werden statt nur neue Komplexität entstehen zu lassen.",
         outcomes: [
           "Sinnvolle KI-Anwendungsfälle im aktuellen Geschäft identifizieren",
           "Bereiche priorisieren, in denen KI Tempo, Qualität oder Entscheidungen verbessert",
@@ -94,7 +94,7 @@ const servicesPageContent = {
         eyebrow: "Web",
         title: "Websites erstellen und hosten",
         description:
-          "Es wird eine Unternehmenswebsite aufgebaut, die Ihr Angebot klar präsentiert, gut funktioniert und verlässlich gehostet wird, ohne unnötigen Betriebsaufwand zu erzeugen.",
+          "Ich baue eine Unternehmenswebsite für Sie auf, die Ihr Angebot klar präsentiert, gut funktioniert und verlässlich gehostet wird, ohne unnötigen Betriebsaufwand zu erzeugen.",
         outcomes: [
           "Einen professionellen digitalen Auftritt für Ihr Unternehmen aufbauen",
           "Eine schnelle und wartbare Website mit klarer Kommunikation erhalten",

@@ -22,7 +22,7 @@ export function LegalPage({ locale, pageKey }: LegalPageProps) {
       pageKey={pageKey}
       brandHref={getPagePath(locale, "home")}
       pageNavItems={pageNavItems}
-      mainClassName="pt-24 pb-12"
+      mainClassName="pt-20 pb-12"
     >
       <PageIntro
         id="overview"
@@ -30,7 +30,7 @@ export function LegalPage({ locale, pageKey }: LegalPageProps) {
         title={page.title}
         description={page.description}
       />
-      <div className="container-shell pb-20">
+      <div className="container-shell pb-16 sm:pb-20">
         <div className="grid gap-6">
           {page.sections.map((section) => (
             <section

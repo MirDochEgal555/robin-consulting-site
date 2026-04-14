@@ -14,7 +14,10 @@ export function PageIntro({
   description,
 }: PageIntroProps) {
   return (
-    <section id={id} className="anchor-offset relative overflow-hidden py-20 sm:py-24">
+    <section
+      id={id}
+      className="anchor-offset relative overflow-hidden py-16 sm:py-20"
+    >
       <div className="hero-orb page-intro-orb-one page-intro-float-y" />
       <div className="hero-orb page-intro-orb-two page-intro-float-x" />
       <div className="container-shell relative z-10">

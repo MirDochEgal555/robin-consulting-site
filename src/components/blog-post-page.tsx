@@ -174,7 +174,7 @@ export function BlogPostPage({ locale, slug }: BlogPostPageProps) {
           __html: JSON.stringify(getBlogPostStructuredData(post, locale)),
         }}
       />
-      <section id="overview" className="anchor-offset py-20 sm:py-24">
+      <section id="overview" className="anchor-offset py-16 sm:py-20">
         <div className="container-shell">
           <div
             className="reveal-up scroll-reveal-up"
@@ -225,7 +225,7 @@ export function BlogPostPage({ locale, slug }: BlogPostPageProps) {
           </div>
         </div>
       </section>
-      <section className="pb-20 sm:pb-24">
+      <section className="pb-16 sm:pb-20">
         <div className="container-shell">
           <article className="glass-panel reveal-up scroll-tilt-in rounded-[2rem] p-8 sm:p-10 lg:p-12">
             <div className="mx-auto max-w-3xl">
@@ -260,7 +260,7 @@ export function BlogPostPage({ locale, slug }: BlogPostPageProps) {
           </article>
         </div>
       </section>
-      <section id="related" className="anchor-offset pb-20 sm:pb-24">
+      <section id="related" className="anchor-offset pb-16 sm:pb-20">
         <div className="container-shell">
           <div className="mb-8 font-mono text-xs uppercase tracking-[0.2em] text-slate-400">
             {content.blog.relatedPostsLabel}

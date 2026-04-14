@@ -191,7 +191,7 @@ const siteContent = {
     ],
     cta: {
       bookConsultation: "Book a free consultation",
-      emailRobin: "Email Robin",
+      emailRobin: "Email me",
       sendEmail: "Send an email",
     },
     languageSwitch: {
@@ -267,7 +267,7 @@ const siteContent = {
         title:
           "A technical partner who brings clarity, structure, and follow-through",
         description:
-          "Independent consulting for founders and lean teams that need sound engineering judgment, plain communication, and hands-on support when the next step should be built.",
+          "I offer independent consulting for founders and lean teams that need sound engineering judgment, plain communication, and hands-on support when the next step should be built.",
         imageAlt: "Portrait of Robin Keim",
         timelineLabel: "Education and experience",
         credibilityLabel: "Highlights",
@@ -291,7 +291,7 @@ const siteContent = {
         eyebrow: "Build",
         title: "Implementation",
         description:
-          "When the solution is clear, Robin can also implement selected software components, internal tools, automations, or product features without turning the engagement into a large agency process.",
+          "When the solution is clear, I can also implement selected software components, internal tools, automations, or product features without turning the engagement into a large agency process.",
       },
       {
         eyebrow: "Support",
@@ -363,28 +363,28 @@ const siteContent = {
     ],
     about: {
       summary:
-        "The consulting offer is backed by formal training in business informatics and several years of hands-on software delivery in a professional environment.",
+        "My consulting work is backed by formal training in business informatics and several years of hands-on software delivery in a professional environment.",
       timeline: [
         {
           period: "2019-2022",
           title: "B.Sc. in Business Informatics",
           institution: "University of Mannheim",
           description:
-            "Built the academic foundation across software, information systems, and business context that informs how technical decisions are framed.",
+            "I built my academic foundation across software, information systems, and business context there, and that still shapes how I frame technical decisions.",
         },
         {
           period: "2022-2026",
           title: "M.Sc. in Business Informatics",
           institution: "Karlsruhe Institute of Technology (KIT)",
           description:
-            "Deepened the ability to analyze complex requirements and translate them into structured, workable technical solutions.",
+            "I deepened my ability to analyze complex requirements and translate them into structured, workable technical solutions there.",
         },
         {
           period: "Since 2023",
           title: "Application development at Omikron Data Solutions GmbH",
           institution: "Professional software delivery",
           description:
-            "Built several applications in an active delivery environment, with direct exposure to implementation, iteration, and product-oriented engineering work.",
+            "I have built several applications in an active delivery environment, with direct exposure to implementation, iteration, and product-oriented engineering work.",
         },
       ],
       highlights: [
@@ -454,7 +454,7 @@ const siteContent = {
     ],
     cta: {
       bookConsultation: "Kostenloses Erstgespräch buchen",
-      emailRobin: "Robin schreiben",
+      emailRobin: "Mir schreiben",
       sendEmail: "E-Mail senden",
     },
     languageSwitch: {
@@ -530,7 +530,7 @@ const siteContent = {
         eyebrow: "Über mich",
         title: "Ihr IT-Partner mit Expertise, klarer Kommunikation und Kompetenz",
         description:
-          "Unabhängige Beratung für Unternehmen, die fundiertes Engineering-Urteilsvermögen, klare Kommunikation und praktische Unterstützung im IT-Bereich brauchen.",
+          "Ich biete unabhängige Beratung für Unternehmen, die fundiertes Engineering-Urteilsvermögen, klare Kommunikation und praktische Unterstützung im IT-Bereich brauchen.",
         imageAlt: "Porträt von Robin Keim",
         timelineLabel: "Ausbildung und Erfahrung",
         credibilityLabel: "Highlights",
@@ -626,28 +626,28 @@ const siteContent = {
     ],
     about: {
       summary:
-        "Das Beratungsangebot wird durch formale Ausbildung in Wirtschaftsinformatik und mehrere Jahre praktischer Software-Entwicklung im professionellen Umfeld gestützt.",
+        "Meine Beratungsarbeit wird durch formale Ausbildung in Wirtschaftsinformatik und mehrere Jahre praktischer Software-Entwicklung im professionellen Umfeld getragen.",
       timeline: [
         {
           period: "2019-2022",
           title: "B.Sc. Wirtschaftsinformatik",
           institution: "Universität Mannheim",
           description:
-            "Hier entstand das akademische Fundament über Software, Informationssysteme und betriebswirtschaftlichen Kontext, das die Einordnung technischer Entscheidungen bis heute prägt.",
+            "Dort habe ich mein akademisches Fundament in Software, Informationssystemen und betriebswirtschaftlichem Kontext aufgebaut, das meine Einordnung technischer Entscheidungen bis heute prägt.",
         },
         {
           period: "2022-2026",
           title: "M.Sc. Wirtschaftsinformatik",
           institution: "Karlsruher Institut für Technologie (KIT)",
           description:
-            "Dort wurde die Fähigkeit vertieft, komplexe Anforderungen zu analysieren und in strukturierte, tragfähige technische Lösungen zu übersetzen.",
+            "Dort habe ich meine Fähigkeit vertieft, komplexe Anforderungen zu analysieren und in strukturierte, tragfähige technische Lösungen zu übersetzen.",
         },
         {
           period: "Seit 2023",
           title: "Anwendungsentwicklung bei Omikron Data Solutions GmbH",
           institution: "Professionelle Software-Entwicklung",
           description:
-            "Mehrere Anwendungen wurden in einem aktiven Delivery-Umfeld gebaut, mit direktem Bezug zu Implementierung, Iteration und produktnaher Engineering-Arbeit.",
+            "Ich habe mehrere Anwendungen in einem aktiven Delivery-Umfeld gebaut, mit direktem Bezug zu Implementierung, Iteration und produktnaher Engineering-Arbeit.",
         },
       ],
       highlights: [

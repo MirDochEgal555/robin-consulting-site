@@ -16,6 +16,42 @@ type BlogPageProps = {
   locale: SiteLocale;
 };
 
+type BlogSectionHeaderProps = {
+  eyebrow: string;
+  title?: string;
+  description?: string;
+};
+
+function BlogSectionHeader({
+  eyebrow,
+  title,
+  description,
+}: BlogSectionHeaderProps) {
+  return (
+    <div className="mb-10 max-w-3xl">
+      <div className="eyebrow-line section-label reveal-up scroll-reveal-up">
+        {eyebrow}
+      </div>
+      {title ? (
+        <h2
+          className="mt-4 text-3xl font-semibold tracking-tight text-white reveal-up scroll-reveal-up sm:text-4xl"
+          style={{ "--delay": "90ms" } as CSSProperties}
+        >
+          {title}
+        </h2>
+      ) : null}
+      {description ? (
+        <p
+          className="mt-4 text-base leading-7 text-slate-300 reveal-up scroll-reveal-up sm:text-lg"
+          style={{ "--delay": "160ms" } as CSSProperties}
+        >
+          {description}
+        </p>
+      ) : null}
+    </div>
+  );
+}
+
 export function BlogPage({ locale }: BlogPageProps) {
   const content = getSiteContent(locale);
   const page = getPageDefinition(locale, "blog");
@@ -52,11 +88,13 @@ export function BlogPage({ locale }: BlogPageProps) {
         title={page.intro.title}
         description={page.intro.description}
       />
-      <section id="latest" className="anchor-offset pb-20 sm:pb-24">
+      <section id="latest" className="anchor-offset pb-16 sm:pb-20">
         <div className="container-shell">
-          <div className="mb-8 font-mono text-xs uppercase tracking-[0.2em] text-sky-300">
-            {content.blog.latestLabel}
-          </div>
+          <BlogSectionHeader
+            eyebrow={content.blog.latestLabel}
+            title={content.sections.blog.title}
+            description={content.sections.blog.description}
+          />
           <Link
             href={latestPost.path}
             className="glass-panel card-lift reveal-up scroll-tilt-in grid gap-8 rounded-[2rem] p-8 sm:p-10 lg:grid-cols-[minmax(0,1.1fr)_minmax(0,0.9fr)]"
@@ -104,11 +142,9 @@ export function BlogPage({ locale }: BlogPageProps) {
           </Link>
         </div>
       </section>
-      <section id="archive" className="anchor-offset pb-20 sm:pb-24">
+      <section id="archive" className="anchor-offset pb-16 sm:pb-20">
         <div className="container-shell">
-          <div className="mb-8 font-mono text-xs uppercase tracking-[0.2em] text-slate-400">
-            {content.blog.archiveLabel}
-          </div>
+          <BlogSectionHeader eyebrow={content.blog.archiveLabel} />
           <div className="grid gap-6 md:grid-cols-2">
             {archivePosts.map((post, index) => (
               <Link
