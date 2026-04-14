@@ -32,7 +32,7 @@ describe("site-pages", () => {
   it("generates canonical and alternate metadata for localized pages", () => {
     const metadata = getPageMetadata("de", "projects");
 
-    expect(metadata.title).toBe("Fruehere Projekte | Robin Keim IT-Beratung");
+    expect(metadata.title).toBe("Frühere Projekte | Robin Keim IT-Beratung");
     expect(metadata.alternates).toEqual({
       canonical: "/de/projekte",
       languages: {
