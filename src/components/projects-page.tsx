@@ -18,10 +18,10 @@ export function ProjectsPage({ locale }: ProjectsPageProps) {
   const projectsContent = getProjectsPageContent(locale);
   const pageNavItems = [
     { label: content.sections.overviewLabel, href: "#overview" },
-    { label: projectsContent.github.eyebrow, href: "#github" },
-    { label: projectsContent.projectSection.eyebrow, href: "#projects" },
     { label: projectsContent.experienceSection.eyebrow, href: "#experience" },
-    { label: projectsContent.knowledgeSection.eyebrow, href: "#knowledge" },
+    { label: projectsContent.projectSection.eyebrow, href: "#projects" },
+    { label: projectsContent.github.eyebrow, href: "#github" },
+    { label: projectsContent.knowledgeSection.eyebrow, href: "#strengths" },
     { label: content.sections.contact.eyebrow, href: "#contact" },
   ];
 
@@ -44,41 +44,42 @@ export function ProjectsPage({ locale }: ProjectsPageProps) {
       />
 
       <SectionShell
-        id="github"
-        eyebrow={projectsContent.github.eyebrow}
-        title={projectsContent.github.title}
-        description={projectsContent.github.description}
+        id="experience"
+        eyebrow={projectsContent.experienceSection.eyebrow}
+        title={projectsContent.experienceSection.title}
+        description={projectsContent.experienceSection.description}
       >
-        <div
-          className="glass-panel reveal-up scroll-tilt-in rounded-[2rem] p-8 sm:p-10"
-          style={{ "--delay": "100ms" } as CSSProperties}
-        >
-          <div className="grid gap-8 lg:grid-cols-[minmax(0,1fr)_auto] lg:items-end">
-            <div>
-              <div className="font-mono text-xs uppercase tracking-[0.2em] text-slate-400">
-                {projectsContent.github.profileLabel}
+        <div className="grid gap-6 lg:grid-cols-2">
+          {projectsContent.experience.map((item, index) => (
+            <article
+              key={`${item.period}-${item.title}`}
+              className="glass-panel reveal-up scroll-reveal-up rounded-[2rem] p-7"
+              style={{ "--delay": `${120 + index * 90}ms` } as CSSProperties}
+            >
+              <div className="font-mono text-xs uppercase tracking-[0.18em] text-sky-300">
+                {item.period}
               </div>
-              <div className="mt-6 grid gap-4 md:grid-cols-3">
-                {projectsContent.github.stats.map((stat, index) => (
-                  <div
-                    key={stat.label}
-                    className="reveal-up scroll-reveal-up rounded-[1.5rem] border border-white/10 bg-slate-950/40 px-5 py-5"
-                    style={{ "--delay": `${180 + index * 90}ms` } as CSSProperties}
+              <h2 className="mt-4 text-2xl font-semibold text-white">
+                {item.title}
+              </h2>
+              <p className="mt-2 text-sm font-medium text-slate-200">
+                {item.organization}
+              </p>
+              <p className="mt-4 text-sm leading-7 text-slate-300">
+                {item.description}
+              </p>
+              <ul className="mt-6 space-y-3 text-sm leading-7 text-slate-300">
+                {item.points.map((point) => (
+                  <li
+                    key={point}
+                    className="rounded-[1.25rem] border border-white/10 bg-white/[0.03] px-4 py-3"
                   >
-                    <div className="text-lg font-semibold text-white">{stat.value}</div>
-                    <p className="mt-2 text-sm leading-6 text-slate-300">
-                      {stat.label}
-                    </p>
-                  </div>
+                    {point}
+                  </li>
                 ))}
-              </div>
-            </div>
-            <div className="flex items-start lg:justify-end">
-              <ButtonLink href={projectsContent.github.profileHref}>
-                {projectsContent.github.ctaLabel}
-              </ButtonLink>
-            </div>
-          </div>
+              </ul>
+            </article>
+          ))}
         </div>
       </SectionShell>
 
@@ -128,47 +129,46 @@ export function ProjectsPage({ locale }: ProjectsPageProps) {
       </SectionShell>
 
       <SectionShell
-        id="experience"
-        eyebrow={projectsContent.experienceSection.eyebrow}
-        title={projectsContent.experienceSection.title}
-        description={projectsContent.experienceSection.description}
+        id="github"
+        eyebrow={projectsContent.github.eyebrow}
+        title={projectsContent.github.title}
+        description={projectsContent.github.description}
       >
-        <div className="grid gap-6 lg:grid-cols-2">
-          {projectsContent.experience.map((item, index) => (
-            <article
-              key={`${item.period}-${item.title}`}
-              className="glass-panel reveal-up scroll-reveal-up rounded-[2rem] p-7"
-              style={{ "--delay": `${120 + index * 90}ms` } as CSSProperties}
-            >
-              <div className="font-mono text-xs uppercase tracking-[0.18em] text-sky-300">
-                {item.period}
+        <div
+          className="glass-panel reveal-up scroll-tilt-in rounded-[2rem] p-8 sm:p-10"
+          style={{ "--delay": "100ms" } as CSSProperties}
+        >
+          <div className="grid gap-8 lg:grid-cols-[minmax(0,1fr)_auto] lg:items-end">
+            <div>
+              <div className="font-mono text-xs uppercase tracking-[0.2em] text-slate-400">
+                {projectsContent.github.profileLabel}
               </div>
-              <h2 className="mt-4 text-2xl font-semibold text-white">
-                {item.title}
-              </h2>
-              <p className="mt-2 text-sm font-medium text-slate-200">
-                {item.organization}
-              </p>
-              <p className="mt-4 text-sm leading-7 text-slate-300">
-                {item.description}
-              </p>
-              <ul className="mt-6 space-y-3 text-sm leading-7 text-slate-300">
-                {item.points.map((point) => (
-                  <li
-                    key={point}
-                    className="rounded-[1.25rem] border border-white/10 bg-white/[0.03] px-4 py-3"
+              <div className="mt-6 grid gap-4 md:grid-cols-3">
+                {projectsContent.github.stats.map((stat, index) => (
+                  <div
+                    key={stat.label}
+                    className="reveal-up scroll-reveal-up rounded-[1.5rem] border border-white/10 bg-slate-950/40 px-5 py-5"
+                    style={{ "--delay": `${180 + index * 90}ms` } as CSSProperties}
                   >
-                    {point}
-                  </li>
+                    <div className="text-lg font-semibold text-white">{stat.value}</div>
+                    <p className="mt-2 text-sm leading-6 text-slate-300">
+                      {stat.label}
+                    </p>
+                  </div>
                 ))}
-              </ul>
-            </article>
-          ))}
+              </div>
+            </div>
+            <div className="flex items-start lg:justify-end">
+              <ButtonLink href={projectsContent.github.profileHref}>
+                {projectsContent.github.ctaLabel}
+              </ButtonLink>
+            </div>
+          </div>
         </div>
       </SectionShell>
 
       <SectionShell
-        id="knowledge"
+        id="strengths"
         eyebrow={projectsContent.knowledgeSection.eyebrow}
         title={projectsContent.knowledgeSection.title}
         description={projectsContent.knowledgeSection.description}

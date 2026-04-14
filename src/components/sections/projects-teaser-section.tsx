@@ -1,4 +1,5 @@
 import type { CSSProperties } from "react";
+import { SectionShell } from "@/components/section-shell";
 import { ButtonLink } from "@/components/ui/button-link";
 import type { SiteContent } from "@/content/site-content";
 import { getPagePath } from "@/content/site-pages";
@@ -13,14 +14,16 @@ const teaserCopy = {
     title: "Take a look at previous projects.",
     description:
       "See selected past work and get a clearer picture of the technical range, practical experience, and problem-solving approach behind the consulting offer.",
+    panelText: "Selected repositories, project examples, and practical development work.",
     linkLabel: "View previous projects",
   },
   de: {
-    eyebrow: "Fruehere Projekte",
-    title: "Werfen Sie einen Blick auf fruehere Projekte.",
+    eyebrow: "Frühere Projekte",
+    title: "Werfen Sie einen Blick auf frühere Projekte.",
     description:
-      "Sehen Sie ausgewaehlte fruehere Arbeiten und gewinnen Sie einen klareren Eindruck von technischer Bandbreite, praktischer Erfahrung und der Herangehensweise hinter dem Beratungsangebot.",
-    linkLabel: "Zu den frueheren Projekten",
+      "Sehen Sie ausgewählte frühere Arbeiten und gewinnen Sie einen klareren Eindruck von technischer Bandbreite, praktischer Erfahrung und der Herangehensweise hinter dem Beratungsangebot.",
+    panelText: "Ausgewählte Repositories, Projektbeispiele und praktische Entwicklungsarbeit.",
+    linkLabel: "Zu den früheren Projekten",
   },
 } as const;
 
@@ -31,25 +34,22 @@ export function ProjectsTeaserSection({
   const teaser = teaserCopy[content.locale];
 
   return (
-    <section id="projects" className="anchor-offset py-6 sm:py-8">
-      <div className="container-shell">
+    <SectionShell
+      id="projects"
+      eyebrow={teaser.eyebrow}
+      title={teaser.title}
+      description={teaser.description}
+    >
+      <div className="mt-6">
         <div
           className="glass-panel reveal-up scroll-tilt-in rounded-[2rem] p-8 sm:p-10"
           style={{ "--delay": "120ms" } as CSSProperties}
         >
-          <div className="grid gap-8 lg:grid-cols-[minmax(0,1fr)_auto] lg:items-end">
-            <div className="max-w-3xl">
-              <div className="eyebrow-line section-label">
-                {teaser.eyebrow}
-              </div>
-              <h2 className="mt-4 text-3xl font-semibold tracking-tight text-white sm:text-4xl">
-                {teaser.title}
-              </h2>
-              <p className="mt-4 text-base leading-7 text-slate-300 sm:text-lg">
-                {teaser.description}
-              </p>
-            </div>
-            <div className="flex items-start lg:justify-end">
+          <div className="flex flex-col gap-6 sm:flex-row sm:items-center sm:justify-between">
+            <p className="max-w-3xl text-base leading-7 text-slate-300">
+              {teaser.panelText}
+            </p>
+            <div className="flex items-start sm:justify-end">
               <ButtonLink href={projectsPath} variant="secondary">
                 {teaser.linkLabel}
               </ButtonLink>
@@ -57,6 +57,6 @@ export function ProjectsTeaserSection({
           </div>
         </div>
       </div>
-    </section>
+    </SectionShell>
   );
 }

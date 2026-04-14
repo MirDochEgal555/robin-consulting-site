@@ -73,9 +73,9 @@ const projectsPageContent = {
   en: {
     github: {
       eyebrow: "GitHub",
-      title: "Public repositories, experiments, and older implementation work.",
+      title: "Public repositories that show how ideas turn into working software.",
       description:
-        "Earlier implementation work, technical depth, and the path from idea to working software become visible here. Potential clients get a clearer sense of how problems are approached in code and execution.",
+        "Public code, experiments, and earlier implementation work give technically minded clients an extra layer of confidence in how solutions are built.",
       profileLabel: "MirDochEgal555 / Robin Keim",
       profileHref: githubProfileHref,
       ctaLabel: "Open GitHub profile",
@@ -95,10 +95,10 @@ const projectsPageContent = {
       ],
     },
     projectSection: {
-      eyebrow: "Projects",
-      title: "A few older repositories that show range and technical curiosity.",
+      eyebrow: "Selected work",
+      title: "Selected project work that shows range, execution, and technical judgment.",
       description:
-        "These examples show how different technical challenges were approached in practice, from dashboards and research-driven implementations to fast Python-based prototyping.",
+        "Different problem types, practical constraints, and implementation styles come into focus here, from research-heavy work to dashboards and fast Python prototyping.",
       archiveNote:
         "More older projects and context notes will be added here over time.",
     },
@@ -141,10 +141,10 @@ const projectsPageContent = {
       },
     ],
     experienceSection: {
-      eyebrow: "Experience",
-      title: "Working student experience in web development and task automation.",
+      eyebrow: "Delivery experience",
+      title: "Professional delivery experience behind the work.",
       description:
-        "Hands-on delivery in a real working environment shaped this background: building useful software, improving internal workflows, and shipping solutions that need to hold up in day-to-day use.",
+        "Real delivery experience matters more than side projects alone: useful software, better workflows, and solutions that have to hold up in real working environments.",
     },
     experience: [
       {
@@ -173,10 +173,10 @@ const projectsPageContent = {
       },
     ],
     knowledgeSection: {
-      eyebrow: "Knowledge",
-      title: "General coding knowledge shaped by college work and applied projects.",
+      eyebrow: "Technical foundation",
+      title: "The technical foundation behind the delivery work.",
       description:
-        "The college path in business informatics added structure to the practical experience: not just writing code, but understanding why a system should be built in a certain way and where it creates business value.",
+        "Structured problem solving, solid engineering fundamentals, and the ability to translate business needs into implementation underpin the work on client-facing solutions.",
     },
     knowledgeAreas: [
       {
@@ -214,12 +214,12 @@ const projectsPageContent = {
   de: {
     github: {
       eyebrow: "GitHub",
-      title: "Oeffentliche Repositories, Experimente und fruehere Implementierungsarbeit.",
+      title: "Öffentliche Repositories, die den Weg von der Idee zur funktionierenden Software zeigen.",
       description:
-        "Fruehere Implementierungsarbeit, technische Tiefe und der Weg von der Idee zur funktionierenden Software werden hier sichtbar. Potenzielle Kunden erhalten so ein klareres Bild davon, wie Probleme in Code und Umsetzung angegangen werden.",
+        "Öffentliche Code-Arbeit, Experimente und frühere Implementierungen geben technisch interessierten Kunden zusätzliche Sicherheit, wie Lösungen aufgebaut werden.",
       profileLabel: "MirDochEgal555 / Robin Keim",
       profileHref: githubProfileHref,
-      ctaLabel: "GitHub-Profil oeffnen",
+      ctaLabel: "GitHub-Profil öffnen",
       stats: [
         {
           value: "Public repos",
@@ -227,21 +227,21 @@ const projectsPageContent = {
         },
         {
           value: "Web + Automatisierung",
-          label: "Fokus auf praktischer Software, Tooling und Workflow-Unterstuetzung",
+          label: "Fokus auf praktischer Software, Tooling und Workflow-Unterstützung",
         },
         {
           value: "Wachsendes Archiv",
-          label: "Weitere fruehere Projekte werden nach und nach ergaenzt",
+          label: "Weitere frühere Projekte werden nach und nach ergänzt",
         },
       ],
     },
     projectSection: {
-      eyebrow: "Projekte",
-      title: "Einige aeltere Repositories, die technische Bandbreite und Neugier zeigen.",
+      eyebrow: "Ausgewählte Arbeiten",
+      title: "Ausgewählte Projektarbeit, die Bandbreite, Umsetzung und technisches Urteilsvermögen zeigt.",
       description:
-        "Diese Beispiele zeigen, wie unterschiedliche technische Herausforderungen praktisch angegangen wurden, von Dashboards und forschungsnahen Implementierungen bis hin zu schneller Python-basierter Prototyping-Arbeit.",
+        "Unterschiedliche Problemtypen, praktische Rahmenbedingungen und Umsetzungsstile werden hier greifbar, von forschungsnahen Implementierungen bis zu Dashboards und schnellem Python-Prototyping.",
       archiveNote:
-        "Weitere fruehere Projekte und kurze Kontextbeschreibungen werden hier nach und nach ergaenzt.",
+        "Weitere frühere Projekte und kurze Kontextbeschreibungen werden hier nach und nach ergänzt.",
     },
     projects: [
       {
@@ -249,7 +249,7 @@ const projectsPageContent = {
         href: `${githubProfileHref}/Master-Thesis-Implementation`,
         period: "Akademische Implementierungsarbeit",
         description:
-          "Ein Repository aus thesisnaher Implementierungsarbeit, das zeigt, wie groessere akademische Ideen in funktionierenden Code uebersetzt wurden statt nur konzeptionell zu bleiben.",
+          "Ein Repository aus thesisnaher Implementierungsarbeit, das zeigt, wie größere akademische Ideen in funktionierenden Code übersetzt wurden statt nur konzeptionell zu bleiben.",
         stack: ["Python", "Research", "Implementierung"],
         linkLabel: "Repository ansehen",
       },
@@ -258,7 +258,7 @@ const projectsPageContent = {
         href: `${githubProfileHref}/Reinforcement-Learning-based-hyper-heuristics-for-Financial-Forecasting`,
         period: "Forschungsprojekt",
         description:
-          "Ein forschungsnahes Repository zu reinforcement-learning-basierten Hyper-Heuristiken fuer Financial Forecasting und damit ein Beispiel fuer analytisch tiefere, experimentgetriebene Entwicklungsarbeit.",
+          "Ein forschungsnahes Repository zu reinforcement-learning-basierten Hyper-Heuristiken für Financial Forecasting und damit ein Beispiel für analytisch tiefere, experimentgetriebene Entwicklungsarbeit.",
         stack: ["Jupyter Notebook", "Machine Learning", "Forecasting"],
         linkLabel: "Repository ansehen",
       },
@@ -267,7 +267,7 @@ const projectsPageContent = {
         href: `${githubProfileHref}/Dashboard`,
         period: "Anwendungsnahes Projekt",
         description:
-          "Eine fruehere Dashboard-Codebasis, die das Interesse daran zeigt, Informationen in nutzbare Oberflaechen zu uebersetzen, auf denen Entscheidungen leichter getroffen werden koennen.",
+          "Eine frühere Dashboard-Codebasis, die das Interesse daran zeigt, Informationen in nutzbare Oberflächen zu übersetzen, auf denen Entscheidungen leichter getroffen werden können.",
         stack: ["Python", "Dashboarding", "Datenaufbereitung"],
         linkLabel: "Repository ansehen",
       },
@@ -276,16 +276,16 @@ const projectsPageContent = {
         href: `${githubProfileHref}/trade-ideas-lab`,
         period: "Experimentier-Repository",
         description:
-          "Ein kleineres Python-Repo fuer schnelle Experimente mit Ideen, Workflows und Logik, bevor etwas spaeter tiefer ausgearbeitet oder weiterentwickelt wird.",
+          "Ein kleineres Python-Repo für schnelle Experimente mit Ideen, Workflows und Logik, bevor etwas später tiefer ausgearbeitet oder weiterentwickelt wird.",
         stack: ["Python", "Rapid Prototyping", "Analyse"],
         linkLabel: "Repository ansehen",
       },
     ],
     experienceSection: {
-      eyebrow: "Erfahrung",
-      title: "Werkstudentische Erfahrung in Webentwicklung und Aufgabenautomatisierung.",
+      eyebrow: "Delivery-Erfahrung",
+      title: "Berufliche Delivery-Erfahrung hinter dem Angebot.",
       description:
-        "Praktische Umsetzung im echten Arbeitsumfeld praegt diesen Hintergrund: nuetzliche Software bauen, interne Ablaeufe verbessern und Loesungen ausliefern, die im Alltag verlaesslich funktionieren muessen.",
+        "Wichtiger als reine Nebenprojekte ist diese praktische Delivery-Erfahrung: nützliche Software bauen, Abläufe verbessern und Lösungen liefern, die im echten Arbeitsalltag funktionieren müssen.",
     },
     experience: [
       {
@@ -295,37 +295,37 @@ const projectsPageContent = {
         description:
           "Praktische Engineering-Arbeit in einem professionellen Umfeld mit direktem Bezug zu Implementierung, Iteration und produktnaher Delivery.",
         points: [
-          "Beitrag zu Webentwicklungsaufgaben mit Fokus auf praktische Oberflaechen und nutzbare interne oder kundennahe Funktionalitaet.",
+          "Beitrag zu Webentwicklungsaufgaben mit Fokus auf praktische Oberflächen und nutzbare interne oder kundennahe Funktionalität.",
           "Aufgabenautomatisierung mitentwickelt und verbessert, um wiederkehrende Arbeit zu reduzieren und Workflows robuster zu machen.",
-          "Mit realen Umsetzungsgrenzen, wechselnden Anforderungen und der Notwendigkeit gearbeitet, Loesungen alltagstauglich auszuliefern.",
+          "Mit realen Umsetzungsgrenzen, wechselnden Anforderungen und der Notwendigkeit gearbeitet, Lösungen alltagstauglich auszuliefern.",
         ],
       },
       {
         period: "Im B.Sc. und M.Sc.",
         title: "Akademische Projekterfahrung in Wirtschaftsinformatik",
-        organization: "Universitaet Mannheim und Karlsruher Institut fuer Technologie",
+        organization: "Universität Mannheim und Karlsruher Institut für Technologie",
         description:
-          "Formale Studieninhalte und umsetzungsnahe Projektarbeit haben sowohl die technische als auch die analytische Seite der Software-Entwicklung gestaerkt.",
+          "Formale Studieninhalte und umsetzungsnahe Projektarbeit haben sowohl die technische als auch die analytische Seite der Software-Entwicklung gestärkt.",
         points: [
-          "Theoretische Konzepte in konkrete Implementierungen, Prototypen und Projektergebnisse uebersetzt.",
-          "Mit Software Engineering, Informationssystemen, datenbezogenen Aufgaben und betriebswirtschaftlich gepraegten Problemstellungen gearbeitet.",
+          "Theoretische Konzepte in konkrete Implementierungen, Prototypen und Projektergebnisse übersetzt.",
+          "Mit Software Engineering, Informationssystemen, datenbezogenen Aufgaben und betriebswirtschaftlich geprägten Problemstellungen gearbeitet.",
           "Gelernt, Anforderungen, Prozessdenken und technisches Design gemeinsam zu betrachten statt Code isoliert zu sehen.",
         ],
       },
     ],
     knowledgeSection: {
-      eyebrow: "Wissen",
-      title: "Allgemeines Coding-Wissen aus Studium und praktischer Projektarbeit.",
+      eyebrow: "Technische Basis",
+      title: "Die technische Grundlage hinter der Umsetzungsarbeit.",
       description:
-        "Der Studienweg in Wirtschaftsinformatik hat der praktischen Erfahrung Struktur gegeben: nicht nur Code schreiben, sondern verstehen, warum ein System auf bestimmte Weise gebaut werden sollte und welchen Nutzen es fachlich stiftet.",
+        "Strukturiertes Problemlösen, sauberes Software Engineering und die Fähigkeit, Business-Bedarf in technische Umsetzung zu übersetzen, tragen die Kundenarbeit fachlich.",
     },
     knowledgeAreas: [
       {
         title: "Software-Engineering-Grundlagen",
         description:
-          "Das Studium hat die Grundlagen verstaerkt, die Implementierung verlaesslich statt improvisiert machen.",
+          "Das Studium hat die Grundlagen verstärkt, die Implementierung verlässlich statt improvisiert machen.",
         topics: [
-          "Datenstrukturen, Algorithmen und strukturiertes Problemloesen",
+          "Datenstrukturen, Algorithmen und strukturiertes Problemlösen",
           "Clean Code, Debugging, Testing und Wartbarkeit",
           "Versionskontrolle und inkrementelle Umsetzung",
         ],
@@ -333,11 +333,11 @@ const projectsPageContent = {
       {
         title: "Web- und Anwendungsentwicklung",
         description:
-          "Die praktische Coding-Erfahrung wurde auf Interfaces, Anwendungslogik und kleinere Softwaresysteme erweitert, die echte Probleme loesen.",
+          "Die praktische Coding-Erfahrung wurde auf Interfaces, Anwendungslogik und kleinere Softwaresysteme erweitert, die echte Probleme lösen.",
         topics: [
           "Frontend- und Webanwendungsentwicklung",
           "APIs, Datenverarbeitung und interne Tools",
-          "Automatisierungsskripte und Workflow-Unterstuetzung",
+          "Automatisierungsskripte und Workflow-Unterstützung",
         ],
       },
       {
@@ -347,7 +347,7 @@ const projectsPageContent = {
         topics: [
           "Anforderungsanalyse und Prozessmodellierung",
           "Identifikation von Automatisierungspotenzialen",
-          "Vage Ideen in umsetzbare Software-Scopes uebersetzen",
+          "Vage Ideen in umsetzbare Software-Scopes übersetzen",
         ],
       },
     ],

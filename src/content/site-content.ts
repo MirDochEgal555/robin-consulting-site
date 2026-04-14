@@ -23,6 +23,13 @@ type ProcessStep = {
   description: string;
 };
 
+type UseCase = {
+  eyebrow: string;
+  title: string;
+  description: string;
+  outcome: string;
+};
+
 type TimelineItem = {
   period: string;
   title: string;
@@ -91,6 +98,12 @@ export type SiteContent = {
       description: string;
       pageLinkLabel: string;
     };
+    useCases: {
+      eyebrow: string;
+      title: string;
+      description: string;
+      outcomeLabel: string;
+    };
     process: {
       eyebrow: string;
       title: string;
@@ -112,6 +125,7 @@ export type SiteContent = {
     };
   };
   services: Service[];
+  useCases: UseCase[];
   process: ProcessStep[];
   about: {
     summary: string;
@@ -169,10 +183,10 @@ const siteContent = {
     },
     navItems: [
       { label: "Services", href: "#services" },
-      { label: "Process", href: "#process" },
-      { label: "About", href: "#about" },
+      { label: "Use Cases", href: "#use-cases" },
       { label: "Projects", href: "#projects" },
       { label: "Insights", href: "#insights" },
+      { label: "About", href: "#about" },
       { label: "Contact", href: "#contact" },
     ],
     cta: {
@@ -195,7 +209,7 @@ const siteContent = {
       eyebrow: "IT Consulting",
       headline: "AI Consulting. Task Automation.",
       description:
-        "Helping companies and founders make better technical decisions, define a workable solution, and implement the right software when hands-on execution is needed.",
+        "I help small businesses automate repetitive workflows with AI and the right software, without needing in-house technical expertise.",
       promiseLabel: "Core promise",
       promise:
         "Get practical consulting on architecture, tooling, scope, and delivery, with the option to move from recommendation into focused software implementation.",
@@ -230,10 +244,17 @@ const siteContent = {
       },
       services: {
         eyebrow: "Services",
-        title: "Technical Advisory and Solution Engineering",
+        title: "How I Can Help",
         description:
-          "The offer is positioned as fast, outcome-focused advisory rather than long, abstract consulting cycles.",
+          "Start with a focused consultation, move into implementation for a defined use case, or keep ongoing technical support available as your workflows evolve.",
         pageLinkLabel: "To concrete services",
+      },
+      useCases: {
+        eyebrow: "Use Cases",
+        title: "Typical Use Cases for AI and Automation",
+        description:
+          "Concrete examples of the workflows, admin tasks, and internal processes I help small businesses improve.",
+        outcomeLabel: "Result",
       },
       process: {
         eyebrow: "Process",
@@ -261,22 +282,66 @@ const siteContent = {
     },
     services: [
       {
-        eyebrow: "Strategy",
-        title: "Architecture and stack decisions",
+        eyebrow: "Start",
+        title: "Initial consultation",
         description:
-          "Pressure-test technical options before you commit, so platform, tooling, and system design choices match the actual business need.",
+          "Use a focused first session to review your current workflows, identify realistic AI or automation opportunities, and leave with a clear recommendation for the next step.",
       },
       {
-        eyebrow: "Planning",
-        title: "Scoping and delivery planning",
-        description:
-          "Turn broad requirements into a workable plan with clear priorities, realistic scope, and sensible tradeoffs for delivery.",
-      },
-      {
-        eyebrow: "Implementation",
-        title: "Software solutions for focused use cases",
+        eyebrow: "Build",
+        title: "Implementation",
         description:
           "When the solution is clear, Robin can also implement selected software components, internal tools, automations, or product features without turning the engagement into a large agency process.",
+      },
+      {
+        eyebrow: "Support",
+        title: "Ongoing support",
+        description:
+          "Stay supported beyond a single project with ongoing guidance on tooling, workflow improvements, prioritization, and hands-on help when new technical questions or blockers come up.",
+      },
+    ],
+    useCases: [
+      {
+        eyebrow: "Sales",
+        title: "Automate incoming inquiries",
+        description:
+          "Website forms, emails, or lead requests can be captured, tagged, routed, and followed up automatically instead of being handled by hand.",
+        outcome: "Less manual lead handling and faster replies.",
+      },
+      {
+        eyebrow: "Admin",
+        title: "Reduce manual admin work",
+        description:
+          "Recurring email sorting, data entry, document handling, and status updates can be streamlined so routine tasks stop eating up the day.",
+        outcome: "Less repetitive work and more time for valuable tasks.",
+      },
+      {
+        eyebrow: "Operations",
+        title: "Connect disconnected tools",
+        description:
+          "Move data automatically between email, spreadsheets, CRM, calendars, and internal systems instead of relying on copy-paste processes.",
+        outcome: "Fewer errors and smoother day-to-day operations.",
+      },
+      {
+        eyebrow: "Internal tools",
+        title: "Build simple internal tools",
+        description:
+          "Replace fragile spreadsheet workflows with focused dashboards or lightweight tools built around the way your team actually works.",
+        outcome: "Cleaner processes and better visibility.",
+      },
+      {
+        eyebrow: "Customer service",
+        title: "Speed up customer communication",
+        description:
+          "Automate first responses, summaries, routing, and follow-ups so clients get answers faster and requests land in the right place.",
+        outcome: "A faster and more reliable client experience.",
+      },
+      {
+        eyebrow: "Knowledge",
+        title: "Create internal AI assistants",
+        description:
+          "Set up simple assistants that answer recurring questions based on your own documents, notes, and internal workflows.",
+        outcome: "Faster access to information and less repeated back-and-forth.",
       },
     ],
     process: [
@@ -381,10 +446,10 @@ const siteContent = {
     },
     navItems: [
       { label: "Leistungen", href: "#services" },
-      { label: "Vorgehen", href: "#process" },
-      { label: "Über mich", href: "#about" },
+      { label: "Anwendungsfälle", href: "#use-cases" },
       { label: "Projekte", href: "#projects" },
       { label: "Blog", href: "#insights" },
+      { label: "Über mich", href: "#about" },
       { label: "Kontakt", href: "#contact" },
     ],
     cta: {
@@ -407,7 +472,7 @@ const siteContent = {
       eyebrow: "IT-Beratung",
       headline: "KI-Beratung. Prozessautomatisierung.",
       description:
-        "Unternehmen und Unternehmern wird dabei geholfen, gute IT-Entscheidungen zu treffen, eine tragfähige Lösung zu definieren und die richtige Software umzusetzen, wenn praktische Umsetzung gefragt ist.",
+        "Ich helfe kleinen Unternehmen, wiederkehrende Workflows mit KI und passender Software zu automatisieren, ohne eigenes technisches Know-how.",
       promiseLabel: "Kernversprechen",
       promise:
         "Sie erhalten pragmatische Beratung zu Architektur, Tooling, Scope und Delivery, mit der Option, aus einer Empfehlung direkt in eine fokussierte Software-Umsetzung zu wechseln.",
@@ -443,10 +508,17 @@ const siteContent = {
       services: {
         eyebrow: "Leistungen",
         title:
-          "Konkrete Unterstützung für IT-Systeme in Ihrem Unternehmen, die helfen Ihre Potenziale zu heben",
+          "Wobei ich Sie unterstütze",
         description:
-          "Das Angebot ist als schnelle, ergebnisorientierte Beratung angelegt und nicht als langer, abstrakter Beratungsprozess.",
+          "Starten Sie mit einem fokussierten Erstgespräch, gehen Sie in die Umsetzung eines klaren Anwendungsfalls oder sichern Sie sich laufende technische Unterstützung für wachsende Anforderungen.",
         pageLinkLabel: "Zu den konkreten Leistungen",
+      },
+      useCases: {
+        eyebrow: "Anwendungsfälle",
+        title: "Typische Anwendungsfälle für KI und Automatisierung",
+        description:
+          "Konkrete Beispiele für Workflows, Verwaltungsaufgaben und interne Prozesse, die ich für kleine Unternehmen verbessere.",
+        outcomeLabel: "Ergebnis",
       },
       process: {
         eyebrow: "Vorgehen",
@@ -473,22 +545,66 @@ const siteContent = {
     },
     services: [
       {
-        eyebrow: "Strategie",
-        title: "Architektur- und Stack-Entscheidungen",
+        eyebrow: "Start",
+        title: "Erstgespräch",
         description:
-          "Technische Optionen werden vor einer Festlegung auf Umsetzbarkeit geprüft, damit Plattform, Tooling und Systemdesign zum tatsächlichen Geschäftsbedarf passen.",
-      },
-      {
-        eyebrow: "Planung",
-        title: "Scoping und Umsetzungsplanung",
-        description:
-          "Breite Anforderungen werden in einen klar strukturierten Plan mit klaren Prioritäten, realistischem Scope und sinnvollen Trade-offs für die Delivery umgesetzt.",
+          "In einem fokussierten ersten Termin analysieren wir Ihre aktuellen Abläufe, identifizieren sinnvolle KI- oder Automatisierungsansätze und leiten daraus einen klaren nächsten Schritt ab.",
       },
       {
         eyebrow: "Umsetzung",
-        title: "Software-Lösungen für klar umrissene Anwendungsfälle",
+        title: "Implementierung",
         description:
           "Wenn wir gemeinsam die Lösung gefunden haben, können ausgewählte Software-Bausteine, interne Tools, Automatisierungen oder Produktfunktionen umgesetzt werden, ohne dass daraus ein großer Agenturprozess wird.",
+      },
+      {
+        eyebrow: "Begleitung",
+        title: "Laufende Beratung",
+        description:
+          "Bleiben Sie auch nach einem Projekt flexibel mit fortlaufender Beratung zu Tooling, Prozessverbesserungen, Priorisierung und konkreter Unterstützung bei neuen technischen Fragen oder Blockern.",
+      },
+    ],
+    useCases: [
+      {
+        eyebrow: "Vertrieb",
+        title: "Eingehende Anfragen automatisieren",
+        description:
+          "Website-Formulare, E-Mails oder Lead-Anfragen können automatisch erfasst, markiert, weitergeleitet und mit einer ersten Reaktion versehen werden.",
+        outcome: "Weniger manuelle Lead-Bearbeitung und schnellere Rückmeldungen.",
+      },
+      {
+        eyebrow: "Verwaltung",
+        title: "Manuelle Verwaltungsarbeit reduzieren",
+        description:
+          "Wiederkehrende E-Mail-Sortierung, Dateneingabe, Dokumentenbearbeitung und Status-Updates lassen sich verschlanken, damit Routineaufgaben nicht den Tag bestimmen.",
+        outcome: "Weniger repetitive Arbeit und mehr Zeit für wichtige Aufgaben.",
+      },
+      {
+        eyebrow: "Abläufe",
+        title: "Getrennte Tools verbinden",
+        description:
+          "Daten können automatisch zwischen E-Mail, Tabellen, CRM, Kalendern und internen Systemen fließen, statt über Copy-and-paste-Prozesse.",
+        outcome: "Weniger Fehler und reibungslosere Abläufe im Alltag.",
+      },
+      {
+        eyebrow: "Interne Tools",
+        title: "Einfache interne Tools bauen",
+        description:
+          "Fragile Tabellenprozesse können durch fokussierte Dashboards oder schlanke Tools ersetzt werden, die zu Ihren echten Arbeitsabläufen passen.",
+        outcome: "Sauberere Prozesse und mehr Überblick.",
+      },
+      {
+        eyebrow: "Kundenkontakt",
+        title: "Kundenkommunikation beschleunigen",
+        description:
+          "Erste Antworten, Zusammenfassungen, Weiterleitungen und Follow-ups lassen sich automatisieren, damit Anfragen schneller an der richtigen Stelle landen.",
+        outcome: "Ein schnelleres und verlässlicheres Kundenerlebnis.",
+      },
+      {
+        eyebrow: "Wissen",
+        title: "Interne KI-Assistenten einrichten",
+        description:
+          "Einfache Assistenten können wiederkehrende Fragen auf Basis Ihrer eigenen Dokumente, Notizen und internen Prozesse beantworten.",
+        outcome: "Schnellerer Zugriff auf Wissen und weniger wiederholte Rückfragen.",
       },
     ],
     process: [

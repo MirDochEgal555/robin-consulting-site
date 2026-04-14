@@ -62,10 +62,10 @@ const servicesPageContent = {
   },
   de: {
     section: {
-      eyebrow: "Leistungsueberblick",
+      eyebrow: "Leistungsüberblick",
       title: "KI, Automatisierung und Websites mit praktischem Nutzen für Unternehmen.",
       description:
-        "Im Mittelpunkt steht nicht Technik um der Technik willen. Jede Leistung soll dabei helfen, Zeit zu sparen, die Qualitaet zu verbessern oder den digitalen Auftritt des Unternehmens zu staerken.",
+        "Im Mittelpunkt steht nicht Technik um der Technik willen. Jede Leistung soll dabei helfen, Zeit zu sparen, die Qualität zu verbessern oder den digitalen Auftritt des Unternehmens zu stärken.",
     },
     offerings: [
       {
@@ -74,7 +74,7 @@ const servicesPageContent = {
         description:
           "Gemeinsam wird geklärt, wie KI in Ihrem Unternehmen sinnvoll eingesetzt werden kann, damit echte Arbeitsabläufe unterstützt werden statt nur neue Komplexität entstehen zu lassen.",
         outcomes: [
-          "Sinnvolle KI-Anwendungsfaelle im aktuellen Geschäft identifizieren",
+          "Sinnvolle KI-Anwendungsfälle im aktuellen Geschäft identifizieren",
           "Bereiche priorisieren, in denen KI Tempo, Qualität oder Entscheidungen verbessert",
           "Einen pragmatischen Einführungsweg mit überschaubarer Komplexität festlegen",
         ],

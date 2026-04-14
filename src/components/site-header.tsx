@@ -48,9 +48,9 @@ export function SiteHeader({
 }: SiteHeaderProps) {
   const menuLabel = content.locale === "de" ? "Inhalt" : "Content";
   const openMenuLabel =
-    content.locale === "de" ? "Seitenmenue oeffnen" : "Open page menu";
+    content.locale === "de" ? "Seitenmenü öffnen" : "Open page menu";
   const closeMenuLabel =
-    content.locale === "de" ? "Seitenmenue schliessen" : "Close page menu";
+    content.locale === "de" ? "Seitenmenü schließen" : "Close page menu";
   const [activeHref, setActiveHref] = useState<string | null>(null);
   const [menuOpen, setMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
@@ -228,20 +228,20 @@ export function SiteHeader({
               </Link>
             )}
           </div>
-          <nav className="hidden items-center gap-2 rounded-full border border-white/10 bg-white/[0.04] p-1 text-sm text-slate-300 md:flex">
+          <nav className="hidden min-w-0 items-center gap-2 rounded-full border border-white/10 bg-white/[0.04] p-1 text-sm text-slate-300 md:flex">
             {pageNavItems.map((item) => renderNavLink(item))}
           </nav>
-          <div className="flex items-center gap-3">
+          <div className="flex shrink-0 items-center gap-3">
             <Link
               href={languageSwitch.href}
               aria-label={languageSwitch.ariaLabel}
               data-analytics-event="locale_switch"
               data-analytics-label={languageSwitch.label}
-              className="inline-flex h-11 items-center justify-center rounded-full border border-white/[0.12] bg-white/[0.04] px-4 text-sm font-medium text-slate-200 transition hover:border-sky-300/50 hover:bg-white/[0.08] hover:text-white"
+              className="inline-flex h-11 shrink-0 items-center justify-center whitespace-nowrap rounded-full border border-white/[0.12] bg-white/[0.04] px-4 text-sm font-medium text-slate-200 transition hover:border-sky-300/50 hover:bg-white/[0.08] hover:text-white"
             >
               {languageSwitch.label}
             </Link>
-            <div className="hidden sm:block">
+            <div className="hidden shrink-0 sm:block">
               <ButtonLink
                 href={content.bookingUrl}
                 trackingEvent="cta_click"

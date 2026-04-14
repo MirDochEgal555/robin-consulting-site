@@ -88,9 +88,9 @@ const pageDefinitions = {
       },
       intro: {
         eyebrow: "Previous projects",
-        title: "Earlier project work, public repositories, and practical coding experience.",
+        title: "Proof of hands-on delivery, earlier project work, and technical range.",
         description:
-          "Thesis-oriented implementation work, research-heavy Python repositories, dashboard experiments, and practical experience in web development and task automation come together here.",
+          "Potential clients can quickly see the kinds of problems Robin has worked on, how solutions are approached, and what practical delivery experience stands behind the consulting offer.",
       },
     },
     blog: {
@@ -107,8 +107,7 @@ const pageDefinitions = {
       intro: {
         eyebrow: "Blog",
         title: "Published insights, case notes, and technical writing.",
-        description:
-          "",
+        description: "",
       },
     },
     dashboard: {
@@ -165,14 +164,14 @@ const pageDefinitions = {
       metadata: {
         title: "Leistungen | Robin Keim IT-Beratung",
         description:
-          "KI-Beratung, Aufgabenautomatisierung sowie Erstellung und Hosting von Websites fuer Unternehmen, die digitale Hebel praktisch nutzen wollen.",
+          "KI-Beratung, Aufgabenautomatisierung sowie Erstellung und Hosting von Websites für Unternehmen, die digitale Hebel praktisch nutzen wollen.",
         openGraphTitle: "Leistungen | Robin Keim IT-Beratung",
         openGraphDescription:
           "Eine Leistungsseite zu KI-Beratung, Aufgabenautomatisierung sowie Erstellung und Hosting von Websites.",
       },
       intro: {
         eyebrow: "Leistungen",
-        title: "Lösungen mit klarem Nutzen fuer Ihr Unternehmen.",
+        title: "Lösungen mit klarem Nutzen für Ihr Unternehmen.",
         description:
           "Diese Seite zeigt, wie Unternehmen von praktischem KI-Einsatz, sauberer Aufgabenautomatisierung und professionell erstellten und gehosteten Websites profitieren können.",
       },
@@ -181,18 +180,18 @@ const pageDefinitions = {
       label: "Projekte",
       slug: "projekte",
       metadata: {
-        title: "Fruehere Projekte | Robin Keim IT-Beratung",
+        title: "Frühere Projekte | Robin Keim IT-Beratung",
         description:
-          "Ausgewaehlte Repositories zu thesisnaher Implementierungsarbeit, forschungsintensiven Python-Projekten, Dashboard-Experimenten sowie praktischer Erfahrung in Webentwicklung und Automatisierung.",
-        openGraphTitle: "Fruehere Projekte | Robin Keim IT-Beratung",
+          "Ausgewählte Repositories zu thesisnaher Implementierungsarbeit, forschungsintensiven Python-Projekten, Dashboard-Experimenten sowie praktischer Erfahrung in Webentwicklung und Automatisierung.",
+        openGraphTitle: "Frühere Projekte | Robin Keim IT-Beratung",
         openGraphDescription:
-          "Ausgewaehlte Repositories, Dashboard-Experimente sowie praktische Erfahrung in Webentwicklung und Automatisierung.",
+          "Ausgewählte Repositories, Dashboard-Experimente sowie praktische Erfahrung in Webentwicklung und Automatisierung.",
       },
       intro: {
-        eyebrow: "Fruehere Projekte",
-        title: "Fruehere Projektarbeit, oeffentliche Repositories und praktische Coding-Erfahrung.",
+        eyebrow: "Frühere Projekte",
+        title: "Praxisnahe Projektarbeit, frühere Umsetzungen und technische Bandbreite.",
         description:
-          "Thesisnahe Implementierungsarbeit, forschungsintensive Python-Repositories, Dashboard-Experimente sowie praktische Erfahrung in Webentwicklung und Aufgabenautomatisierung kommen hier zusammen.",
+          "Potenzielle Kunden erkennen hier schnell, an welchen Problemtypen gearbeitet wurde, wie Lösungen umgesetzt werden und welche praktische Delivery-Erfahrung hinter dem Angebot steht.",
       },
     },
     blog: {
@@ -201,7 +200,7 @@ const pageDefinitions = {
       metadata: {
         title: "Blog | Robin Keim IT-Beratung",
         description:
-          "Praxisnahe Beitraege zu IT-Beratung, Architekturentscheidungen, Delivery-Planung und Software-Umsetzung.",
+          "Praxisnahe Beiträge zu IT-Beratung, Architekturentscheidungen, Delivery-Planung und Software-Umsetzung.",
         openGraphTitle: "Blog | Robin Keim IT-Beratung",
         openGraphDescription:
           "Veröffentlichte Blog-Posts zu Lösungen, Use-Cases, internen Tools und fokussierter Software-Umsetzung.",
@@ -209,8 +208,7 @@ const pageDefinitions = {
       intro: {
         eyebrow: "Blog",
         title: "Veröffentlichte Blog-Posts zu Lösungen, Use-Cases, internen Tools und fokussierter Software-Umsetzung.",
-        description:
-          "",
+        description: "",
       },
     },
     dashboard: {
@@ -219,16 +217,16 @@ const pageDefinitions = {
       metadata: {
         title: "Dashboard | Robin Keim IT-Beratung",
         description:
-          "Ein leichtgewichtiges Browser-Dashboard fuer SEO, Analytics-Verkabelung und aktuelle Performance-Signale.",
+          "Ein leichtgewichtiges Browser-Dashboard für SEO, Analytics-Verkabelung und aktuelle Performance-Signale.",
         openGraphTitle: "Dashboard | Robin Keim IT-Beratung",
         openGraphDescription:
-          "Ein browserseitiges Dashboard fuer SEO-Bereitschaft, Tracking-Status und aktuelle Performance-Metriken.",
+          "Ein browserseitiges Dashboard für SEO-Bereitschaft, Tracking-Status und aktuelle Performance-Metriken.",
       },
       intro: {
         eyebrow: "Site pulse",
-        title: "Ein kleines Kontrollzentrum fuer SEO, Tracking und Performance.",
+        title: "Ein kleines Kontrollzentrum für SEO, Tracking und Performance.",
         description:
-          "Diese Seite zeigt, was die aktuelle Deployment wirklich ausliefert, welche Events der Browser erfasst und ob Analytics-Weiterleitung derzeit ueberhaupt konfiguriert ist.",
+          "Diese Seite zeigt, was die aktuelle Deployment wirklich ausliefert, welche Events der Browser erfasst und ob Analytics-Weiterleitung derzeit überhaupt konfiguriert ist.",
       },
     },
     legalNotice: {
@@ -237,22 +235,22 @@ const pageDefinitions = {
       metadata: {
         title: "Impressum | Robin Keim IT-Beratung",
         description:
-          "Anbieterkennzeichnung und Pflichtangaben fuer Robin Keim IT-Beratung.",
+          "Anbieterkennzeichnung und Pflichtangaben für Robin Keim IT-Beratung.",
         openGraphTitle: "Impressum | Robin Keim IT-Beratung",
         openGraphDescription:
-          "Anbieterkennzeichnung und Pflichtangaben fuer diese Website.",
+          "Anbieterkennzeichnung und Pflichtangaben für diese Website.",
       },
     },
     privacy: {
       label: "Datenschutz",
       slug: "datenschutz",
       metadata: {
-        title: "Datenschutzerklaerung | Robin Keim IT-Beratung",
+        title: "Datenschutzerklärung | Robin Keim IT-Beratung",
         description:
-          "Datenschutzhinweise fuer Website, Kontaktweg, Terminbuchung und optionale Analytics.",
-        openGraphTitle: "Datenschutzerklaerung | Robin Keim IT-Beratung",
+          "Datenschutzhinweise für Website, Kontaktweg, Terminbuchung und optionale Analytics.",
+        openGraphTitle: "Datenschutzerklärung | Robin Keim IT-Beratung",
         openGraphDescription:
-          "Datenschutzhinweise fuer Website, Kontaktweg, Terminbuchung und optionale Analytics.",
+          "Datenschutzhinweise für Website, Kontaktweg, Terminbuchung und optionale Analytics.",
       },
     },
   },

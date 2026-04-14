@@ -38,7 +38,7 @@ const copy = {
     privacy: "Datenschutz",
     legalNotice: "Impressum",
     manage:
-      "Sie koennen diese Auswahl jederzeit ueber die Cookie-Einstellungen im Footer aendern.",
+      "Sie können diese Auswahl jederzeit über die Cookie-Einstellungen im Footer ändern.",
   },
 } as const;
 

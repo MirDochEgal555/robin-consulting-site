@@ -81,20 +81,20 @@ const copy = {
     metricPath: "Captured on",
   },
   de: {
-    overview: "Uebersicht",
-    overviewTitle: "Was die Deployment-Version direkt im Browser bestaetigen kann",
+    overview: "Übersicht",
+    overviewTitle: "Was die Deployment-Version direkt im Browser bestätigen kann",
     overviewDescription:
       "Diese Seite liest die aktuelle Browser-Session aus und funktioniert daher auch auf der statischen GitHub-Pages-Deployment.",
     analytics: "Analytics",
-    analyticsTitle: "Traffic- und Aktivitaetssignale",
+    analyticsTitle: "Traffic- und Aktivitätssignale",
     analyticsDescription:
-      "Seitenaufrufe und relevante Interaktionen werden erst nach Einwilligung lokal gespeichert und nur dann an GA4 weitergeleitet, wenn zusaetzlich eine Analytics-ID gesetzt ist.",
+      "Seitenaufrufe und relevante Interaktionen werden erst nach Einwilligung lokal gespeichert und nur dann an GA4 weitergeleitet, wenn zusätzlich eine Analytics-ID gesetzt ist.",
     performance: "Performance",
     performanceTitle: "Aktuelle Browser-Lade-Metriken",
     performanceDescription:
-      "Diese Metriken zeigen den letzten vollstaendigen Seitenaufruf in dieser Browser-Session.",
+      "Diese Metriken zeigen den letzten vollständigen Seitenaufruf in dieser Browser-Session.",
     seo: "SEO",
-    seoTitle: "Checks fuer Indexierung und Sichtbarkeit",
+    seoTitle: "Checks für Indexierung und Sichtbarkeit",
     seoDescription:
       "Die exportierte Seite liefert bereits crawlbare Dateien und Routen-Metadaten aus. Diese Karten zeigen den aktuell konfigurierten Surface.",
     deployment: "Deployment",
@@ -117,9 +117,9 @@ const copy = {
     sessionStarted: "Session gestartet",
     lastUpdate: "Letztes Update",
     topPaths: "Top-Pfade",
-    recentActivity: "Letzte Aktivitaeten",
+    recentActivity: "Letzte Aktivitäten",
     noEvents: "In diesem Browser wurden noch keine Events erfasst.",
-    noMetrics: "Fuer diese Session wurden noch keine Performance-Metriken erfasst.",
+    noMetrics: "Für diese Session wurden noch keine Performance-Metriken erfasst.",
     robots: "robots.txt",
     sitemap: "sitemap.xml",
     canonicalBase: "Kanonische Basis-URL",
