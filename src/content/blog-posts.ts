@@ -61,6 +61,250 @@ export const blogSettings = {
 
 const blogPostEntries = [
   {
+    id: "rag-ai-explained",
+    featured: true,
+    publishedAt: "2026-04-06",
+    updatedAt: "2026-04-06",
+    readingTimeMinutes: 6,
+    locales: {
+      en: {
+        slug: "what-is-rag-ai-explained",
+        title: "RAG: The Missing Piece That Makes AI Actually Useful",
+        excerpt:
+          "Most AI tools fail in real business use. RAG (Retrieval-Augmented Generation) is what makes AI accurate, reliable, and actually useful.",
+        seoDescription:
+          "Learn what RAG (Retrieval-Augmented Generation) is and how it makes AI systems more accurate, reliable, and useful for businesses.",
+        category: "AI",
+        tags: ["AI", "RAG", "Automation", "Knowledge Systems"],
+        sections: [
+          {
+            title: "Introduction",
+            paragraphs: [
+              "AI is impressive — but in real business use, it often falls short.",
+              "It sounds confident, but gives wrong answers. It doesn’t know your data. It can’t access your internal knowledge.",
+              "This is exactly where most AI projects fail.",
+              "And this is exactly where RAG comes in.",
+            ],
+          },
+          {
+            title: "The Problem with “Standard AI”",
+            paragraphs: [
+              "Most AI systems work based on general training data.",
+              "They are powerful — but they don’t know your business.",
+            ],
+            bullets: [
+              "No access to internal documents",
+              "No real-time data",
+              "Limited accuracy in specific contexts",
+              "Risk of hallucinations",
+            ],
+          },
+          {
+            title: "What RAG Actually Does",
+            paragraphs: [
+              "RAG stands for Retrieval-Augmented Generation.",
+              "Instead of relying only on what the model “knows”, it actively retrieves relevant information and uses it to generate answers.",
+              "In simple terms:",
+              "👉 AI + your data = useful AI",
+            ],
+          },
+          {
+            title: "Why This Changes Everything",
+            paragraphs: [
+              "With RAG, AI becomes context-aware.",
+              "It doesn’t just generate — it understands based on your actual information.",
+            ],
+            bullets: [
+              "Answers based on your documents",
+              "Up-to-date information",
+              "Higher accuracy",
+              "More trust in results",
+            ],
+          },
+          {
+            title: "Real Business Use Cases",
+            paragraphs: [
+              "RAG is not theoretical — it solves very real problems.",
+            ],
+            bullets: [
+              "Internal knowledge assistants",
+              "Customer support systems",
+              "Document search and analysis",
+              "Onboarding and training tools",
+            ],
+          },
+          {
+            title: "How This Fits into Modern Systems",
+            paragraphs: [
+              "RAG is often part of a bigger system.",
+              "It connects data, workflows, and user interaction into one intelligent layer.",
+              "If you want to see how AI fits into modern digital systems overall: /en/blog/how-ai-is-changing-websites",
+            ],
+          },
+          {
+            title: "Why Most Businesses Don’t Use It Yet",
+            paragraphs: [
+              "Despite its power, many companies are not using RAG yet.",
+            ],
+            bullets: [
+              "Lack of understanding",
+              "Unclear implementation path",
+              "Focus on tools instead of systems",
+            ],
+          },
+          {
+            title: "Where It Creates the Most Value",
+            paragraphs: [
+              "RAG shines where knowledge matters.",
+              "The more information your business has, the more powerful it becomes.",
+              "If you’re looking for practical AI applications, this article is a good next step: /en/blog/ai-use-cases-every-business-should-use",
+            ],
+          },
+          {
+            title: "From Idea to Implementation",
+            paragraphs: [
+              "RAG is not just a feature — it’s part of a system design.",
+              "You need the right data structure, workflows, and integration.",
+              "This is exactly where structured consulting helps: /en/blog/what-i-actually-do-as-an-it-consultant",
+            ],
+          },
+          {
+            title: "Final Thoughts",
+            paragraphs: [
+              "AI without context is impressive — but limited.",
+              "AI with context becomes truly useful.",
+              "RAG is the bridge between the two.",
+            ],
+          },
+          {
+            title: "Get Started",
+            paragraphs: [
+              "If you’re thinking about using AI with your own data, RAG is probably the right approach.",
+              "Let’s explore how it could work in your business.",
+            ],
+          },
+        ],
+      },
+
+      de: {
+        slug: "rag-ki-erklaert",
+        title: "RAG: Das fehlende Puzzlestück für wirklich nützliche KI",
+        excerpt:
+          "Viele KI-Anwendungen scheitern im Alltag. RAG macht KI präzise, zuverlässig und wirklich nutzbar.",
+        seoDescription:
+          "Erfahre, was RAG (Retrieval-Augmented Generation) ist und wie es KI-Systeme für Unternehmen deutlich verbessert.",
+        category: "KI",
+        tags: ["KI", "RAG", "Automatisierung", "Wissenssysteme"],
+        sections: [
+          {
+            title: "Einleitung",
+            paragraphs: [
+              "KI ist beeindruckend — aber im echten Einsatz oft unzuverlässig.",
+              "Sie klingt überzeugend, liegt aber manchmal falsch.",
+              "Das liegt daran, dass sie dein Unternehmen nicht kennt.",
+              "Genau hier kommt RAG ins Spiel.",
+            ],
+          },
+          {
+            title: "Das Problem klassischer KI",
+            paragraphs: [
+              "Die meisten Modelle arbeiten mit allgemeinem Wissen.",
+              "Sie haben keinen Zugriff auf deine Daten.",
+            ],
+            bullets: [
+              "Keine internen Informationen",
+              "Keine aktuellen Daten",
+              "Begrenzte Genauigkeit",
+              "Fehleranfällige Antworten",
+            ],
+          },
+          {
+            title: "Was RAG macht",
+            paragraphs: [
+              "RAG steht für Retrieval-Augmented Generation.",
+              "Das System holt sich gezielt Informationen und nutzt sie für Antworten.",
+              "Einfach gesagt:",
+              "👉 KI + deine Daten = echte Lösungen",
+            ],
+          },
+          {
+            title: "Warum das entscheidend ist",
+            paragraphs: [
+              "Mit RAG wird KI kontextbezogen.",
+              "Sie arbeitet mit echten Informationen statt Annahmen.",
+            ],
+            bullets: [
+              "Antworten auf Basis deiner Daten",
+              "Aktuelle Informationen",
+              "Höhere Genauigkeit",
+              "Mehr Vertrauen",
+            ],
+          },
+          {
+            title: "Praxisbeispiele",
+            paragraphs: [
+              "RAG löst konkrete Probleme im Unternehmen.",
+            ],
+            bullets: [
+              "Interne Wissenssysteme",
+              "Support-Systeme",
+              "Dokumentensuche",
+              "Onboarding-Tools",
+            ],
+          },
+          {
+            title: "Einordnung",
+            paragraphs: [
+              "RAG ist Teil moderner Systeme.",
+              "Es verbindet Daten, Prozesse und Interaktion.",
+              "Mehr dazu: /de/blog/wie-ki-websites-veraendert",
+            ],
+          },
+          {
+            title: "Warum es noch selten ist",
+            paragraphs: [
+              "Viele Unternehmen nutzen RAG noch nicht.",
+            ],
+            bullets: [
+              "Zu wenig Wissen",
+              "Unklare Umsetzung",
+              "Fokus auf Tools statt Systeme",
+            ],
+          },
+          {
+            title: "Wo es den größten Nutzen bringt",
+            paragraphs: [
+              "Besonders dort, wo viel Wissen vorhanden ist.",
+              "Weitere Anwendungsfälle: /de/blog/ki-anwendungsfaelle-unternehmen",
+            ],
+          },
+          {
+            title: "Umsetzung",
+            paragraphs: [
+              "RAG braucht eine saubere Systemstruktur.",
+              "Hier kommt IT-Consulting ins Spiel: /de/blog/was-ich-als-it-consultant-eigentlich-mache",
+            ],
+          },
+          {
+            title: "Fazit",
+            paragraphs: [
+              "KI ohne Kontext ist begrenzt.",
+              "KI mit Kontext ist wirklich nützlich.",
+              "RAG verbindet beides.",
+            ],
+          },
+          {
+            title: "Start",
+            paragraphs: [
+              "Wenn du KI mit deinen Daten nutzen willst, ist RAG ein sinnvoller Ansatz.",
+              "Lass uns schauen, wie das für dein Unternehmen aussehen kann.",
+            ],
+          },
+        ],
+      },
+    },
+  },
+  {
     id: "identify-automation-opportunities",
     featured: true,
     publishedAt: "2026-05-04",
