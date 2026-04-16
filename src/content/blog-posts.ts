@@ -63,8 +63,8 @@ const blogPostEntries = [
   {
     id: "rag-ai-explained",
     featured: true,
-    publishedAt: "2026-04-06",
-    updatedAt: "2026-04-06",
+    publishedAt: "2026-05-11",
+    updatedAt: "2026-05-11",
     readingTimeMinutes: 6,
     locales: {
       en: {
