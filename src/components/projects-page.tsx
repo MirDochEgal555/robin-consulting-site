@@ -16,6 +16,8 @@ export function ProjectsPage({ locale }: ProjectsPageProps) {
   const content = getSiteContent(locale);
   const page = getPageDefinition(locale, "projects");
   const projectsContent = getProjectsPageContent(locale);
+  const [featuredProject, ...otherProjects] = projectsContent.projects;
+  const featuredBadge = locale === "de" ? "Featured Projekt" : "Featured project";
   const pageNavItems = [
     { label: content.sections.overviewLabel, href: "#overview" },
     { label: projectsContent.experienceSection.eyebrow, href: "#experience" },
@@ -90,11 +92,56 @@ export function ProjectsPage({ locale }: ProjectsPageProps) {
         description={projectsContent.projectSection.description}
       >
         <div className="grid gap-6 lg:grid-cols-2">
-          {projectsContent.projects.map((project, index) => (
+          {featuredProject ? (
+            <article
+              key={featuredProject.name}
+              className="glass-panel card-lift reveal-up scroll-tilt-in rounded-[2.25rem] p-8 lg:col-span-2 lg:p-9"
+              style={{ "--delay": "120ms" } as CSSProperties}
+            >
+              <div className="grid gap-8 lg:grid-cols-[minmax(0,1.4fr)_minmax(260px,0.9fr)] lg:items-start">
+                <div>
+                  <div className="flex flex-wrap items-center gap-3">
+                    <span className="rounded-full border border-sky-300/25 bg-sky-300/12 px-3 py-1 text-[0.7rem] font-medium uppercase tracking-[0.18em] text-sky-200">
+                      {featuredBadge}
+                    </span>
+                    <span className="font-mono text-xs uppercase tracking-[0.18em] text-sky-300">
+                      {featuredProject.period}
+                    </span>
+                  </div>
+                  <h2 className="mt-5 text-3xl font-semibold tracking-tight text-white sm:text-4xl">
+                    {featuredProject.name}
+                  </h2>
+                  <p className="mt-5 max-w-3xl text-sm leading-7 text-slate-300 sm:text-base">
+                    {featuredProject.description}
+                  </p>
+                </div>
+
+                <div className="rounded-[1.75rem] border border-white/10 bg-slate-950/35 p-5">
+                  <div className="flex flex-wrap gap-2">
+                    {featuredProject.stack.map((item) => (
+                      <span
+                        key={item}
+                        className="rounded-full border border-sky-300/20 bg-sky-300/10 px-3 py-1 text-xs uppercase tracking-[0.14em] text-sky-200"
+                      >
+                        {item}
+                      </span>
+                    ))}
+                  </div>
+                  <div className="mt-7">
+                    <ButtonLink href={featuredProject.href} variant="secondary">
+                      {featuredProject.linkLabel}
+                    </ButtonLink>
+                  </div>
+                </div>
+              </div>
+            </article>
+          ) : null}
+
+          {otherProjects.map((project, index) => (
             <article
               key={project.name}
               className="glass-panel card-lift reveal-up scroll-tilt-in rounded-[2rem] p-7"
-              style={{ "--delay": `${120 + index * 80}ms` } as CSSProperties}
+              style={{ "--delay": `${200 + index * 80}ms` } as CSSProperties}
             >
               <div className="font-mono text-xs uppercase tracking-[0.18em] text-sky-300">
                 {project.period}

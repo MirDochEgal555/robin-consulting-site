@@ -104,6 +104,15 @@ const projectsPageContent = {
     },
     projects: [
       {
+        name: "CortexRAG",
+        href: `${githubProfileHref}/CortexRAG`,
+        period: "Current AI project",
+        description:
+          "A current RAG-oriented repository focused on grounded AI behavior, knowledge retrieval, and practical system design for more reliable AI-assisted workflows.",
+        stack: ["Python", "RAG", "LLM workflows", "Knowledge systems"],
+        linkLabel: "View repository",
+      },
+      {
         name: "Master-Thesis-Implementation",
         href: `${githubProfileHref}/Master-Thesis-Implementation`,
         period: "Academic implementation work",
@@ -244,6 +253,15 @@ const projectsPageContent = {
         "Weitere frühere Projekte und kurze Kontextbeschreibungen werden hier nach und nach ergänzt.",
     },
     projects: [
+      {
+        name: "CortexRAG",
+        href: `${githubProfileHref}/CortexRAG`,
+        period: "Aktuelles KI-Projekt",
+        description:
+          "Ein aktuelles RAG-orientiertes Repository mit Fokus auf fundiertes KI-Verhalten, Wissensabruf und praxisnahe Systemarchitektur für verlässlichere KI-gestützte Workflows.",
+        stack: ["Python", "RAG", "LLM-Workflows", "Wissenssysteme"],
+        linkLabel: "Repository ansehen",
+      },
       {
         name: "Master-Thesis-Implementation",
         href: `${githubProfileHref}/Master-Thesis-Implementation`,
