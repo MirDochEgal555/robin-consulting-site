@@ -113,6 +113,15 @@ const projectsPageContent = {
         linkLabel: "View repository",
       },
       {
+        name: "AI Sales Agent",
+        href: `${githubProfileHref}/AI-Sales-Agent`,
+        period: "AI automation project",
+        description:
+          "A sales-agent repository focused on practical AI-assisted outreach, customer interaction support, and workflow automation for turning sales processes into usable software.",
+        stack: ["AI agents", "Sales automation", "Workflow automation"],
+        linkLabel: "View repository",
+      },
+      {
         name: "Master-Thesis-Implementation",
         href: `${githubProfileHref}/Master-Thesis-Implementation`,
         period: "Academic implementation work",
@@ -260,6 +269,15 @@ const projectsPageContent = {
         description:
           "Ein aktuelles RAG-orientiertes Repository mit Fokus auf fundiertes KI-Verhalten, Wissensabruf und praxisnahe Systemarchitektur für verlässlichere KI-gestützte Workflows.",
         stack: ["Python", "RAG", "LLM-Workflows", "Wissenssysteme"],
+        linkLabel: "Repository ansehen",
+      },
+      {
+        name: "AI Sales Agent",
+        href: `${githubProfileHref}/AI-Sales-Agent`,
+        period: "KI-Automatisierungsprojekt",
+        description:
+          "Ein Sales-Agent-Repository mit Fokus auf KI-gestuetzte Ansprache, Unterstuetzung in Kundeninteraktionen und Workflow-Automatisierung fuer praktisch nutzbare Sales-Prozesse.",
+        stack: ["AI Agents", "Sales-Automatisierung", "Workflow-Automatisierung"],
         linkLabel: "Repository ansehen",
       },
       {

@@ -61,6 +61,387 @@ export const blogSettings = {
 
 const blogPostEntries = [
   {
+    id: "from-chaos-to-system",
+    featured: true,
+    publishedAt: "2026-05-25",
+    updatedAt: "2026-05-25",
+    readingTimeMinutes: 5,
+    locales: {
+      en: {
+        slug: "from-chaos-to-system-business",
+        title: "From Chaos to System: What a Well-Structured Business Actually Looks Like",
+        excerpt:
+          "Most businesses operate in chaos without realizing it. Here’s what a well-structured system actually looks like.",
+        seoDescription:
+          "Learn what a well-structured business system looks like and how to move from chaos to efficiency.",
+        category: "Business Systems",
+        tags: ["Systems", "Efficiency", "Automation", "Business"],
+        sections: [
+          {
+            title: "Introduction",
+            paragraphs: [
+              "Most businesses don’t think they are chaotic.",
+              "But when you look closely, you often find scattered tools, manual work, and unclear processes.",
+              "If this sounds familiar, start here: /en/blog/hidden-cost-of-manual-work",
+            ],
+          },
+          {
+            title: "What Chaos Actually Looks Like",
+            paragraphs: [
+              "Chaos is not obvious — it’s subtle.",
+            ],
+            bullets: [
+              "Data spread across tools",
+              "Manual workflows",
+              "Repeated questions",
+              "No clear processes",
+            ],
+          },
+          {
+            title: "Why This Happens",
+            paragraphs: [
+              "Most systems evolve over time.",
+              "They are built step by step without a clear structure.",
+            ],
+          },
+          {
+            title: "What a Good System Looks Like",
+            paragraphs: [
+              "A good system feels simple — even if it’s powerful.",
+            ],
+            bullets: [
+              "Clear workflows",
+              "Connected tools",
+              "Minimal manual work",
+              "Transparent data",
+            ],
+          },
+          {
+            title: "The Key Difference",
+            paragraphs: [
+              "Chaotic systems react.",
+              "Good systems guide and automate.",
+            ],
+          },
+          {
+            title: "Where Automation & AI Fit",
+            paragraphs: [
+              "Automation removes repetitive work.",
+              "AI enhances decision-making and workflows.",
+              "Examples: /en/blog/ai-use-cases-every-business-should-use",
+            ],
+          },
+          {
+            title: "How You Get There",
+            paragraphs: [
+              "You don’t rebuild everything.",
+              "You improve step by step.",
+              "Start by identifying opportunities: /en/blog/identify-automation-opportunities-business",
+            ],
+          },
+          {
+            title: "Why Structure Creates Growth",
+            paragraphs: [
+              "Structured systems scale.",
+              "Chaos does not.",
+            ],
+          },
+          {
+            title: "Final Thoughts",
+            paragraphs: [
+              "The goal is not perfection.",
+              "The goal is clarity and efficiency.",
+            ],
+          },
+          {
+            title: "Get Started",
+            paragraphs: [
+              "If your business feels messy, that’s normal.",
+              "Let’s turn it into a system that works.",
+            ],
+          },
+        ],
+      },
+
+      de: {
+        slug: "von-chaos-zu-system",
+        title: "Von Chaos zu System: Wie ein gut strukturiertes Unternehmen wirklich aussieht",
+        excerpt:
+          "Viele Unternehmen arbeiten im Chaos, ohne es zu merken. So sieht ein gutes System wirklich aus.",
+        seoDescription:
+          "Erfahre, wie strukturierte Systeme aussehen und wie du dein Unternehmen effizienter machst.",
+        category: "Systeme",
+        tags: ["Systeme", "Effizienz", "Automatisierung", "Business"],
+        sections: [
+          {
+            title: "Einleitung",
+            paragraphs: [
+              "Viele Unternehmen merken gar nicht, wie chaotisch ihre Abläufe sind.",
+              "Wenn Prozesse ineffizient wirken, lies auch: /de/blog/versteckte-kosten-manuelle-arbeit",
+            ],
+          },
+          {
+            title: "Wie Chaos aussieht",
+            paragraphs: [
+              "Chaos ist oft subtil.",
+            ],
+            bullets: [
+              "Verteilte Daten",
+              "Manuelle Arbeit",
+              "Unklare Prozesse",
+              "Wiederkehrende Fragen",
+            ],
+          },
+          {
+            title: "Warum das passiert",
+            paragraphs: [
+              "Systeme entstehen oft ohne Planung.",
+            ],
+          },
+          {
+            title: "Wie gute Systeme aussehen",
+            paragraphs: [
+              "Gute Systeme sind klar und effizient.",
+            ],
+            bullets: [
+              "Klare Abläufe",
+              "Verbundene Tools",
+              "Wenig manuelle Arbeit",
+              "Transparente Daten",
+            ],
+          },
+          {
+            title: "Der Unterschied",
+            paragraphs: [
+              "Chaos reagiert.",
+              "Systeme steuern.",
+            ],
+          },
+          {
+            title: "Automatisierung & KI",
+            paragraphs: [
+              "Sie verbessern Prozesse deutlich.",
+              "Beispiele: /de/blog/ki-anwendungsfaelle-unternehmen",
+            ],
+          },
+          {
+            title: "Der Weg dahin",
+            paragraphs: [
+              "Schrittweise verbessern.",
+              "Start hier: /de/blog/automatisierungspotenziale-erkennen",
+            ],
+          },
+          {
+            title: "Fazit",
+            paragraphs: [
+              "Struktur ermöglicht Wachstum.",
+            ],
+          },
+          {
+            title: "Start",
+            paragraphs: [
+              "Wenn dein System nicht optimal ist, lass es uns verbessern.",
+            ],
+          },
+        ],
+      },
+    },
+  },
+  {
+    id: "no-code-vs-custom",
+    featured: true,
+    publishedAt: "2026-05-18",
+    updatedAt: "2026-05-18",
+    readingTimeMinutes: 6,
+    locales: {
+      en: {
+        slug: "no-code-vs-custom-development",
+        title: "No-Code vs Custom Development: What’s Actually Right for Your Business?",
+        excerpt:
+          "No-code tools are powerful — but not always the right solution. Here’s how to decide between no-code and custom development.",
+        seoDescription:
+          "Learn when to use no-code tools vs custom development and how to choose the right approach for your business.",
+        category: "IT Strategy",
+        tags: ["No-Code", "Custom Development", "Automation", "Business"],
+        sections: [
+          {
+            title: "Introduction",
+            paragraphs: [
+              "No-code tools are everywhere — and they’re powerful.",
+              "You can build workflows, apps, and systems without writing code.",
+              "But the real question is: are they the right solution for your business?",
+            ],
+          },
+          {
+            title: "What No-Code Is Great At",
+            paragraphs: [
+              "No-code tools are perfect for getting started quickly.",
+            ],
+            bullets: [
+              "Fast setup",
+              "Low cost",
+              "No technical barrier",
+              "Great for simple workflows",
+            ],
+          },
+          {
+            title: "Where No-Code Breaks",
+            paragraphs: [
+              "At some point, limitations appear.",
+              "This is where friction starts to build.",
+            ],
+            bullets: [
+              "Limited flexibility",
+              "Difficult integrations",
+              "Performance issues",
+              "Scaling problems",
+            ],
+          },
+          {
+            title: "When Custom Development Makes Sense",
+            paragraphs: [
+              "Custom solutions are not about complexity — they’re about fit.",
+              "They become valuable when your business outgrows standard tools.",
+              "This is closely related to the broader decision: /en/blog/build-vs-buy-custom-software",
+            ],
+          },
+          {
+            title: "The Hybrid Approach",
+            paragraphs: [
+              "The best solution is rarely one or the other.",
+              "You use no-code where it works — and extend it with custom logic where needed.",
+              "This is how modern systems are built in practice: /en/blog/what-i-actually-do-as-an-it-consultant",
+            ],
+          },
+          {
+            title: "Where AI Changes the Game",
+            paragraphs: [
+              "AI makes both approaches more powerful.",
+              "It allows smarter workflows and better automation.",
+              "For real examples: /en/blog/ai-use-cases-every-business-should-use",
+            ],
+          },
+          {
+            title: "A Simple Decision Framework",
+            paragraphs: [
+              "If your setup feels simple — use no-code.",
+              "If your business feels constrained — go custom.",
+            ],
+            bullets: [
+              "Start simple",
+              "Watch for friction",
+              "Upgrade when needed",
+            ],
+          },
+          {
+            title: "Final Thoughts",
+            paragraphs: [
+              "No-code is not a replacement for custom development.",
+              "It’s a starting point.",
+              "The goal is always the same: efficient, scalable systems.",
+            ],
+          },
+          {
+            title: "Get Started",
+            paragraphs: [
+              "If you’re unsure which path is right, that’s completely normal.",
+              "Let’s figure out what makes the most sense for your business.",
+            ],
+          },
+        ],
+      },
+
+      de: {
+        slug: "no-code-vs-custom-entwicklung",
+        title: "No-Code vs individuelle Entwicklung: Was passt wirklich zu deinem Business?",
+        excerpt:
+          "No-Code ist stark — aber nicht immer die richtige Lösung. So triffst du die richtige Entscheidung.",
+        seoDescription:
+          "Erfahre, wann No-Code sinnvoll ist und wann individuelle Entwicklung besser passt.",
+        category: "IT-Strategie",
+        tags: ["No-Code", "Software", "Automatisierung", "Business"],
+        sections: [
+          {
+            title: "Einleitung",
+            paragraphs: [
+              "No-Code Tools sind überall — und sie sind leistungsfähig.",
+              "Doch die entscheidende Frage ist: passen sie wirklich zu deinem Unternehmen?",
+            ],
+          },
+          {
+            title: "Stärken von No-Code",
+            paragraphs: [
+              "No-Code eignet sich perfekt für den Einstieg.",
+            ],
+            bullets: [
+              "Schnelle Umsetzung",
+              "Geringe Kosten",
+              "Einfache Nutzung",
+              "Ideal für einfache Prozesse",
+            ],
+          },
+          {
+            title: "Grenzen von No-Code",
+            paragraphs: [
+              "Mit der Zeit zeigen sich Einschränkungen.",
+            ],
+            bullets: [
+              "Wenig Flexibilität",
+              "Schwierige Integration",
+              "Performance-Probleme",
+              "Skalierungsgrenzen",
+            ],
+          },
+          {
+            title: "Wann individuelle Lösungen sinnvoll sind",
+            paragraphs: [
+              "Individuelle Entwicklung lohnt sich, wenn Standardlösungen nicht mehr passen.",
+              "Mehr dazu: /de/blog/build-vs-buy-software",
+            ],
+          },
+          {
+            title: "Die Kombination",
+            paragraphs: [
+              "Die beste Lösung ist oft eine Mischung.",
+              "So entstehen moderne Systeme: /de/blog/was-ich-als-it-consultant-eigentlich-mache",
+            ],
+          },
+          {
+            title: "KI als Verstärker",
+            paragraphs: [
+              "KI macht beide Ansätze leistungsfähiger.",
+              "Beispiele: /de/blog/ki-anwendungsfaelle-unternehmen",
+            ],
+          },
+          {
+            title: "Entscheidungsregel",
+            paragraphs: [
+              "Einfach starten — und bei Bedarf erweitern.",
+            ],
+            bullets: [
+              "Mit Tools starten",
+              "Engpässe erkennen",
+              "Gezielt erweitern",
+            ],
+          },
+          {
+            title: "Fazit",
+            paragraphs: [
+              "No-Code ist ein Einstieg, keine Endlösung.",
+              "Ziel sind skalierbare Systeme.",
+            ],
+          },
+          {
+            title: "Start",
+            paragraphs: [
+              "Wenn du unsicher bist, welche Lösung passt, lass uns das gemeinsam anschauen.",
+            ],
+          },
+        ],
+      },
+    },
+  },
+  {
     id: "rag-ai-explained",
     featured: true,
     publishedAt: "2026-05-11",
