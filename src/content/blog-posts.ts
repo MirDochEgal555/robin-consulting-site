@@ -82,7 +82,7 @@ const blogPostEntries = [
             paragraphs: [
               "Most businesses don’t think they are chaotic.",
               "But when you look closely, you often find scattered tools, manual work, and unclear processes.",
-              "If this sounds familiar, start here: /en/blog/hidden-cost-of-manual-work",
+              "If this sounds familiar, start here: /blog/hidden-cost-of-manual-work",
             ],
           },
           {
@@ -128,7 +128,7 @@ const blogPostEntries = [
             paragraphs: [
               "Automation removes repetitive work.",
               "AI enhances decision-making and workflows.",
-              "Examples: /en/blog/ai-use-cases-every-business-should-use",
+              "Examples: /blog/ai-use-cases-every-business-should-use",
             ],
           },
           {
@@ -136,7 +136,7 @@ const blogPostEntries = [
             paragraphs: [
               "You don’t rebuild everything.",
               "You improve step by step.",
-              "Start by identifying opportunities: /en/blog/identify-automation-opportunities-business",
+              "Start by identifying opportunities: /blog/identify-automation-opportunities-business",
             ],
           },
           {
@@ -302,7 +302,7 @@ const blogPostEntries = [
             paragraphs: [
               "Custom solutions are not about complexity — they’re about fit.",
               "They become valuable when your business outgrows standard tools.",
-              "This is closely related to the broader decision: /en/blog/build-vs-buy-custom-software",
+              "This is closely related to the broader decision: /blog/build-vs-buy-custom-software",
             ],
           },
           {
@@ -310,7 +310,7 @@ const blogPostEntries = [
             paragraphs: [
               "The best solution is rarely one or the other.",
               "You use no-code where it works — and extend it with custom logic where needed.",
-              "This is how modern systems are built in practice: /en/blog/what-i-actually-do-as-an-it-consultant",
+              "This is how modern systems are built in practice: /blog/what-i-actually-do-as-an-it-consultant",
             ],
           },
           {
@@ -318,7 +318,7 @@ const blogPostEntries = [
             paragraphs: [
               "AI makes both approaches more powerful.",
               "It allows smarter workflows and better automation.",
-              "For real examples: /en/blog/ai-use-cases-every-business-should-use",
+              "For real examples: /blog/ai-use-cases-every-business-should-use",
             ],
           },
           {
@@ -519,7 +519,7 @@ const blogPostEntries = [
             paragraphs: [
               "RAG is often part of a bigger system.",
               "It connects data, workflows, and user interaction into one intelligent layer.",
-              "If you want to see how AI fits into modern digital systems overall: /en/blog/how-ai-is-changing-websites",
+              "If you want to see how AI fits into modern digital systems overall: /blog/how-ai-is-changing-websites",
             ],
           },
           {
@@ -538,7 +538,7 @@ const blogPostEntries = [
             paragraphs: [
               "RAG shines where knowledge matters.",
               "The more information your business has, the more powerful it becomes.",
-              "If you’re looking for practical AI applications, this article is a good next step: /en/blog/ai-use-cases-every-business-should-use",
+              "If you’re looking for practical AI applications, this article is a good next step: /blog/ai-use-cases-every-business-should-use",
             ],
           },
           {
@@ -546,7 +546,7 @@ const blogPostEntries = [
             paragraphs: [
               "RAG is not just a feature — it’s part of a system design.",
               "You need the right data structure, workflows, and integration.",
-              "This is exactly where structured consulting helps: /en/blog/what-i-actually-do-as-an-it-consultant",
+              "This is exactly where structured consulting helps: /blog/what-i-actually-do-as-an-it-consultant",
             ],
           },
           {
@@ -707,7 +707,7 @@ const blogPostEntries = [
             paragraphs: [
               "Most businesses know they should automate — but they don’t know where to start.",
               "The problem is not a lack of tools. It’s a lack of clarity.",
-              "If you’ve already noticed inefficiencies, this article might sound familiar: /en/blog/hidden-cost-of-manual-work",
+              "If you’ve already noticed inefficiencies, this article might sound familiar: /blog/hidden-cost-of-manual-work",
             ],
           },
           {
@@ -1233,7 +1233,7 @@ const blogPostEntries = [
             paragraphs: [
               "This is exactly where automation and AI create real value.",
               "Instead of doing tasks manually, systems can handle them faster, more reliably, and at scale.",
-              "If you want to see concrete examples, check out: /en/blog/ai-use-cases-every-business-should-use",
+              "If you want to see concrete examples, check out: /blog/ai-use-cases-every-business-should-use",
             ],
           },
           {
@@ -1253,7 +1253,7 @@ const blogPostEntries = [
             paragraphs: [
               "Even when the problem is obvious, many companies don’t act.",
               "Not because they don’t care — but because they don’t know where to start.",
-              "This is exactly where structured IT consulting comes in: /en/blog/what-i-actually-do-as-an-it-consultant",
+              "This is exactly where structured IT consulting comes in: /blog/what-i-actually-do-as-an-it-consultant",
             ],
           },
           {
@@ -1907,7 +1907,7 @@ const blogPostEntries = [
             title: "5. Provide AI Solutions",
             paragraphs: [
               "A growing part of my work is helping businesses use AI in a practical way.",
-              "If you're curious how AI is changing modern websites and digital systems, you can read more here: /en/blog/how-ai-is-changing-websites",
+              "If you're curious how AI is changing modern websites and digital systems, you can read more here: /blog/how-ai-is-changing-websites",
 
             ],
             bullets: [
